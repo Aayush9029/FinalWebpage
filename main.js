@@ -1,8 +1,8 @@
 
 $(function() {
-    $("#ok").hide(2000).delay(500).show(3000)
+    $("#ok").hide(1000).delay(500).show(2000)
 
 
-        $('ul').hide(1000).show(3000).hide(500).show(500)
+        $('ul').hide(1000).show(2000)
 });
 

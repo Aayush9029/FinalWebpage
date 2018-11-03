@@ -1,6 +1,6 @@
 *{
     padding: 0px;
-    margin:0px;
+    margin:5px;
     
 
 }
@@ -92,11 +92,12 @@ li a:hover{
 }
 
 .square a{
+    
     color:white;
     text-decoration: none;
     list-style: none;
     font-weight: 22px;
-    margin: 22px;
+    margin: 35px;
  border: 2px solid black;
  padding: 25px;
  background: #630660;
