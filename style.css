@@ -1,0 +1,104 @@
+*{
+    padding: 0px;
+    margin:0px;
+    
+
+}
+
+body{
+    /* background-image: url('hero.png'); */
+    background-repeat:no-repeat;
+    background-size:auto;   
+
+}
+
+
+
+
+/*This code below is going to be for nav bar */
+ul{
+    margin: 20px;
+    padding-bottom: 20%;
+    /* border:black solid 12px; */
+}
+li{
+    list-style: none;
+  
+}
+
+li a {
+    padding: 8px;
+    margin:5px;
+    font-size: 20px; 
+    border:	#630660 solid 2px;
+    color : 	#630660;
+    float: right;
+    border-radius: 22px;
+}
+
+li a:hover{
+    background-color: rgb(144, 54, 228);
+    color:white;
+    transition: .3s;   
+}
+
+/* .active{
+    background-color: rgba(137, 43, 226, 0.5);
+    color:white;  
+} */
+
+/*Nav bar code ends yayyy */
+
+
+
+.upper_body{
+
+    /* padding-bottom:500px; */
+    /* border:black solid 2px; */
+    text-align: center;
+    background-repeat: no-repeat;
+   
+       
+}
+.purple_strip1{
+   
+    padding:150px 75px 155px 75px;
+    height: 250px;
+    color:white;
+    /* border:black solid 1px; */
+    text-align: center;
+    background-color:#630660;
+}
+.white{
+    padding:150px 75px 155px 75px;
+    margin: 22px;
+
+}
+
+.purple_strip2{
+    background-color:#630660;
+   
+    padding:150px 75px 155px 75px;
+    border: black 2px solid;
+
+}
+
+.white2{
+   
+    padding:150px 75px 155px 75px;
+    border: black 2px solid;
+
+    
+}
+
+.square a{
+    color:white;
+    text-decoration: none;
+    list-style: none;
+    font-weight: 22px;
+    margin: 22px;
+ border: 2px solid black;
+ padding: 25px;
+ background: #630660;
+float: left;
+}
