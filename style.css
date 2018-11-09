@@ -1,29 +1,21 @@
 *{
     padding: 0px;
     margin:5px;
-    
-
 }
 
 body{
-    /* background-image: url('hero.png'); */
     background-repeat:no-repeat;
     background-size:auto;   
-
 }
-
-
-
 
 /*This code below is going to be for nav bar */
 ul{
     margin: 20px;
     padding-bottom: 20%;
-    /* border:black solid 12px; */
 }
+
 li{
     list-style: none;
-  
 }
 
 li a {
@@ -41,65 +33,67 @@ li a:hover{
     color:white;
     transition: .3s;   
 }
-
-/* .active{
-    background-color: rgba(137, 43, 226, 0.5);
-    color:white;  
-} */
-
 /*Nav bar code ends yayyy */
 
-
-
 .upper_body{
-
-    /* padding-bottom:500px; */
-    /* border:black solid 2px; */
-    text-align: center;
-    background-repeat: no-repeat;
-   
-       
+    background-repeat: no-repeat;      
 }
+
 .purple_strip1{
-   
     padding:150px 75px 155px 75px;
     height: 250px;
     color:white;
-    /* border:black solid 1px; */
     text-align: center;
     background-color:#630660;
 }
+
 .white{
     padding:150px 75px 155px 75px;
     margin: 22px;
-
 }
 
 .purple_strip2{
     background-color:#630660;
-   
     padding:150px 75px 155px 75px;
     border: black 2px solid;
-
 }
 
 .white2{
-   
     padding:150px 75px 155px 75px;
     border: black 2px solid;
-
-    
 }
 
+
+/*This is for the Titile of myu projects in Projects linked in the homepage */
+.pro{
+    margin: 35px;
+    font-family: 'Lato', sans-serif;
+
+}
+
+/*This is for My Projects Place holder this is bacically a place holder for links */
 .square a{
-    
     color:white;
     text-decoration: none;
     list-style: none;
     font-weight: 22px;
     margin: 35px;
- border: 2px solid black;
- padding: 25px;
- background: #630660;
-float: left;
+    border: 2px solid black;
+    padding: 25px;
+    background: #630660;
+    float: left;
+    font-family: 'Lato', sans-serif;
+}
+
+.square :hover{
+    background-color:   #9A1195;
+    transition: .2s;
+
+    transform: scale(1.1);
+    box-shadow: 15px 15px black;
+}
+
+.square: active{
+    background-color: green;
+
 }
