@@ -73,13 +73,16 @@ li a:hover{
 
 /*This is for My Projects Place holder this is bacically a place holder for links */
 .square a{
+    padding-top: 25px;
+    text-align: center;
     color:white;
     text-decoration: none;
     list-style: none;
-    font-weight: 22px;
+
+    width: 110px;
+    height:60px;
     margin: 35px;
     border: 2px solid black;
-    padding: 25px;
     background: #630660;
     float: left;
     font-family: 'Lato', sans-serif;
@@ -88,12 +91,7 @@ li a:hover{
 .square :hover{
     background-color:   #9A1195;
     transition: .2s;
-
     transform: scale(1.1);
-    box-shadow: 15px 15px black;
+    box-shadow: 15px 15px 5px rgba(29, 0, 18, 0.719);
 }
 
-.square: active{
-    background-color: green;
-
-}
