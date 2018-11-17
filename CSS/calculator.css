@@ -1,0 +1,56 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body
+{
+background-color:#00ADB5;
+} 
+
+button{
+    background-color: #FFF4E0;
+    font-size:20px;
+    float: center;
+    height: 65px;;
+    width: 70px;
+    margin:8px;
+    box-shadow: 5px 5px 2.5px rgb(35, 0, 92);
+}
+
+button:hover{
+    background-color: aquamarine;
+    transition: .25s;
+}
+button:active{
+    background-color: rgb(179, 179, 179);
+}
+.button_holder{
+    border:5px solid rgb(88, 98, 114);
+    margin-top:0px;
+    margin-left:100px; 
+    width: 365px;
+    background-color: #FC3C3C;
+    box-shadow: 15px 15px 10px rgb(24, 0, 63);
+}
+
+.operators{
+    background-color: #F8B500;
+}
+input{
+    font-size:20px;
+    padding-left: 20px;
+    border:5px solid rgb(88, 98, 114);
+    color:white;
+    box-shadow:5px 5px 5px rgb(29, 1, 73) inset;
+    background-color:#393E46;
+    height:70px;
+    width:345px; 
+    margin-top:250px;
+    margin-left:100px; 
+}
+
+/* 
+
+color wheel profile
+https://color.adobe.com/Mi-tema-de-Color-color-theme-11516868/edit/?copy=true&base=2&rule=Custom&selected=0&name=Copy%20of%20Mi%20tema%20de%20Color&mode=rgb&rgbvalues=0.21985658081672801,0.23914243561254542,0.27,0,0.678431,0.709804,1,0.956863,0.878431,0.972549,0.709804,0,0.988235,0.235294,0.235294&swatchOrder=0,1,2,3,4 */
