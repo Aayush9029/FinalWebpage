@@ -1,0 +1,48 @@
+*{
+  margin:50px;
+  padding:0px;
+}
+
+.c{
+  width:25px;
+  height:25px;
+  background-color:red;
+  animation: mymove 5s alternate-reverse infinite;
+}
+
+.c1{
+  width:25px;
+  height:25px;
+  background-color:red;
+  animation: mymove 4.5s alternate-reverse infinite;
+}
+
+.c2{
+  width:25px;
+  height:25px;
+  background-color:red;
+  animation: mymove 4s alternate-reverse infinite;
+}
+.c3{
+  width:25px;
+  height:25px;
+  background-color:red;
+  animation: mymove 3.5s alternate-reverse infinite;
+}
+
+
+
+@keyframes mymove{
+  0%{
+    width:25px;
+  }
+  40%, 60%
+  {
+    background:yellow;
+  }
+  
+  60%, 100%{
+     width:1000px;
+    background:skyblue;
+  }
+}
