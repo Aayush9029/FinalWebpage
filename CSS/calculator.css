@@ -8,7 +8,7 @@ body
 background-color:#00ADB5;
 } 
 
-button{
+.button{
     font-weight: bold;
     border-radius: 5px;
     background-color: #FFF4E0;
@@ -20,11 +20,11 @@ button{
     box-shadow: 5px 5px 2.5px rgb(35, 0, 92);
 }
 
-button:hover{
+.button:hover{
     background-color: aquamarine;
     transition: .25s;
 }
-button:active{
+.button:active{
     background-color: rgb(179, 179, 179);
 }
 .button_holder{
@@ -33,18 +33,26 @@ button:active{
     border:5px solid rgb(88, 98, 114);
     margin-top:100px;
     width: 365px;
-    height: 465px;
+    height: 475px;
     background-color: #FC3C3C;
     box-shadow: 15px 15px 10px rgb(24, 0, 63);
 }
 
 .operators{
+    font-weight: bold;
+    border-radius: 5px;
+    font-size:20px;
+    float: center;
+    height: 70px;;
+    width: 70px;
+    margin:8px;
+    box-shadow: 5px 5px 2.5px rgb(35, 0, 92);
     background-color: #F8B500;
 }
-input{
+.form{
     border-radius:5px;
     font-size:20px;
-    margin:5px 5px 15px 5px;
+    margin:5px 5px 15px 0px;
     padding-left: 10px;
     border:.5px solid rgb(88, 98, 114);
     color:white;

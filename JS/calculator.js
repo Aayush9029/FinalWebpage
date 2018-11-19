@@ -1,6 +1,13 @@
 
-let a = 99;
-let b = 1;
+function myNum(num){
+    document.form.textview.value = document.form.textview.value + num;
 
- let 
- alert(c);
+}
+function equal(){
+
+    var ans = document.form.textview.value;
+    if(ans){
+        document.form.textview.value = eval(ans);
+    }
+}
+
