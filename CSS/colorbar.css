@@ -1,40 +1,63 @@
 *{
-  margin:50px;
+  margin:0px;
   padding:0px;
 }
-
+font{
+  margin-left:50%;
+  
+  animation: font 1s alternate-reverse 2;
+  
+}
 .c{
+  margin:50px;
   width:25px;
   height:25px;
   background-color:red;
-  animation: mymove 5s alternate-reverse infinite;
 }
 
 .c1{
-  width:25px;
-  height:25px;
-  background-color:red;
+  animation: mymove 5s alternate-reverse infinite;
+}
+.c2{
   animation: mymove 4.5s alternate-reverse infinite;
 }
-
-.c2{
-  width:25px;
-  height:25px;
-  background-color:red;
+.c3{
   animation: mymove 4s alternate-reverse infinite;
 }
-.c3{
-  width:25px;
-  height:25px;
-  background-color:red;
+.c4{
   animation: mymove 3.5s alternate-reverse infinite;
 }
+
+/* for square boxes that chenge color based on their line parents  */
+.square{
+  margin:50px;
+  float: left;
+  width:100px;
+  height:100px;
+  background: red;
+}
+
+.square1{  
+  animation: square 5s alternate-reverse infinite;
+}
+.square2{
+  animation: square 4.5s alternate-reverse infinite;
+}
+.square3{
+  animation: square 4s alternate-reverse infinite;
+}
+.square4{
+  animation: square 3.5s alternate-reverse infinite;
+}
+
+
+
 
 
 
 @keyframes mymove{
   0%{
-    width:25px;
+    width:0%;
   }
   40%, 60%
   {
@@ -42,7 +65,42 @@
   }
   
   60%, 100%{
-     width:1000px;
+     width:92%;
     background:skyblue;
   }
 }
+
+
+@keyframes square{
+  0%{
+    
+  }
+  40%, 60%
+  {
+    background:yellow;
+  }
+  
+  60%, 100%{
+    
+    background:skyblue;
+  }
+}
+
+
+
+@keyframes font{
+  0%{
+    
+    color:red;
+  }
+  40%, 60%
+  {
+    color:yellow;
+  }
+  
+  60%, 100%{
+    
+    color:skyblue;
+  }
+}
+

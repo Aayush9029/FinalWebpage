@@ -9,10 +9,11 @@ background-color:#00ADB5;
 } 
 
 .button{
+    cursor: pointer;
     font-weight: bold;
     border-radius: 5px;
     background-color: #FFF4E0;
-    font-size:20px;
+    font-size:22px;
     float: center;
     height: 70px;;
     width: 70px;
@@ -31,17 +32,18 @@ background-color:#00ADB5;
     padding: 5px;
     border-radius: 10px;
     border:5px solid rgb(88, 98, 114);
-    margin-top:100px;
+    margin-top:50px;
     width: 365px;
     height: 475px;
     background-color: #FC3C3C;
     box-shadow: 15px 15px 10px rgb(24, 0, 63);
+    
 }
 
 .operators{
     font-weight: bold;
     border-radius: 5px;
-    font-size:20px;
+    font-size:22px;
     float: center;
     height: 70px;;
     width: 70px;
@@ -62,6 +64,83 @@ background-color:#00ADB5;
     width:345px; 
    
 }
+
+
+.equal{
+    font-weight: bold;
+    border-radius: 5px;
+    font-size:20px;
+    float: center;
+    height: 70px;;
+    width: 70px;
+    margin:8px;
+    box-shadow: 5px 5px 2.5px rgb(35, 0, 92);
+    background-color: rgb(0, 195, 255);
+
+}
+
+
+/* Button to change calculators theme and stuff */
+.themeChanger{
+    left:50%;
+    border-radius: 5px;
+    background-color: #FFF4E0;
+    font-size:20px;
+    float: center;
+    height: 70px;;
+    width: 100px;
+    margin:8px;
+    box-shadow: 5px 5px 2.5px rgb(35, 0, 92);
+    animation: Tc 5s alternate-reverse infinite; 
+}
+
+
+
+
+@keyframes Tc{
+ 0%{
+     width: 100px;
+     color:white;
+     background: #00ADB5;
+ }
+ 30%{
+    color:rgb(0, 110, 255);
+     background: #F8B500;
+
+ }
+
+ 50%{
+    color:rgb(0, 255, 0);
+     background: #FC3C3C;
+ }
+70%{
+    color:rgb(251, 255, 0);
+    background:rgb(255, 0, 255);
+
+}
+100%{
+    width:75px;
+    color:rgb(0, 4, 255);
+    background: rgb(0, 255, 115);
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 
 color wheel profile
