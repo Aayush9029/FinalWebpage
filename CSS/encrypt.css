@@ -1,0 +1,29 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.alert_text{
+    text-align: center;;
+    font-size: 25px;
+    margin:20px;
+}
+#raw{
+  
+    background: rgb(0, 0, 0);
+    padding: 25px;
+    font-size: 22px;
+    color:rgb(69, 250, 69);
+}
+
+form{
+    margin:50px;
+}
+
+.button{
+    margin-top: 5px;
+    font-size:25px;
+    width:285px;
+    padding: 15px;
+}
