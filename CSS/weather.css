@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    
+}
+body{
+    background: rgb(0, 183, 255);
+}
+
+
+h1{
+    font-size: 15rem;
+}
+
+h2{
+    padding: 5px;
+    font-size: 3rem;
+}
+h3{
+    font-optical-sizing: 1.4rem;
+}
+span{
+    font-size: 6rem;
+}
+
+.container{
+    margin: 10px;
+    max-width: 550px;
+    background: skyblue;
+    height:95vh;
+    border:1px solid black;
+    display: grid;
+    grid-template-rows: 20% 80%;
+    text-align:center;
+}
+
+.degrees{
+
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+}
+
+#wear{
+    font-size: 3rem;
+}
