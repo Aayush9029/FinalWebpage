@@ -1,6 +1,6 @@
 $(document).ready(function () {
     
-  // Get Location 
+  // Get Location (asks for location access !!!)
   navigator.geolocation.getCurrentPosition(success, error);
 
   function success(pos) {
@@ -30,13 +30,13 @@ $(document).ready(function () {
       var desc = data.weather[0].description;
       var greeting;
       
-        if (temp > 10) {
-        greeting = "no jacket necessary";
+        if (temp > 15) {
+        greeting = "No Jacket Necessary";
 
          }else if (temp < 5){
           greeting ='Heavy Jacket';
           }else {
-         greeting ='niceday';
+         greeting ='light jacket';
         }
 
       $('#city').html(city.toUpperCase());
@@ -47,5 +47,3 @@ $(document).ready(function () {
   }
 });
 
-
-document.write(greeting);
