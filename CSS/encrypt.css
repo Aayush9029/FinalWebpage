@@ -1,16 +1,18 @@
 *{
     padding: 0px;
     margin: 0px;
+
 }
 
 
 .alert_text{
+    font-family: 'Open Sans Condensed', sans-serif;
     text-align: center;;
     font-size: 25px;
     margin:20px;
 }
-#raw{
-  
+
+.typebox{
     background: rgb(0, 0, 0);
     padding: 25px;
     font-size: 22px;
@@ -22,6 +24,7 @@ form{
 }
 
 .button{
+    cursor: pointer;
     margin-top: 5px;
     font-size:25px;
     width:285px;
