@@ -1,11 +1,12 @@
 *{
+    color:#fff;
     margin: 0px;
     padding: 0px;
     font-family: 'Roboto', sans-serif;
     
 }
 body{
-    background: rgb(0, 183, 255);
+    background: url(https://wallpapercave.com/wp/4hrIhgG.jpg)
 }
 
 
@@ -14,6 +15,7 @@ h1{
 }
 
 h2{
+    margin-top: 50px;
     padding: 5px;
     font-size: 3rem;
 }
@@ -24,19 +26,10 @@ span{
     font-size: 6rem;
 }
 
-.container{
-    margin: 10px;
-    max-width: 550px;
-    background: skyblue;
-    height:95vh;
-    border:1px solid black;
-    display: grid;
-    grid-template-rows: 20% 80%;
-    text-align:center;
-}
+
+   
 
 .degrees{
-
     display: grid;
     grid-template-columns: auto auto;
     justify-content: center;
