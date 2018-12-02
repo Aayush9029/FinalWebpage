@@ -28,6 +28,10 @@ $(document).ready(function () {
       var city = (data.name);
       var temp = Math.round(data.main.temp);
       var desc = data.weather[0].description;
+      var max = data.main.temp_max;
+      var min = data.main.temp_min;
+      var wind = data.wind.speed;
+      var humid = data.main.humidity;
       var greeting;
       
         if (temp > 15) {
@@ -43,6 +47,10 @@ $(document).ready(function () {
       $('#temp').html(temp);
       $('#desc').html(desc.toUpperCase());
       $('#wear').html(greeting);
+      $('#minmax').html('Today will be ' + min +' to '+ max);
+     
+      $('#wind').html('Wind: '+ wind + " km/hr");
+      $('#humid').html('Humidity: ' + humid);
 
   }
 });

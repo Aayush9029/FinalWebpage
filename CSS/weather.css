@@ -10,24 +10,16 @@ body{
 }
 
 
-h1{
-    font-size: 15rem;
-}
-
 h2{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
     margin-top: 50px;
-    padding: 5px;
-    font-size: 3rem;
-}
-h3{
-    font-optical-sizing: 1.4rem;
-}
-span{
-    font-size: 6rem;
+    font-optical-sizing: 3rem;
 }
 
 
-   
+
 
 .degrees{
     display: grid;
@@ -35,6 +27,21 @@ span{
     justify-content: center;
 }
 
-#wear{
-    font-size: 3rem;
+
+h1{
+    font-size: 15rem;
 }
+
+span{
+    font-size: 7rem;
+}
+
+
+
+#desc{    
+    height:33px;
+    padding: 5px;
+    margin: 5px;
+}
+
+
