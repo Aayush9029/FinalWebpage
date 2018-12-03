@@ -1,3 +1,17 @@
+//for date & time manupulation
+currentDate = new Date();
+date2 = currentDate.getMonth();
+date = currentDate.getDate();
+
+dayfinal = ("Month " + date2 +" Day " + date);
+
+Datearray = date[0];
+console.log(Datearray);
+
+
+;
+
+
 $(document).ready(function () {
     
   // Get Location (asks for location access !!!)
@@ -51,6 +65,7 @@ $(document).ready(function () {
      
       $('#wind').html('Wind: '+ wind + " km/hr");
       $('#humid').html('Humidity: ' + humid);
+      $('#date').html(dayfinal);
 
   }
 });
