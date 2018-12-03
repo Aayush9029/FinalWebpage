@@ -2,16 +2,10 @@
 currentDate = new Date();
 date2 = currentDate.getMonth();
 date = currentDate.getDate();
-
 dayfinal = ("Month " + date2 +" Day " + date);
 
-Datearray = date[0];
-console.log(Datearray);
 
-
-;
-
-
+//jquery manupulation
 $(document).ready(function () {
     
   // Get Location (asks for location access !!!)
