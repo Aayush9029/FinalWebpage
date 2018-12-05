@@ -10,13 +10,7 @@
 function encrypt(){  
    
     var str = document.getElementById("raw").value;
-
-    
     var enc = btoa(str);
-
-    var enc2= enc.toUpperCase(2);
-
-    console.log(enc2);
          
             document.getElementById("raw").value = enc;
 }   

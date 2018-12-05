@@ -57,7 +57,7 @@ $(document).ready(function () {
       $('#wear').html(greeting);
       $('#minmax').html('Today will be ' + min +' to '+ max);
      
-      $('#wind').html('Wind: '+ wind + " km/hr");
+      $('#wind').html('Wind: '+ wind + " km/h");
       $('#humid').html('Humidity: ' + humid);
       $('#date').html(dayfinal);
 
