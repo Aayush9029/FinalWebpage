@@ -1,12 +1,12 @@
 *{
     padding: 0px;
-    margin:0px;
+    margin: 0px;
     font-family: 'Ubuntu', sans-serif;
 }
 
 body{
-    background-repeat:no-repeat;
-    background-size:fill;   
+    background-repeat: no-repeat;
+    background-size: fill;   
 }
 
 /*This code below is going to be for nav bar */
@@ -21,10 +21,10 @@ li{
 
 li a {
     padding: 8px;
-    margin:5px;
+    margin: 5px;
     font-size: 20px; 
     border:	#630660 solid 2px;
-    color : 	#630660;
+    color :	#630660;
     float: right;
     border-radius: 22px;
 }
@@ -41,7 +41,7 @@ li a:hover{
 }
 
 .skillz{
-    padding:50px;
+    padding: 50px;
     height: 250px;
     color:white;
 }
@@ -50,37 +50,37 @@ li a:hover{
 .bar{
     color:white;
     padding: 5px;
-    margin-left:5%;
-    margin-top:15px;
-    height:25px;
+    margin-left: 5%;
+    margin-top: 15px;
+    height: 25px;
     background-color:#630660;
   }
 
 .ps{
-    margin-top:25px;
-    width:88%;
+    margin-top: 25px;
+    width: 88%;
   }
 .html{
 
-    width:87%;
+    width: 87%;
   }
   
 .css{
-    width:67%;
+    width: 67%;
   }
   
 .js{
-    width:50%;
+    width: 50%;
   }
   
 .ae{
-    width:80%;
+    width: 80%;
   }
   
 
   
 .ai{
-    width:70%;
+    width: 70%;
   }
   
 
@@ -107,7 +107,7 @@ li a:hover{
 
   @keyframes mymove{
     0%{
-      width:0%;
+      width: 0%;
       background: rgba(255, 0, 0, 0.87);
     }
     40%{
@@ -126,18 +126,18 @@ li a:hover{
   
   
 .white{
-    padding:150px 75px 155px 75px;
+    padding: 150px 75px 155px 75px;
     margin: 22px;
 }
 
 .purple_strip2{
     background-color:#630660;
-    padding:150px 75px 155px 75px;
+    padding: 150px 75px 155px 75px;
     border: black 2px solid;
 }
 
 .white2{
-    padding:150px 75px 155px 75px;
+    padding: 150px 75px 155px 75px;
     border: black 2px solid;
 }
 
@@ -158,7 +158,7 @@ li a:hover{
     list-style: none;
 
     width: 110px;
-    height:60px;
+    height: 60px;
     margin: 35px;
     border: 2px solid black;
     background: #630660;
