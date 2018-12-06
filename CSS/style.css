@@ -1,11 +1,12 @@
 *{
     padding: 0px;
     margin:0px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 body{
     background-repeat:no-repeat;
-    background-size:auto;   
+    background-size:fill;   
 }
 
 /*This code below is going to be for nav bar */
@@ -40,13 +41,84 @@ li a:hover{
 }
 
 .purple_strip1{
-    padding:150px 75px 155px 75px;
+    padding:50px;
     height: 250px;
     color:white;
-    text-align: center;
-    background-color:#630660;
+    
+   
 }
 
+
+.bar{
+    padding: 5px;
+    margin:25px;
+    height:25px;
+    background-color:rgb(183, 0, 255);
+  }
+
+.html{
+    content: 'html';
+    width:98%;
+  }
+  
+.css{
+    width:88%;
+  }
+  
+.js{
+    width:55%;
+  }
+  
+.ae{
+    width:87%;
+  }
+  
+.ps{
+    width:97%;
+  }
+  
+.ai{
+    width:65%;
+  }
+  
+  .html{
+    animation: mymove 10s linear ;
+  }
+  .css{
+    animation: mymove 8.5s linear ;
+  }
+  .js{
+    animation: mymove 7s linear ;
+  }
+  .ae{
+    animation: mymove 6.5s linear;
+  }
+  .ai{
+    animation: mymove 6s linear;
+  }
+  .ps{
+    animation: mymove 5s linear;
+  }
+
+
+
+
+  @keyframes mymove{
+    0%{
+      width:0%;
+    }
+    40%, 60%
+    {
+      background:yellow;
+    }
+    
+    60%, 100%{;
+      background:rgb(183, 0, 255);
+    }
+  }
+  
+  
+  
 .white{
     padding:150px 75px 155px 75px;
     margin: 22px;
