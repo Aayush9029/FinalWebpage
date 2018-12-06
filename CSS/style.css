@@ -40,80 +40,86 @@ li a:hover{
     background-repeat: no-repeat;      
 }
 
-.purple_strip1{
+.skillz{
     padding:50px;
     height: 250px;
     color:white;
-    
-   
 }
 
 
 .bar{
+    color:white;
     padding: 5px;
-    margin:25px;
+    margin-left:5%;
+    margin-top:15px;
     height:25px;
-    background-color:rgb(183, 0, 255);
+    background-color:#630660;
   }
 
-.html{
-    content: 'html';
-    width:98%;
-  }
-  
-.css{
+.ps{
+    margin-top:25px;
     width:88%;
   }
-  
-.js{
-    width:55%;
-  }
-  
-.ae{
+.html{
+
     width:87%;
   }
   
-.ps{
-    width:97%;
+.css{
+    width:67%;
   }
+  
+.js{
+    width:50%;
+  }
+  
+.ae{
+    width:80%;
+  }
+  
+
   
 .ai{
-    width:65%;
+    width:70%;
   }
   
-  .html{
-    animation: mymove 10s linear ;
-  }
-  .css{
-    animation: mymove 8.5s linear ;
-  }
-  .js{
-    animation: mymove 7s linear ;
-  }
-  .ae{
-    animation: mymove 6.5s linear;
-  }
-  .ai{
+
+.ps{
     animation: mymove 6s linear;
-  }
-  .ps{
-    animation: mymove 5s linear;
-  }
+}
 
+.html{
+    animation: mymove 6.5s linear ;
+}
+.ae{
+    animation: mymove 8s linear;
+}
+.ai{
+     animation: mymove 9s linear;
+}
+.css{
+    animation: mymove 10s linear ;
+}
 
-
+.js{
+    animation: mymove 11s linear ;
+}
 
   @keyframes mymove{
     0%{
       width:0%;
+      background: rgba(255, 0, 0, 0.87);
     }
-    40%, 60%
+    40%{
+        background: lightskyblue;
+    }
+        60%
     {
       background:yellow;
     }
     
-    60%, 100%{;
-      background:rgb(183, 0, 255);
+    60%, 100%{
+      background:#630660;
     }
   }
   
