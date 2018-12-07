@@ -33,7 +33,7 @@ label,input,textarea{
     color:rgb(0, 140, 255);
     background: rgba(140, 0, 255, 0.281);
     border-radius: 1%;
-    width:45vw;
+    width:40vw;
     padding:1vh;
 }
 .submit{
