@@ -1,12 +1,12 @@
+
 let x = 0;
 let y = 350;
 let speedx =  5;
 let speedy = -5;
 
-let barX = 600/2.5;//eyes tracking value is y buhaha !!
 let barY = 400-30;
-
-let video; let poseNet; let eyelX = 0; 
+let eyelX = 600/2.5; //bars xposition aka eye tracking database
+let video; let poseNet; 
 
 
 function setup(){
@@ -19,7 +19,7 @@ function setup(){
     //loading done datas added to stuffs LOL
 }
 
-
+alert(" Allow camera to play")
 function draw() {
     background(0); //background
 
@@ -30,21 +30,33 @@ function draw() {
     
     ellipse(x, y, 25,25);
 
-    if (x > width-20 || x < 0){
+    if (x > width-20 || x< 0){ //side bounce
         speedx = -speedx;
     }
     x += speedx; 
+//sakiyo
 
-    if (y > height-20 || y < 0){
+    if ( y < 20){ //upward bounce
         speedy = -speedy;
+
+    }else if (y > height-50){
+        if (x > eyelX -100 && x< eyelX + 100){
+            speedy = -speedy;
+        }else{
+        
+        
+        //alerts if it goes downwards
+        alert('go');
+        document.location.reload();
     }
-    y += speedy; 
+}
+
 
 //ball ends PHEW !!!
 
 //bar starts
 rect(eyelX, barY, 100,20);
-
+y += speedy; 
 }
 
 function modelReady() {
