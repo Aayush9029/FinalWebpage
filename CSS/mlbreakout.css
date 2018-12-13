@@ -1,11 +1,16 @@
 html, body {
     margin: 50px;
     padding: 0;
-  }
-  canvas {
+}
+canvas {
 
     margin: 10px;
     background: #eee;
    display: block;
-  }
+}
+  
+.head {
+    color: grey;
+    display: block;
+}
   
