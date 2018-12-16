@@ -1,7 +1,7 @@
 let x = 0;
 let y = 350;
-let speedx = 5;
-let speedy = -5;
+let speedx = 7;
+let speedy = -7;
 let points = 0;
 let barY = 400 - 30;
 let eyelX = 600 / 2.5; //bars xposition aka eye tracking database
