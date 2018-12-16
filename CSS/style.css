@@ -4,15 +4,15 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
-body{
-    background-repeat: no-repeat;
-    background-size: 100%;   
+.pcimage{
+    padding: 5px;
+    content:url(../Images/herobg.png);
 }
 
 /*This code below is going to be for nav bar */
 ul{
     margin: 20px;
-    padding-bottom: 20%;
+    padding-bottom:150px;
 }
 
 li{
@@ -37,7 +37,8 @@ li a:hover{
 /*Nav bar code ends yayyy */
 
 .upper_body{
-    background-repeat: no-repeat;      
+    margin-top:50px;      
+    margin-bottom: 100px;
 }
 
 .skillz{
@@ -48,10 +49,11 @@ li a:hover{
 
 
 .bar{
+    border-radius: 5px;
     color:white;
     padding: 5px;
     margin-left:2%;
-    margin-top: 15px;
+    margin-top: 25px;
     height: 25px;
     background-color:#630660ad;
   }
@@ -59,30 +61,30 @@ li a:hover{
 .ps{
     margin-top: 25px;
     width: 85%;
-    animation: mymove 6s linear;
+    animation: mymove 9s linear;
 }
 .html{
-    animation: mymove 6.5s linear ;
+    animation: mymove 9.5s linear ;
     width: 84%;
 }
 .ae{
     width: 78%;
-    animation: mymove 8s linear;
+    animation: mymove 11s linear;
 }
 .ai{
-    animation: mymove 9s linear;
+    animation: mymove 12s linear;
     width: 65%;
 }
 .css{
-    animation: mymove 10s linear ;
+    animation: mymove 13s linear ;
     width: 63%;
 }
 .js{
-    animation: mymove 11s linear ;
+    animation: mymove 14s linear ;
     width: 47%;
 }
 .ml{
-    animation: mymove 12s linear ;
+    animation: mymove 15s linear ;
     width:13%;
 }
 
@@ -99,7 +101,7 @@ li a:hover{
       background:yellow;
     }
     
-    60%, 100%{
+    70%, 100%{
       background:#630660ad;
     }
 }
