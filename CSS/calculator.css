@@ -1,136 +1,119 @@
-*{
+* {
     padding: 0px;
     margin: 5px;
-}
-
-body
-{
-background-color:#00ADB5;
-} 
-
-.button{
+  }
+  
+  body {
+    background-color: #00adb5;
+  }
+  
+  .button {
     cursor: pointer;
     font-weight: bold;
     border-radius: 5px;
-    background-color: #FFF4E0;
-    font-size:22px;
+    background-color: #fff4e0;
+    font-size: 22px;
     float: center;
-    height: 70px;;
+    height: 70px;
     width: 70px;
-    margin:8px;
+    margin: 8px;
     box-shadow: 5px 5px 2.5px rgb(35, 0, 92);
-}
-
-.button:hover{
+  }
+  
+  .button:hover {
     background-color: aquamarine;
-    transition: .25s;
-}
-.button:active{
+    transition: 0.25s;
+  }
+  .button:active {
     background-color: rgb(179, 179, 179);
-}
-.button_holder{
+  }
+  .button_holder {
     padding: 5px;
     border-radius: 10px;
-    border:5px solid rgb(88, 98, 114);
-    margin-top:50px;
+    border: 5px solid rgb(88, 98, 114);
+    margin-top: 50px;
     width: 365px;
     height: 475px;
-    background-color: #FC3C3C;
+    background-color: #fc3c3c;
     box-shadow: 15px 15px 10px rgb(24, 0, 63);
-    
-}
-
-.operators{
+  }
+  
+  .operators {
     font-weight: bold;
     border-radius: 5px;
-    font-size:22px;
+    font-size: 22px;
     float: center;
-    height: 70px;;
+    height: 70px;
     width: 70px;
-    margin:8px;
+    margin: 8px;
     box-shadow: 5px 5px 2.5px rgb(35, 0, 92);
-    background-color: #F8B500;
-}
-.form{
-    border-radius:5px;
-    font-size:20px;
-    margin:5px 5px 15px 0px;
+    background-color: #f8b500;
+  }
+  .form {
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 5px 5px 15px 0px;
     padding-left: 10px;
-    border:.5px solid rgb(88, 98, 114);
-    color:white;
-    box-shadow:5px 5px 5px rgb(29, 1, 73) inset;
-    background-color:rgb(59, 44, 44);
-    height:100px;
-    width:345px; 
-   
-}
-
-
-.equal{
+    border: 0.5px solid rgb(88, 98, 114);
+    color: white;
+    box-shadow: 5px 5px 5px rgb(29, 1, 73) inset;
+    background-color: rgb(59, 44, 44);
+    height: 100px;
+    width: 345px;
+  }
+  
+  .equal {
     font-weight: bold;
     border-radius: 5px;
-    font-size:20px;
+    font-size: 20px;
     float: center;
-    height: 70px;;
+    height: 70px;
     width: 70px;
-    margin:8px;
+    margin: 8px;
     box-shadow: 5px 5px 2.5px rgb(35, 0, 92);
     background-color: rgb(0, 195, 255);
-
-}
-
-
-/* Button to change calculators theme and stuff */
-.themeChanger{
-    left:50%;
+  }
+  
+  /* Button to change calculators theme and stuff */
+  .themeChanger {
+    left: 50%;
     border-radius: 5px;
-    background-color: #FFF4E0;
-    font-size:20px;
+    background-color: #fff4e0;
+    font-size: 20px;
     float: center;
-    height: 70px;;
+    height: 70px;
     width: 100px;
-    margin:8px;
+    margin: 8px;
     box-shadow: 5px 5px 2.5px rgb(35, 0, 92);
-    animation: Tc 5s alternate-reverse infinite; 
-}
-
-
-
-
-@keyframes Tc{
- 0%{
-     width: 100px;
-     color:white;
-     background: #00ADB5;
- }
- 30%{
-    color:rgb(0, 110, 255);
-     background: #F8B500;
-
- }
-
- 50%{
-    color:rgb(0, 255, 0);
-     background: #FC3C3C;
- }
-70%{
-    color:rgb(251, 255, 0);
-    background:rgb(255, 0, 255);
-
-}
-100%{
-    width:75px;
-    color:rgb(0, 4, 255);
-    background: rgb(0, 255, 115);
-}
-}
-
-
-
-
-
-
-
+    animation: Tc 5s alternate-reverse infinite;
+  }
+  
+  @keyframes Tc {
+    0% {
+      width: 100px;
+      color: white;
+      background: #00adb5;
+    }
+    30% {
+      color: rgb(0, 110, 255);
+      background: #f8b500;
+    }
+  
+    50% {
+      color: rgb(0, 255, 0);
+      background: #fc3c3c;
+    }
+    70% {
+      color: rgb(251, 255, 0);
+      background: rgb(255, 0, 255);
+    }
+    100% {
+      width: 75px;
+      color: rgb(0, 4, 255);
+      background: rgb(0, 255, 115);
+    }
+  }
+  
 
 
 

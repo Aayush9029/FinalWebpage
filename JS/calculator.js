@@ -1,19 +1,14 @@
-
-function myNum(num){
+function myNum(num) {
     document.form.textview.value = document.form.textview.value + num;
-
-}
-
-function equal(){
-
+  }
+  
+  function equal() {
     var ans = document.form.textview.value;
-
+  
     document.form.textview.value = eval(ans);
-
-}
-
-function del() {
-    document.form.textview.value = document.form.textview.value * 0 ;
-
-    
-}
+  }
+  
+  function del() {
+    document.form.textview.value = document.form.textview.value * 0;
+  }
+  
