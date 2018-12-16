@@ -59,53 +59,34 @@ li a:hover{
 .ps{
     margin-top: 25px;
     width: 88%;
-  }
-.html{
-
-    width: 87%;
-  }
-  
-.css{
-    width: 67%;
-  }
-  
-.js{
-    width: 50%;
-  }
-  
-.ae{
-    width: 80%;
-  }
-  
-
-  
-.ai{
-    width: 70%;
-  }
-  
-
-.ps{
     animation: mymove 6s linear;
 }
-
 .html{
     animation: mymove 6.5s linear ;
+    width: 87%;
 }
 .ae{
+    width: 80%;
     animation: mymove 8s linear;
 }
 .ai{
-     animation: mymove 9s linear;
+    animation: mymove 9s linear;
+    width: 70%;
 }
 .css{
     animation: mymove 10s linear ;
+    width: 67%;
 }
-
 .js{
     animation: mymove 11s linear ;
+    width: 50%;
+}
+.ml{
+    animation: mymove 12s linear ;
+    width:10%;
 }
 
-  @keyframes mymove{
+@keyframes mymove{
     0%{
       width: 0%;
       background: rgba(255, 0, 0, 0.87);
@@ -121,7 +102,7 @@ li a:hover{
     60%, 100%{
       background:#630660;
     }
-  }
+}
   
   
   
