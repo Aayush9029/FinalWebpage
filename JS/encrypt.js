@@ -1,10 +1,4 @@
 
-// // (C) Aayush Caesear Chipher
-
-
-
-
-
 
 
 function encrypt(){  
