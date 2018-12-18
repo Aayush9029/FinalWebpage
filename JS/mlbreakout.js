@@ -1,4 +1,7 @@
-let x = 0;
+
+alert(" Allow camera to play");
+
+let x = 600 / 2.5;
 let y = 350;
 let speedx = 7;
 let speedy = -7;
@@ -7,6 +10,9 @@ let barY = 400 - 30;
 let eyelX = 600 / 2.5; //bars xposition aka eye tracking database
 let video;
 let poseNet;
+let barw = 100;
+let barh = 20;
+let balld = 25; //ball's diameter
 
 function setup() {
   createCanvas(600, 400);
@@ -18,43 +24,43 @@ function setup() {
   //loading done datas added to stuffs LOL
 }
 
-alert(" Allow camera to play");
 function draw() {
- 
   background(0); //background
- canvas.getContext('2d').fillText( points, 25, 30); //points counter
+  canvas.getContext('2d').fillText( points, 25, 30); //points counter
   //ball
   stroke(225);
   strokeWeight(4);
   noFill();
+  ellipse(x, y, balld, balld);
 
-  ellipse(x, y, 25, 25);
 
-  if (x > width - 20 || x < 0) {
+  if (x > width - 15 || x < 15) {
     //side bounce
     speedx = -speedx;
   }
-  x += speedx;
+
   //sakiyo
 
-  if (y < 20) {
+  if (y < 15) {
     //upward bounce
     speedy = -speedy;
   } else if (y > height - 50) {
-    if (x > eyelX  && x < eyelX + 100) {
+    if (x > eyelX  && x < eyelX + barw) {
       points++;
       speedy = -speedy;
     } else {
       //alerts if it goes downwards
       alert("Game over, " + "You got " + points + " points");
-      document.location.reload();
+      location.reload()
     }
   }
 
   //ball ends PHEW !!!
 
   //bar starts
-  rect(eyelX, barY, 100, 20);
+  rect(eyelX, barY, barw, barh);
+
+  x += speedx;
   y += speedy;
 }
 
