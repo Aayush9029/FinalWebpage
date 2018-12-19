@@ -1,0 +1,23 @@
+* {
+    padding: 0px;
+    margin: 0px;
+  }
+  canvas {
+    border:black solid 2px;
+    display: block;
+    margin-top: 50px;
+  }
+  br {
+    margin: 5px;
+  }
+  .top {
+    margin-top: 10px;
+  }
+  
+
+
+  
+ canvas createSlider {
+    width: 100%;
+    border: black 2px solid;
+  }
