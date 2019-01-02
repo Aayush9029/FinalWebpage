@@ -27,7 +27,7 @@ $(document).ready(function () {
 
       $.getJSON(URL, function(data) {
           updateDOM(data);
-          console.log(data);
+        //   console.log(data);
       });
   }
 

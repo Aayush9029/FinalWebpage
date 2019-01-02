@@ -14,9 +14,12 @@ function draw(){
   let hr = hour();
   let min = minute();
   let sec = second();
+  let mil = millis();
 
   noFill();
   strokeWeight(6);
+
+
   stroke(242, 60, 80);
   let secondAngle = map(sec, 0,60, 0, 360);
   arc(0, 0, width-250, width-250, 0, secondAngle);
@@ -30,7 +33,7 @@ function draw(){
   let hourAngle = map(hr % 12, 0, 12, 0, 360);
   arc(0, 0, width-290, width-290, 0, hourAngle);
 
-  
+  // console.log(mil);
   push();
   stroke(242, 60, 80);
   rotate(secondAngle);
