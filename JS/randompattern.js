@@ -28,7 +28,7 @@ function draw(){
 
 noStroke();
  fill(r,g,b);
- textSize(60);
+ textSize(32);
  text(name, x, y);
  if (name == "" ){
  ellipse(x, y, birdsize,birdsize)
