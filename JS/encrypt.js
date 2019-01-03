@@ -1,6 +1,4 @@
 
-
-
 function encrypt(){  
    
     var str = document.getElementById("raw").value;
