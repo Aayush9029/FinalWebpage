@@ -4,10 +4,11 @@ let rectsize = 35;
 let speed = 0;
 let coinspeed = 4;
 let xarrow = 100;
-let yarrow = 500;
+let yarrow = 100;
 let circler = 35;
 let yline = -5500;
 let r = 242;
+let points = 0;
 
 function setup(){
 createCanvas(500,800);
@@ -18,7 +19,8 @@ function draw(){
     background(17,47,65); //sky ?
     noStroke();
 
-
+    textSize(16)
+    text(points,10, 10, 200, 200)
 
     fill(79,185,159);//this is the line white in between
     for (let i = 0 ; i < 25; i++){
@@ -47,23 +49,31 @@ if(yarrow + circler >= y && y+rectsize >= yarrow){
   if(x > xarrow && x < xarrow  + circler){
         xarrow = random(width- circler);
         yarrow = 0;
-        r = 22;
+        r = 22; 
+        points++;
 
 }else if (x + rectsize > xarrow && x + rectsize < xarrow  + circler){
         xarrow = random(width-circler);
         yarrow = 0;
         r = 22
+        points++;
 
 }else if (x > yarrow+rectsize && x + rectsize > xarrow + rectsize){
         xarrow = random(width-circler);
         yarrow = 0;
         r = 22
+        points++;
 }
 
 }else if ( yarrow > height){
     xarrow = random(width-circler);
     yarrow = 0;
+    alert("Game Over dude you got, " + points + ' Points.');
+    points = 0;
 }
+
+
+//keeps the rect in the box
 if (x > width - rectsize){
     speed = 0;
     x = width - rectsize;
