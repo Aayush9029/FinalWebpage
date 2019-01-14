@@ -16,6 +16,7 @@ createCanvas(500,800);
 
 function draw(){
 
+
     background(17,47,65); //sky ?
     noStroke();
 
@@ -43,6 +44,9 @@ function draw(){
     rect(x,y,rectsize,rectsize);
     x = x+ speed;
 
+    //bottom bar 
+    fill(73,155,255);
+    rect(0,740,700,70);
 
 
 if(yarrow + circler >= y && y+rectsize >= yarrow){
