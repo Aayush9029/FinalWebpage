@@ -118,7 +118,13 @@ text('lvl:3',440, 10, 50, 50);
 
 }else if (points >= 30){
     coinspeed = 8;
-text('lvl:5',440, 10, 50, 50);
+    text('lvl:5',440, 10, 50, 50);
+}else if (points >= 40){
+    coinspeed = 10;
+text('lvl:6',440, 10, 50, 50);
+}else if (points >= 50){
+    coinspeed = 11;
+text('lvl:7',440, 10, 50, 50);
 
 }
 }
