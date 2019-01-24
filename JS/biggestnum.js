@@ -6,7 +6,9 @@ var num2 = Number(prompt("num 2 "));
 var num3 = Number(prompt("num3?"));
 
 
-const courses = [num1, num2, num3];
+let course = [num1, num2, num3];
+
+let courses = course.sort();
 
 document.write("Original values "+ courses );
          document.write('<br />'); 
@@ -16,6 +18,7 @@ document.write("Average of the numbers = " + sum/courses.length);
          document.write('<br />');  
 document.write("In asscending orders ");
          document.write('<br />'); 
+         
 document.write(courses[0] +" "+  courses[1] +" "+ courses[2]);
         document.write('<br />');
 

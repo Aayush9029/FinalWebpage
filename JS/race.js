@@ -41,7 +41,7 @@ function draw(){
     yline += coinspeed;
     for (let i = 0; i <2; i++ ){
 
-    fill(242,177,52);//is the circle points
+    fill(200,79,41);//is the circle points
     rect(xarrow,yarrow,circler,circler+10);
     yarrow= yarrow + coinspeed;
     // console.log(i);
