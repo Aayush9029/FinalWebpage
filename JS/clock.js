@@ -3,7 +3,7 @@
 //above is my color pallet
 
 function setup() {
- createCanvas(600, 600);
+ createCanvas(windowWidth,windowHeight);
  angleMode(DEGREES);
 }
 
@@ -14,42 +14,42 @@ function draw(){
   let hr = hour();
   let min = minute();
   let sec = second();
-  let mil = millis();
+
 
   noFill();
-  strokeWeight(6);
+  strokeWeight(width-width/1.006);
 
 
   stroke(242, 60, 80);
   let secondAngle = map(sec, 0,60, 0, 360);
-  arc(0, 0, width-250, width-250, 0, secondAngle);
+  arc(0, 0, width-width/1.5, width-width/1.5, 0, secondAngle);
 
 
   stroke(74, 217, 217);
   let minuteAngle = map(min, 0,60, 0, 360);
-  arc(0, 0,width-270, width-270, 0, minuteAngle)
+  arc(0, 0,width-width/1.6, width-width/1.6, 0, minuteAngle)
 
   stroke(2, 88, 155);
   let hourAngle = map(hr % 12, 0, 12, 0, 360);
-  arc(0, 0, width-290, width-290, 0, hourAngle);
+  arc(0, 0, width-width/1.7, width-width/1.7, 0, hourAngle);
 
-  // console.log(mil);
+
   push();
   stroke(242, 60, 80);
   rotate(secondAngle);
-  line(0,0,100,0)
+  line(0,0,width/7.5,0)
   pop();
   
   push();
   stroke(74, 217, 217);
   rotate(minuteAngle);
-  line(0,0,75,0)
+  line(0,0,width/10.5,0)
   pop();
   
   push();
   stroke(2, 88, 155);
   rotate(hourAngle);
-  line(0,0,50,0)
+  line(0,0,width/11,0)
   pop();
 
   stroke(255);
