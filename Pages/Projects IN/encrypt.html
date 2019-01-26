@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="../../CSS/encrypt.css" /> -->
     <script src="../../JS/encrypt.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
+
 </head>
 <body>
     <style>*{
@@ -15,24 +16,28 @@
             margin: 0px;
         
         }
-        
+        body{
+            background:#383D45;
+            font-family: 'Ubuntu', sans-serif;
+            color:#FFF4E0;
+        }
         
         .alert_text{
-            font-family: 'Open Sans Condensed', sans-serif;
             text-align: center;;
             font-size: 25px;
             margin:20px;
         }
         
         .typebox{
-            background: rgb(0, 0, 0);
+            background: #FFF4E0;
             padding: 25px;
             font-size: 22px;
-            color:rgb(69, 250, 69);
+            color:#F8B500;
+            border-radius:5px;
         }
         
         form{
-            margin:50px;
+            margin:90px 0px;
         }
         
         .button{
@@ -41,9 +46,27 @@
             font-size:25px;
             width:285px;
             padding: 15px;
-        }</style>
+            background: #00ADB5;
+            color:aliceblue;
+            border-radius:5px;
+        }
+        .button:hover{
+            background: #FC3C3C;
+        }
+        .button:active{
+            background: #FC3C3C;
+        }
+        .d{
+            background: #FC3C3C;
+          }
+        .d:hover{
+            background: #00ADB5;
+          }
+
+
+</style>
     <div class="alert_text">
-        Press encrypt couple of times and remember the number of times you press for maximum security, and remeber to press decrypt accordingly.
+        Press <font color ="00ADB5">encrypt</font> couple of times<br> and remember the number of times<br> you press for maximum security,<br> and remeber to press <font color ="FC3C3C">decrypt</font>  accordingly.
      </div> 
 
      <center>
@@ -53,7 +76,7 @@
     </form>  
 
     <input class ="typebox" type="text" id="dec" name="dec"/><br/>  
-    <input class="button" type="button" value="Decrypt" onclick="decrypt()"/> 
+    <input class="button d" type="button" value="Decrypt" onclick="decrypt()"/> 
 
 
 
