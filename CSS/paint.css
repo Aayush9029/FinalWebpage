@@ -5,19 +5,41 @@
   canvas {
     border:black solid 2px;
     display: block;
-    margin-top: 50px;
-  }
-  br {
-    margin: 5px;
-  }
-  .top {
-    margin: 10px;
+    margin: 10px auto;
+    cursor: pointer;
   }
   
-
-
-  
- canvas createSlider {
-    width: 100%;
-    border: black 2px solid;
+  body{
+    background:#000;
+    font-family: 'Ubuntu', sans-serif;
   }
+  div {
+    width: 230px;
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+  
+.stroke{
+  color:white;
+}
+
+.red{
+  background-color: rgba(255, 0, 0, 0.2);
+  padding:10px;
+  border:2px solid red;
+  color:red;
+}
+
+.green{
+  background-color: rgba(43, 255, 0, 0.2);
+  padding:10px;
+  border:2px solid lightgreen;
+  color:lightgreen;
+}
+
+.blue{
+  background-color: rgba(0, 119, 255, 0.2);
+  padding:10px;
+  border:2px solid lightblue;
+  color:skyblue;
+}

@@ -8,19 +8,16 @@ let drawing = [];
 
 function setup(){
     createCanvas(800,500);
-    background(200);
-    
+    background(255);
     redcolor = createSlider(0, 255, 100);
-    
-    bluecolor = createSlider(0, 255, 100);
     greencolor = createSlider(0, 255, 100)   ;
+    bluecolor = createSlider(0, 255, 100);
     strokevalue = createSlider(1, 20, 2, 1);
-    size = createSlider(10, 200, 25, 5);
-
-    strokevalue.position(50, 15);
-    redcolor.position(50, 45);
-    greencolor.position(50, 75);
-    bluecolor.position(50, 100);
+    size = createSlider(10, 200, 25, 7);
+    strokevalue.position(90, 15);
+    redcolor.position(90, 57);
+    greencolor.position(90, 117);
+    bluecolor.position(90, 172);
     
 
 }
@@ -39,11 +36,11 @@ function draw(){
 
     fill(redcolor.value(),greencolor.value(),bluecolor.value());  
     noStroke();
-    rect(10, 20, 20, 20);
+    rect(5, 5, 10, 10);
 }
 
 function mouseDragged(){
     strokeWeight(strokevalue.value());
-    stroke(redcolor.value(),bluecolor.value(),greencolor.value());
+    stroke(redcolor.value(),greencolor.value(),bluecolor.value());
     line(mouseX, mouseY, pmouseX, pmouseY);
 }
