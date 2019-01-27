@@ -3,15 +3,16 @@ let len;
 let angle;
 
 function setup() {
-    createCanvas(600,600);
-    slider =  createSlider(0,TWO_PI, PI,0.01);
+    createCanvas(900,700);
+    slider =  createSlider(0,TWO_PI, 5.9,0.01);
 }
 
 function draw(){
-    background(50)
-    stroke(255);
+    background(0);
+    strokeWeight(3);
+    stroke(255,random(2,90),146);
     translate(width/2,height)
-    branch(100);
+    branch(200);
     angle = slider.value();
 }
 
