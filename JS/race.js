@@ -10,15 +10,17 @@ let yline = -5500;
 let r = 242;
 let points = 0;
 var img;
-
+function preload() {
+    img = loadImage("../../Images/gamebg.png");
+}
 function setup(){
 createCanvas(500,800);
-img = loadImage("../../Images/gamebg.png");
+
 
 
 }
 
-function draw(){
+function draw(){  
 
     image(img, -45, 0);
   // Displays the image at point (0, height/2) at half size
