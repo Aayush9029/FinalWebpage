@@ -51,8 +51,6 @@ function draw(){
     fill(101,183,243) //the rectangle (red?)
     rect(x,y,rectsize,rectsize);
 
-    fill(146,212,244) //the rectangle (red?)
-    rect(x+2,y+2,18,10);
     x = x+ speed;
 
     //water top
@@ -129,6 +127,15 @@ text('lvl:6',440, 10, 50, 50);
 text('lvl:7',440, 10, 50, 50);
 
 }
+
+fill(0,10,220)
+ellipse(mouseX, mouseY, 20,20)
+fill(222,0,0)
+ellipse(mouseX, mouseY, 10,10)
+
+
+
+
 }
 
 
