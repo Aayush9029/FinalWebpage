@@ -1,0 +1,100 @@
+*{
+    padding: 0px;
+    margin:0px;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background:url('../img/background_earth.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* will add image for parralax effect later */
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+.hello{
+    margin:0px;
+    padding:0px;
+    font-size: 5vw;
+    position: absolute;
+    top:50%;
+    left:16%;
+}
+
+.greypart{
+    height: 100vh;
+    background:#1F2226;
+}
+
+.line {
+    position: relative;
+    top: 50%;
+    width: 16em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(0, 0, 0, 0);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;transform: translateY(-50%);
+    animation-name: cursor;
+    opacity: 0.9;
+}
+
+/*Animation for cursor and text*/
+
+.anim-typewriter {
+    animation: typewriter 4s steps(40) 1s 1 normal both,
+    blinkTextCursor 500ms steps(40) 18 normal;
+}
+
+.anim-typewriter:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+@keyframes typewriter {
+    0% {
+          width: 0;
+    }
+    40% {
+          width: 45%;
+    }
+    65%{
+        width: 45%;
+    }
+    100%{
+        width:100%;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+          border-right-color: #FFF4E0;
+    }
+    to {
+          border-right-color: #1F2226;
+    }
+}
+
+.intropart{
+    text-align:center; 
+    font-size: 32px;
+    margin-top: 30px;
+    padding:20%;
+    height: 45vh;
+    background:#1F2226;
+}
+
+
+.contact{
+    margin:44px;
+    border:2px solid skyblue;
+
+}
