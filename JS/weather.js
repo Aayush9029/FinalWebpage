@@ -60,7 +60,7 @@ $(document).ready(function () {
       $('#wind').html('Wind: '+ wind + " km/h");
       $('#humid').html('Humidity: ' + humid);
 
-      $('#copyright').html('  (c) aayushpokharel');
+      $('#copyright').html('  (c) aayushpokharel, (p.s) for people who wanna know more console log :)');
 
   }
 });

@@ -11,7 +11,7 @@ let r = 242;
 let points = 0;
 var img;
 function preload() {
-    // img = loadImage("../../Images/gamebg.png");
+    img = loadImage("../../img/gamebg.png");
 }
 function setup(){
 createCanvas(500,800);
@@ -21,11 +21,10 @@ createCanvas(500,800);
 }
 
 function draw(){  
-    background(51,200,22);
-    // image(img, -45, 0);
+    image(img, -45, 0);
   // Displays the image at point (0, height/2) at half size
-//   image(img, 0, height/2, img.width/2, img.height/2);
-    // background(146,212,244); //sky ?
+  image(img, 0, height/2, img.width/2, img.height/2);
+    background(146,212,244); //sky ?
     noStroke();
     fill(51);
     textSize(22)
