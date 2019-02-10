@@ -1,6 +1,6 @@
 # Aayush
 
-aayush9029.github.io/Aayush/
-
 writecode.me
+
+instagram @aayush_9029
 
