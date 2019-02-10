@@ -1,0 +1,71 @@
+*{
+    padding: 0px;
+    margin:0px;
+}
+
+body{
+    background:#383D45;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+  
+.pro{
+    text-align: center; 
+    margin-right:3%;
+    margin-top: 5% ;
+}
+
+
+
+a{
+    border: 2px solid rgba(255, 255, 255, 0.295);
+    background: #00ADB5;
+    color:#FFF4E0;
+    padding:25px;
+    text-decoration: none;
+    font-size: 25px;
+    margin:25px 30px;
+    display: block;
+    width: 247px;
+    float:right;
+    border-radius:2px;
+}
+
+
+a:hover{
+    border: 2px solid #FFF4E0;
+    background: rgb(3, 202, 212);
+    color:rgb(255, 249, 238);
+    transform: scale(1.07);
+    transition: 0.3s;
+}
+
+
+.home{
+    animation: home 1.5s infinite alternate-reverse;
+}
+.home:hover{
+        background: rgb(255, 209, 82);
+}
+
+.home:active{
+        background: #FC3C3C;
+}
+
+a:active{
+    border: 2px solid #FFF4E0;
+    background: #F8B500;
+    color:rgb(255, 249, 238);
+    transform: scale(1.07);
+    transition: 0.3s;
+}
+
+@keyframes home{
+    from{
+        opacity: .7;
+    }
+    to{
+        opacity: 1;
+    }
+}
