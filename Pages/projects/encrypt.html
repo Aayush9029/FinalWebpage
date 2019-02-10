@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CRYPTO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="../../CSS/encrypt.css" /> -->
+    <script src="../../js/encrypt.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
+
+</head>
+<body>
+    <style>*{
+            padding: 0px;
+            margin: 0px;
+        
+        }
+        body{
+            background:#383D45;
+            font-family: 'Ubuntu', sans-serif;
+            color:#FFF4E0;
+        }
+        
+        .alert_text{
+            text-align: center;;
+            font-size: 25px;
+            margin:20px;
+        }
+        
+        .typebox{
+            background: #FFF4E0;
+            padding: 25px;
+            font-size: 22px;
+            color:#F8B500;
+            border-radius:5px;
+        }
+        
+        form{
+            margin:90px 0px;
+        }
+        
+        .button{
+            cursor: pointer;
+            margin-top: 5px;
+            font-size:25px;
+            width:285px;
+            padding: 15px;
+            background: #00ADB5;
+            color:aliceblue;
+            border-radius:5px;
+        }
+        .button:hover{
+            background: #FC3C3C;
+        }
+        .button:active{
+            background: #FC3C3C;
+        }
+        .d{
+            background: #FC3C3C;
+          }
+        .d:hover{
+            background: #00ADB5;
+          }
+
+
+</style>
+    <div class="alert_text">
+        Press <font color ="00ADB5">encrypt</font> couple of times<br> and remember the number of times<br> you press for maximum security,<br> and remeber to press <font color ="FC3C3C">decrypt</font>  accordingly.
+     </div> 
+
+     <center>
+<form>  
+    <input class = "typebox"type="text" id="raw" name="raw"/><br/>  
+    <input class="button" type="button" value="Encrypt" onclick="encrypt()"/>  
+    </form>  
+
+    <input class ="typebox" type="text" id="dec" name="dec"/><br/>  
+    <input class="button d" type="button" value="Decrypt" onclick="decrypt()"/> 
+
+
+
+</center>
+</body>
+</html>

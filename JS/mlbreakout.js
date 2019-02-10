@@ -1,68 +1,73 @@
-
-alert(" Allow camera to play");
-
-let x = 600 / 2.5;
-let y = 350;
-let speedx = 7;
+// alert(" Allow camera to play");
+let x = 600 / 2;
+let y = 500;
+let speedx = 6;
 let speedy = -7;
 let points = 0;
-let barY = 400 - 30;
-let eyelX = 600 / 2.5; //bars xposition aka eye tracking database
+let barY;
+let bar2Y;
+let eyelX = 600 / 2.7; //bars xposition aka eye tracking database
 let video;
 let poseNet;
 let barw = 100;
-let barh = 20;
+let barh = 15;
 let balld = 25; //ball's diameter
+let ratio = 2.65;//for points position
+var val = 'black';
 
 function setup() {
-  createCanvas(600, 400);
+  createCanvas(500, 650);
   video = createCapture(VIDEO);
   video.hide();
   //poseNet form ML5 machine learning database loading..
   poseNet = ml5.poseNet(video, modelReady);
   poseNet.on("pose", gotPoses);
   //loading done datas added to stuffs LOL
+  frameRate(30);
+  barY  = height-barh;
+  bar2Y = barh;
 }
 
 function draw() {
-  background(0); //background
-  canvas.getContext('2d').fillText( points, 25, 30); //points counter
+  background(val); //background
+    textSize(220);
+    fill(255, 51);
+  canvas.getContext('2d').fillText( points, width/ratio, height/1.5); //points counter
   //ball
   stroke(225);
   strokeWeight(4);
   noFill();
+  stroke(255);
   ellipse(x, y, balld, balld);
 
-
-  if (x > width - 15 || x < 15) {
-    //side bounce
+  if(x + speedx >= width-balld/2 || x + speedx <= balld/2) {
     speedx = -speedx;
-  }
+}
 
-  //sakiyo
-
-  if (y < 15) {
-    //upward bounce
-    speedy = -speedy;
-  } else if (y > height - 50) {
-    if (x > eyelX  && x < eyelX + barw) {
-      points++;
-      speedy = -speedy;
-    } else {
-      //alerts if it goes downwards
-      alert("Game over, " + "You got " + points + " points");
-      location.reload()
+else if(y + speedy >= height-balld/2 || y + speedy <= balld/2 ) {
+    if(x >= eyelX && x < eyelX + barw) {
+        speedy = -speedy;
+        points++;
+        val = 'black';
     }
-  }
-
-  //ball ends PHEW !!!
-
-  //bar starts
+    else {
+        location.reload()
+        clearInterval(interval); // Needed for Chrome to end game
+    }
+}
+    //bar starts
   rect(eyelX, barY, barw, barh);
+  rect(eyelX, bar2Y-barh, barw, barh);
 
   x += speedx;
   y += speedy;
+
+
+  if (points >= 10){
+    ratio = 4.5;
+  }
 }
+
 
 function modelReady() {
   //if modelready or poseNet is fully loaded..
@@ -78,4 +83,10 @@ function gotPoses(poses) {
     //lerping to make jitter go away >>> optional but better to add few line to make it look better
     eyelX = lerp(eyelX, eX, 0.5);
   }
+  
+
 }
+
+
+
+var interval = setInterval(draw, 20);
