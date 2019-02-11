@@ -13,7 +13,7 @@ function sliderSpeed(val) {
   speed = val;
   console.log(val);
 }
-
+  
 function setup() {
   createCanvas(windowWidth, 600);
 }
