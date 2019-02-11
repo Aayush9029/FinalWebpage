@@ -11,7 +11,7 @@ let r = 242;
 let points = 0;
 var img;
 function preload() {
-    img = loadImage("../img/gamebg.png");
+    img = loadImage("../../img/gamebg.png");
 }
 function setup(){
 createCanvas(500,800);
