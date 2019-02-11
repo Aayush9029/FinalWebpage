@@ -3,14 +3,16 @@
     margin: 0px;
   }
   canvas {
-    border:black solid 2px;
+    /* border:black solid 2px; */
     display: block;
     margin: 10px auto;
     cursor: pointer;
+    box-shadow: 15px 15px 25px rgb(24, 24, 24);
   }
   
   body{
-    background:#000;
+    overflow: hidden;
+    background:#383D45;
     font-family: 'Ubuntu', sans-serif;
   }
   div {
