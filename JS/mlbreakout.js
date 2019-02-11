@@ -13,15 +13,18 @@ let barw = 100;
 let barh = 15;
 let balld = 25; //ball's diameter
 let ratio = 2.65;//for points position
-var val = 'black';
 
-function setup() {
-  createCanvas(500, 650);
+function preload(){
   video = createCapture(VIDEO);
   video.hide();
   //poseNet form ML5 machine learning database loading..
   poseNet = ml5.poseNet(video, modelReady);
   poseNet.on("pose", gotPoses);
+}
+function setup() {
+  createCanvas(500, 650);
+  
+  
   //loading done datas added to stuffs LOL
   frameRate(30);
   barY  = height-barh;
@@ -29,7 +32,8 @@ function setup() {
 }
 
 function draw() {
-  background(val); //background
+   
+  background(0);
     textSize(220);
     fill(255, 51);
   canvas.getContext('2d').fillText( points, width/ratio, height/1.5); //points counter
