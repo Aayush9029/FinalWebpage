@@ -5,6 +5,7 @@ let angle;
 function setup() {
     createCanvas(900,700);
     slider =  createSlider(0,TWO_PI, 5.9,0.01);
+    slider.position(width/2,height+45);
 }
 
 function draw(){
@@ -21,7 +22,7 @@ function branch(len){
 
     line(0, 0,0, -len);
     translate(0, -len);
-    if(len > 4){
+    if(len > 5){
     push();
     rotate(angle);
     branch(len * 0.67);
