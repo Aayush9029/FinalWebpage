@@ -20,22 +20,20 @@ function preload(){
   //poseNet form ML5 machine learning database loading..
   poseNet = ml5.poseNet(video, modelReady);
   poseNet.on("pose", gotPoses);
+  //loading done datas added to stuffs LOL
 }
+
 function setup() {
   createCanvas(500, 650);
-  
-  
-  //loading done datas added to stuffs LOL
   frameRate(30);
   barY  = height-barh;
   bar2Y = barh;
 }
 
 function draw() {
-   
   background(0);
-    textSize(220);
-    fill(255, 51);
+  textSize(220);
+  fill(255, 51);
   canvas.getContext('2d').fillText( points, width/ratio, height/1.5); //points counter
   //ball
   stroke(225);
