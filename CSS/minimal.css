@@ -1,0 +1,15 @@
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.body{
+    text-align: justify;
+    width: 60%;
+    margin: 10% auto;
+}
+
+h5{
+    margin: 0px;
+    opacity:0.8;
+}
