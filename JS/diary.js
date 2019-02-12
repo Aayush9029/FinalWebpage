@@ -7,7 +7,7 @@ $(document).ready(function () {
             statusElm.empty()
     
 
-        if (email == '9029'){
+        if (email == '@9029'){
             statusElm.append("Valid Code<br>")
             
         }else{  
