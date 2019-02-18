@@ -1,58 +1,108 @@
-*{
-    font-size: 2.3vw;
+* {
     padding: 0px;
-    margin:0px;
-    font-family: 'Ubuntu', sans-serif;
-}
-body{
-    background: #383D45;
-}
-
-
-h1{ 
-    color:white;
-    margin: 10px;
-}
-label,input,textarea{
-    font-size: 2.5vw;
-    display: block;
-    margin: 25px;
-    color:#FFF4E0;
-
-}
-
-.container{
-    margin-top:5vh;
-   
-}
-
-.email,.subject,.message{
-    margin: 5px;
-    color: #F8B500;
-    background: rgb(1, 153, 161);
-    border-radius: 5px;
-    width:40vw;
-    padding:1vh;
-}
-.submit{
-    background-color: #F8B500;
-    border-radius: 10px;
-    color:white;
-    width:11.5vw;
-    padding: 10px;
-}
-.submit:hover{
+    margin: 0px;
+    font-family: "Ubuntu", sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(
+      to bottom right,
+      rgb(226, 4, 133),
+      rgb(61, 0, 20)
+    );
+    overflow: hidden;
+  }
+  
+  .box1 {
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    background-image: linear-gradient(to bottom right, #2e3650, #202430);
+    margin: 120px auto;
+    padding-top: 90px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 55px;
+    margin-bottom: 200px;
+  }
+  
+  .header {
+    position: relative;
+    color: rgba(255, 255, 255, 0.63);
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .info:hover {
+    background-image: linear-gradient(to bottom right, #262d42, #14171f);
+  }
+  
+  .info:focus {
+    background-image: linear-gradient(to bottom right, #323e64, #14171f);
+  }
+  .info {
+    position: relative;
+    left:-10px;
+    width:288px;
+    font-size: 15px;
+    background-image: linear-gradient(to bottom right, #262d42, #202430);
+    color: rgb(0, 213, 224);
+    padding: 15px;
+    border: 1px solid rgba(70, 70, 99, 0);
+    text-shadow: 4px 4px 10px rgba(0, 0, 0);
+  }
+  
+  
+  .submit {
     cursor: pointer;
-    transition: .3s;
-    background:#FC3C3C;
-}
-
-.footer,.footer font{
-    font-size:18px;
-    margin-top:250px;
-}
-
-.status{
-    color:red;
-    margin:5px;
-}
+    position: relative;
+    background-color: #212531;
+    color: rgb(209, 106, 204);
+    padding-top: 8px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 8px;
+    border-radius: 50px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border: 2px solid rgba(209, 106, 204, 0.5);
+  }
+  
+  .submit:hover {
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    color: white;
+    background: rgba(235, 37, 225, 0.75);
+    border: 2px solid rgba(235, 37, 225, 0.75);
+    transition: 0.25s;
+  }
+  
+  .submit:active {
+    border: 2px solid rgba(0, 0, 0, 0.75);
+    border: 2px solid rgb(150, 0, 92);
+    background: rgb(168, 0, 104);
+  }
+  
+  .forgot {
+    position: relative;
+    left:55px;
+    font-size: 10px;
+    margin-top: 15px;
+    color: rgba(75, 74, 104, 1);
+  }
+  
+  .forgot:hover {
+    margin-top: 15px;
+    color: rgba(95, 94, 124, 1);
+    transition: 0.25s;
+  }
+  
+  
+  .about {
+    text-align:justify;
+    position: relative;
+    /* left:120px; */
+    font-size: 10px;
+    margin-top: 35px;
+    text-decoration: none;
+    color: rgba(95, 94, 124, 1);
+  }
+  
