@@ -5,10 +5,11 @@
   }
   
   body {
+    transform:scale(1.1);
     background: linear-gradient(
       to bottom right,
       rgb(226, 4, 133),
-      rgb(61, 0, 20)
+      #00ADB5
     );
     overflow: hidden;
   }
@@ -45,10 +46,10 @@
     width:288px;
     font-size: 15px;
     background-image: linear-gradient(to bottom right, #262d42, #202430);
-    color: rgb(0, 213, 224);
+    color: #00ADB5;
     padding: 15px;
     border: 1px solid rgba(70, 70, 99, 0);
-    text-shadow: 4px 4px 10px rgba(0, 0, 0);
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
   }
   
   
@@ -68,6 +69,7 @@
   }
   
   .submit:hover {
+    transform:scale(1.05);
     border: 2px solid rgba(255, 255, 255, 0.75);
     color: white;
     background: rgba(235, 37, 225, 0.75);
@@ -76,6 +78,7 @@
   }
   
   .submit:active {
+    transform:scale(0.95);
     border: 2px solid rgba(0, 0, 0, 0.75);
     border: 2px solid rgb(150, 0, 92);
     background: rgb(168, 0, 104);

@@ -4,7 +4,8 @@
 }
 
 body{
-    background:#383D45;
+    
+    background:rgb(41, 52, 68);
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -20,7 +21,10 @@ body{
 
 a{
     border: 2px solid rgba(255, 255, 255, 0.295);
-    background: #00ADB5;
+    background: linear-gradient(
+      to bottom right,
+        rgb(1, 186, 196),rgba(2, 169, 199, 0.37)
+    );
     color:#FFF4E0;
     padding:25px;
     text-decoration: none;
@@ -35,7 +39,10 @@ a{
 
 a:hover{
     border: 2px solid #FFF4E0;
-    background: rgb(3, 202, 212);
+    background: linear-gradient(
+      to bottom right,
+        rgb(0, 241, 253),rgba(4, 193, 226, 0.37)
+    );
     color:rgb(255, 249, 238);
     transform: scale(1.07);
     transition: 0.3s;
@@ -46,20 +53,31 @@ a:hover{
     animation: home 1.5s infinite alternate-reverse;
 }
 .home:hover{
-        background: rgb(255, 209, 82);
+    background: linear-gradient(
+        to bottom right,
+        rgb(255, 206, 73),rgb(117, 86, 0)
+      );
 }
 
 .home:active{
-        background: #FC3C3C;
+    background: linear-gradient(
+        to bottom right,
+        rgb(253, 78, 78),rgb(114, 0, 0)
+    )
 }
 
 a:active{
     border: 2px solid #FFF4E0;
-    background: #F8B500;
+    background: linear-gradient(
+        to bottom right,
+        rgb(255, 206, 73),rgb(117, 86, 0)
+      );
     color:rgb(255, 249, 238);
     transform: scale(1.07);
     transition: 0.3s;
 }
+
+
 
 @keyframes home{
     from{
