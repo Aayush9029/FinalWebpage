@@ -23,7 +23,7 @@ function setup() {
     frameRate(30);
      
     for (let i = 0 ; i < 5; i++){
-        horses[i] = new Sprite(animation,0, i * height/5 ,random(0.1,1));
+        horses[i] = new Sprite(animation,0, i * height/5 ,random(0.4,1));
 
     }
 }
