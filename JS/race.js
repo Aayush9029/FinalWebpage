@@ -17,7 +17,8 @@ y2 = random(500)
 
 function draw(){  
     background(51);
-    textSize(25);
+    fill(222);
+		textSize(24);
     text(points, 10, 30)
     rect(x,y,rWidth,rHeight);
     rect(x2,y2,rWidth,rHeight);
@@ -50,11 +51,10 @@ function draw(){
     y += yspeed;
     y2 += yspeed;
     y3 += yspeed;
-
 }
 
 function mousePressed(){
-    
+
     if(mouseX > x && mouseX < x + rWidth){
             if(mouseY > y && mouseY < y + rHeight){
                 points++;
