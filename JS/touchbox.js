@@ -8,6 +8,9 @@ let rHeight  = 75;
 let rWidth   = 75;
 let yspeed   = 5;
 let points   = 0;
+let r = 0;
+let g = 255;
+let b = 255;
 
 
 function setup(){
@@ -20,8 +23,11 @@ function draw(){
     fill(222);
 		textSize(24);
     text(points, 10, 30)
+    fill(r,g,b);
     rect(x,y,rWidth,rHeight);
+    fill(r,g,b);
     rect(x2,y2,rWidth,rHeight);
+    fill(r,g,b);
     rect(x3,y3,rWidth,rHeight);
     
     
@@ -37,6 +43,7 @@ function draw(){
         x2 = random(width-rWidth)
         points = 0;
         yspeed = 5;
+
     }
     
     if(y3+rHeight > height ){
@@ -61,6 +68,8 @@ function mousePressed(){
                 y = -rHeight-10;
                 x = random(width-rWidth)
                 yspeed+= 0.25;
+                pickColor();
+
             }
         }
         
@@ -70,6 +79,7 @@ function mousePressed(){
             y2 = -rHeight-10;
             x2 = random(width-rWidth)
             yspeed+= 0.2;
+            pickColor();
         }
     }
     
@@ -79,6 +89,14 @@ function mousePressed(){
             y3 = -rHeight-10;
             x3 = random(width-rWidth)
             yspeed+= 0.05;
+            pickColor();
         }
     }
+}
+
+
+function pickColor() {
+    r = random(254);
+    g = random(254);
+    b = random(254);
 }
