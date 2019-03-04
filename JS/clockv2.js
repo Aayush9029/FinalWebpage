@@ -8,7 +8,7 @@ function setup() {
 }
 
 function draw(){
-  background(0);
+  background(255);
   translate(width/2,height/2);
   rotate(-90);
   let hr = hour();
@@ -49,7 +49,7 @@ function draw(){
   push();
   stroke(2, 88, 155);
   rotate(hourAngle);
-  line(0,0,width/12.5,0)
+  line(0,0,width/13,0)
   pop();
 
   stroke(255);
