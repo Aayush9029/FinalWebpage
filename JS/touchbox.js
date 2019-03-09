@@ -17,7 +17,9 @@ function setup(){
 createCanvas(windowWidth-20,windowHeight-20);
 y2 = random(500)
 }
-
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+  }
 function draw(){  
     background(51);
     fill(222);

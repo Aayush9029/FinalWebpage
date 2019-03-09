@@ -20,7 +20,9 @@ poseNet = ml5.poseNet(video, modelReady);
 poseNet.on("pose", gotPoses);
 }
 
-
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+  }
 function modelReady() {
     //if modelready or poseNet is fully loaded..
     console.log("model ready");

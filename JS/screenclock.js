@@ -6,7 +6,9 @@
 function setup() {
     createCanvas(windowWidth,windowHeight);
 }
-   
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+  }
 function draw(){
     background(56,61,69);
      let hr = hour();

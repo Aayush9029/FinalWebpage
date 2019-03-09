@@ -59,8 +59,8 @@ finish(){
 
 
 function colorPicker(){
-    r = random(255);
-    g = random(255);
-    b = random(255);
+    r = random(100,255);
+    g = random(100,255);
+    b = random(100,255);
 
 }

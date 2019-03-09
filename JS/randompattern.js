@@ -15,7 +15,9 @@ function setup(){
 createCanvas(windowWidth-1,windowHeight-2);
 background(255);
 }
-
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+  }
 
 function colorgen(){
     r = random(255);
