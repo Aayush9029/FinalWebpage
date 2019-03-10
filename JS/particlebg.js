@@ -16,7 +16,7 @@ function setup(){
     g = random(255);
     b = random(255);
     
-    yspeed = random(2,5);
+    yspeed = random(2,4);
     xspeed = random(2,5);
     background(30);
     
