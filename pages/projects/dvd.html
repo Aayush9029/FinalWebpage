@@ -36,6 +36,9 @@ function preload(){
  img = loadImage('../../img/dvd.png');
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
 function setup(){
 createCanvas(windowWidth,windowHeight);
 background(51);

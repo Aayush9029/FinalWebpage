@@ -7,6 +7,9 @@ function setup() {
  angleMode(DEGREES);
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
 function draw(){
   background(0);
   translate(width/2,height/2);
