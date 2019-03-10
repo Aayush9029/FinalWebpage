@@ -20,6 +20,9 @@
             
             
             
+    function windowResized() {
+        resizeCanvas(windowWidth, windowHeight);
+    }
     function draw(){
             
         noStroke();   
@@ -41,7 +44,7 @@
 <body>
     
    
-    <style>*{margin:0px;padding:0px;}canvas{margin:0px; padding:0px;}</style>
+    <style>*{margin:0px;padding:0px;}body{overflow: hidden;}canvas{margin:0px; padding:0px;}</style>
 
 </body>
 
