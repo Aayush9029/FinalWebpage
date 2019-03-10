@@ -76,9 +76,6 @@ a:active{
     transform: scale(1.07);
     transition: 0.3s;
 }
-
-
-
 @keyframes home{
     from{
         opacity: .7;

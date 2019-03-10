@@ -99,3 +99,29 @@ body {
     border:2px solid skyblue;
 
 }
+
+.projects{
+    background: linear-gradient(to bottom right,rgb(136, 100, 0),#F8B500 );
+      color:#1F2226;
+      text-decoration: none; border-radius: 5px; 
+      padding: 2.5px;
+      animation:projects 1s infinite;
+}
+
+.projects:hover{
+    background: linear-gradient(to bottom right,rgb(167, 122, 1),rgb(255, 195, 31) );
+
+}
+
+
+
+
+@keyframes projects{
+    from{
+        opacity: .9;
+    }
+    to{
+        opacity: 1;
+        background: linear-gradient(to bottom right,rgb(202, 149, 1),rgb(255, 195, 31) );
+    }
+}
