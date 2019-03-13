@@ -1,37 +1,87 @@
-//https://color.adobe.com/Copy-of-Copy-of-Billar-color-theme-11701107/edit/?copy=true&base=2&rule=Custom&selected=4&name=Copy%20of%20Copy%20of%20Copy%20of%20Billar&mode=rgb&rgbvalues=0.9490196078431372,0.23529411764705882,0.3137254901960784,1,0.7607843137254902,0.0196078431372549,0.9137254901960784,0.9450980392156862,0.8745098039215686,0.2901960784313726,0.8509803921568627,0.8509803921568627,0.00784313725490196,0.34509803921568627,0.6078431372549019&swatchOrder=0,1,2,3,4
-
-//above is my color pallet
-
 
 function setup() {
-    createCanvas(windowWidth,windowHeight);
+  createCanvas(windowWidth, windowHeight);
+  angleMode(DEGREES);
 }
-function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
-  }
-function draw(){
-    background(56,61,69);
-     let hr = hour();
-     let min = minute();
-     let sec = second();   
-     rectWidth = width;
-     side = (width/2) - rectWidth/2;
+function windowResized(){
+  resizeCanvas(windowWidth, windowHeight);
+}
 
-     fill(0,173,181);
-     text(sec + ' Seconds ', width/2.9, height/50);
-     fill(248,181,1);
-    text(min +' minutes ', width/2.25, height/50);
-     fill(252,60,60);
-    text(hr + ' hours', width/1.9, height/50);
+function draw() {
+  background(255,137,132);
+
+  let hr = hour();
+  let min = minute();
+  let sec = second();
+  let final = 60;
+
+  translate(width / 2, height / 2);
+
+  fill(255, 198, 168);
+  stroke(237, 247, 245, 200);
+  ellipse(0,0, 4 * final + hr * 4 + min * 4, 4 * final + hr * 4 + min * 4);
 
 
-     noFill();
-stroke(244);
-     noStroke();
-    fill(0,173,181);
-    rect(side, height-min*5-hr*5, rectWidth,-sec*5);
-    fill(248,181,1);
-    rect(side, height-hr*5, rectWidth,-min*5);
-    fill(252,60,60);
-    rect(side, height, rectWidth,-hr*5);
-    }
+  strokeWeight(2);
+  fill(237, 247, 245); //for seconds
+  ellipse(
+    0,
+    0,
+    4 * sec + hr * 4 + min * 4,
+    4 * sec + hr * 4 + min * 4
+  );
+
+  fill(183, 215, 216); //for min
+  ellipse(0, 0, 4 * min + hr * 4, 4 * min + hr * 4);
+
+  fill(32, 78, 95); //for hr
+  ellipse(0, 0, 4 * hr, 4 * hr);
+
+  noFill();
+
+  rotate(-90);
+
+  let secondAngle = map(sec, 0, 60, 0, 360);
+  let minuteAngle = map(min, 0, 60, 0, 360);
+  let hourAngle = map(hr % 12, 0, 12, 0, 360);
+
+
+  ellipse(0, 0, 4*24, 4*24);
+  stroke(32, 78, 95, 200); //hr fill
+  arc(0, 0, 4*24, 4*24, 0, hourAngle);
+
+
+
+  stroke(183, 215, 216,200);
+  ellipse(0,0,4*60+hr * 4, 4 * 60 + hr * 4);
+  stroke(74, 217, 217); // minute fill
+  arc(0, 0,4 * 60 + hr * 4, 4 * 60 + hr * 4, 0, minuteAngle)
+
+
+
+  stroke(237, 0, 0, 200); //sec fill
+  // strokeWeight(22);
+  arc(0, 0,4 * final + hr * 4 + min * 4, 4 * final + hr * 4 + min * 4, 0, secondAngle);
+
+
+
+
+  push();
+  stroke(242, 60, 80);
+  rotate(secondAngle);
+  line(0, 0, 4 * 30, 8, 0);
+  pop();
+
+  push();
+  stroke(74, 217, 217);
+  rotate(minuteAngle);
+  line(0, 0, 4 * 20, 0);
+  pop();
+
+  push();
+  stroke(255,200,200);
+  rotate(hourAngle);
+  line(0, 0, 4 * 10, 0);
+  pop();
+
+}
