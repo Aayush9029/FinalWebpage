@@ -64,6 +64,7 @@ function draw() {
   arc(0, 0,4 * final + hr * 4 + min * 4, 4 * final + hr * 4 + min * 4, 0, secondAngle);
 
 
+  
 
 
   push();
