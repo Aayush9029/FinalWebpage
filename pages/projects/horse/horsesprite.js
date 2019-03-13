@@ -18,7 +18,7 @@ show(){
 
 animate (){
  this.index += this.speed;
- this.x += this.speed * windowWidth/150;
+ this.x += this.speed * 5;
 
 if ( this.x > width){
     this.x = - this.animation[0].width
