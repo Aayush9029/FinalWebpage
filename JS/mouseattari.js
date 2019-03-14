@@ -11,21 +11,52 @@ let barw = 100;
 let barh = 15;
 let balld = 25; //ball's diameter
 let ratio = 2.65; //points positon according to points number 
-var val = 'black';
+var val;
+
+let initailInput;
+
+let submit;
 
 function setup() {
-  createCanvas(500, 650);
+ canvas=  createCanvas(500, 650);
   frameRate(30);
+  val = 'black';
   barY = height-barh;
+canvas.parent('game');
 
-  
-}
+
+initailInput = createInput('Name');
+initailInput.parent('game');
+
+submit = createButton('submit');
+submit.parent('game');
+
+
+submit.mouseClicked(submitScore);
+
+
+  var config = {
+    apiKey: "AIzaSyDVeRD0P145hETu39Ryh4HM8rvlTSj4Kos",
+    authDomain: "try2-70357.firebaseapp.com",
+    databaseURL: "https://try2-70357.firebaseio.com",
+    projectId: "try2-70357",
+    storageBucket: "",
+    messagingSenderId: "99106327684"
+  };
+  firebase.initializeApp(config);
+
+   database = firebase.database();
+
+  var ref = database.ref('scores');
+  ref.on('value', gotData, errData);
+
+} 
+
 
 function draw() {
   background(val);
   textSize(220);
-  fill(51);
-canvas.getContext('2d').fillText( points, width/ratio, height/1.6); //points counter
+  text( points, width/ratio, height/1.6); //points counter
 //ball
   stroke(255);
   strokeWeight(4);
@@ -48,7 +79,9 @@ if(y + speedy <= balld/2) {
         val = 'black';
     }
     else {
-        location.reload()
+      // initials = prompt('name');
+      location.reload();
+
         clearInterval(interval); // Needed for Chrome to end game
     }
 }
@@ -71,3 +104,53 @@ function mouseDragged(){
 }
 
 var interval = setInterval(draw, 20);
+
+
+
+function gotData(data){
+
+  var scorelisitings = selectAll('.scorelisitings');
+      for ( var i = 0; i < scorelisitings.length; i++){
+          scorelisitings[i].remove();
+      }
+  
+      // console.log('nice');
+      // console.log(data.val());
+      var scores = data.val();
+      var keys = Object.keys(scores);
+      // console.log(keys);
+  
+      for(var i = 0 ; i< keys.length ; i++){
+          var k = keys[i];
+          var initials = scores[k].initails;
+          var points = scores[k].points;
+  
+          // console.log(points, initials);
+          var li = createElement('li', initials + ':' + points);
+          li.class('scorelisitings');
+          li.parent('scorelist');
+      }
+  
+  }
+  
+  
+  
+  
+  
+  function errData(err){
+      // console.log('err');
+      // console.log(err);
+  }
+
+  
+
+function submitScore(){
+  var data = {
+      initails: initailInput.value(),
+      points: points
+  }
+  var ref = database.ref('scores');
+  ref.push(data);
+  
+
+}
