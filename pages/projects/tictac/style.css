@@ -7,6 +7,8 @@
 body{
     background: #2B3A42;
     font-family: 'Ubuntu', sans-serif;
+    transform: scale(1.5);
+    overflow: hidden;
 }
 
 td {
@@ -24,7 +26,7 @@ td {
 
 table {
 	border-collapse: collapse;
-    margin:80px auto;
+    margin:120px auto;
 }
 
 table tr:first-child td{
@@ -51,7 +53,7 @@ border-radius: 5px;
 box-shadow: 10px 10px 55px rgba(0, 0, 0);
 width: 200px;
 height: 300px;
-top: 87px;
+top: 40px;
 position: absolute;
 left: 50%;
 margin-left: -100px;
