@@ -11,11 +11,12 @@ let barw = 100;
 let barh = 15;
 let balld = 25; //ball's diameter
 let ratio = 2.65; //points positon according to points number 
-var val;
+var val ='black';
 
 let initailInput;
 
-let submit;
+// let submit;
+
 
 function setup() {
  canvas=  createCanvas(500, 650);
@@ -25,14 +26,9 @@ function setup() {
 canvas.parent('game');
 
 
-initailInput = createInput('Name');
-initailInput.parent('game');
+initailInput = createInput().attribute('placeholder', 'Your Name');
+initailInput.parent('userName');
 
-submit = createButton('submit');
-submit.parent('game');
-
-
-submit.mouseClicked(submitScore);
 
 
   var config = {
@@ -80,9 +76,10 @@ if(y + speedy <= balld/2) {
     }
     else {
       // initials = prompt('name');
-      location.reload();
+      endgame();
+      // location.reload();
 
-        clearInterval(interval); // Needed for Chrome to end game
+        // clearInterval(interval); // Needed for Chrome to end game
     }
 }
 
@@ -126,7 +123,7 @@ function gotData(data){
           var points = scores[k].points;
   
           // console.log(points, initials);
-          var li = createElement('li', initials + ':' + points);
+          var li = createElement('li', initials + ' : ' + points);
           li.class('scorelisitings');
           li.parent('scorelist');
       }
@@ -138,7 +135,7 @@ function gotData(data){
   
   
   function errData(err){
-      // console.log('err');
+      console.error('err');
       // console.log(err);
   }
 
@@ -153,4 +150,35 @@ function submitScore(){
   ref.push(data);
   
 
+}
+
+
+function endgame(){
+  document.querySelector(".endgame").style.display = "block";
+  document.getElementById("points").innerHTML = points;
+  speedx  = 0 ;
+  speedy  = 0 ; //stops ball
+  barY = height+22; //hides bar controll
+  bar2Y = -20; //hides bar auto
+  val = (56,61,69);
+  x = 700;
+
+
+} 
+
+
+function rePlay(){
+  document.querySelector(".endgame").style.display = "none";
+  points = 0;
+  speedx  = 5.5;
+  speedy  = 6.5; //stops ball
+  barY = height-barh //hides bar controll
+  bar2Y = 0; //hides bar auto
+  x = 100;
+  y = 25;
+  val = 'white';
+}
+
+function Submit(){
+  submitScore();
 }

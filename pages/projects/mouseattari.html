@@ -8,41 +8,13 @@
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script><!--  firebasedatabaseconnect -->
     <meta charset="utf-8" /><!-- declaring character-->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" media="screen" href="../../CSS/mouseattari.css" />
 
   </head>
   <body>
 <style>
     
-  html{
-    margin:0px;
-    padding: 0px;
-  }
 
-  body {
-    text-align: center;
-    font-size:28px;
-    background: #383D45;
-  }
-  canvas {
-    margin-top:30px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    box-shadow: 15px 15px 10px #00000060;
-    /* cursor: none; */
-  }
-
-    
-  a{
-    color:#FC3C3C;
-    font-family: 'Ubuntu', sans-serif;
-  }
-      
-  .head {
-    margin-top:5px;
-    color: #00ADB5;
-    font-family: 'Ubuntu', sans-serif;
-  }    
 </style>
 
 
@@ -52,13 +24,20 @@
     </div>
     <a href="mlbreakout.html"> Click here to use face tracking as control.</a></div>
 
-
+    <center>
+    <div class="endgame" id = "endgame">
+      <div id="userName"></div>
+        <div id="points"></div>
+        <button class = "submit" onclick="Submit()">Submit Score</button><br>
+      <button class = "submit" onclick="rePlay()">Replay</button>
+    </div>
     <div id = "game"></div>
 
+  </center>
     <p>
-        <ol id = "scorelist">
+        <ul id = "scorelist">
 
-        </ol>
+        </ul>
     </p>
 
 
