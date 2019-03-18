@@ -21,11 +21,12 @@ let strokeVal = "black";
 let fillval = "black";
 let mySound;
 var audio;
+
 let right = prompt("player using W and S");
 let left = prompt("player using UP_ARROW and DOWN_ARROW");
-
 let roundScore = parseFloat(prompt("best of what? (number)"));
 alert("ok best of " + roundScore);
+
 function preload() {
   audio = new Audio("assets/hit.mp3");
 }
@@ -77,7 +78,7 @@ function draw() {
   }
 
   updateBall(); // updates Pingpong's location
-  checkSide();
+  checkSide();  // CHECKS IF PONG TOUCHED THE SIDE
 
   if (x - radius <= bar1x + barw) {
     //for left bar
