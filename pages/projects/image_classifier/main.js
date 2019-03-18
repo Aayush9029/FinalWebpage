@@ -1,8 +1,9 @@
 let video;
 let poseNet;
-let radius = 5;
+let radius = 9;
 let initialpos = -60;
-let click = false;
+let click1 = false;
+let click2 = false;
 //nose
 let noseX = initialpos;
 let noseY = initialpos;
@@ -93,28 +94,56 @@ function modelReady() {
 function draw() {
   image(video, 0, 0);
 
-  if(click == true){
+  if(click1 == true){
     showData();
   }
-}
-
-
-
-
-function trueornot(){
-  if (click == false){
-    click = true;
-  }else{
-    click = false;
+  if(click2 == true){
+    showSkeleton();
   }
 }
+
+
+
+
+function ShowDatatrueornot(){
+  if (click1 == false){
+    click1 = true;
+  }else{
+    click1 = false;
+  }
+  }
+
+function trueornot(){
+  if (click2 == false){
+    click2 = true;
+  }else{
+    click2 = false;
+  }
+  }
+
+
+
+  function showSkeleton(){
+    filter('GRAY');
+    strokeWeight(radius/4);
+    stroke(0,222,0);
+    line(noseX, noseY, eyeLeft_X, eyeLeft_Y);
+    line(noseX, noseY, eyeRight_X, eyeRight_Y);
+
+    stroke(255, 76, 160);
+    line(noseX, noseY, leftEarX, leftEarY);
+    line(noseX, noseY, rightEarX, rightEarY);
+
+    stroke(102, 210, 255);
+    line(noseX, noseY, leftShoulderX, leftShoulderY);
+    line(noseX, noseY, rightShoulderX, rightShoulderY);
+  }
 
 
 function showData(){
-
   textAlign(CENTER);
   filter('GRAY');
-  
+  noStroke();
   textSize(18);
 
   fill(0,222,0);
