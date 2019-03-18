@@ -1,3 +1,7 @@
+//dual pong game 
+// Made by Aayush Pokharel
+
+
 let x = 200;
 let y = 200;
 let xspeed = 10;
@@ -126,10 +130,9 @@ function hit() {
 
 function rePlay() {
   document.querySelector(".endgame").style.display = "none";
-  xspeed = 12;
-  x = 100;
-  y = random(25, height - 25);
   pointsReset();
+  location.reload();
+  
 }
 
 function removedecoration() {
@@ -139,10 +142,14 @@ function removedecoration() {
 
 function reDraw() {
   xspeed = 12;
-  y = random(25, height - 25);
+  y = 200;
+  x = 200;
 }
 
 function won() {
+  x = 440;
+  y = 440;
+  xspeed = 0;
   document.querySelector(".endgame").style.display = "block";
   if (pointsLeft > pointsRight) {
     document.getElementById("points").innerHTML = left + " won, " + pointsLeft;
@@ -150,8 +157,7 @@ function won() {
     document.getElementById("points").innerHTML =
       right + " won, " + pointsRight;
   }
-  x = 440;
-  y = 440;
+
   pointsReset();
 }
 
