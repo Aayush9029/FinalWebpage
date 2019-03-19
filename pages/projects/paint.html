@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
    <link rel="stylesheet" href="../../CSS/paint.css">
     <script src="../../JS/paint.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+
 </head>
 <body>
    
@@ -15,6 +17,16 @@
    <div class="red">Red:</div>
     <div class="green">Green:</div>
     <div class="blue">Blue:</div>
+    
+    <div id = "canvascontainer"></div>
+    <button id = "saveButton">save</button>
+    <button id = "clearButton">clr</button>
+
+    <p>
+        <ol id = "drawinglist">
+
+        </ol>
+    </p>
 </div>
 </body>
 </html>

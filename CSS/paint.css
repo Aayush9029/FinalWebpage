@@ -45,3 +45,36 @@
   border:2px solid lightblue;
   color:skyblue;
 }
+
+button {
+  cursor: pointer;
+  position: relative;
+  background-color: #212531;
+  color: rgb(209, 106, 204);
+  padding-top: 18px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-bottom: 18px;
+  border-radius: 50px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border: 2px solid rgba(209, 106, 204, 0.5);
+}
+
+
+button:hover {
+  /* transform:scale(1.05); */
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  color: white;
+  background: rgba(235, 37, 225, 0.75);
+  border: 2px solid rgba(235, 37, 225, 0.75);
+  transition: 0.25s;
+}
+
+button:active {
+  transform:scale(0.95);
+  border: 2px solid rgba(0, 0, 0, 0.75);
+  border: 2px solid rgb(150, 0, 92);
+  background: rgb(168, 0, 104);
+}
+
