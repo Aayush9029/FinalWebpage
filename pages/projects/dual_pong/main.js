@@ -4,7 +4,7 @@
 
 let x = 200;
 let y = 200;
-let xspeed = 10;
+let xspeed;
 let yspeed = 4;
 let diameter = 25;
 let radius = diameter / 2;
@@ -22,8 +22,8 @@ let fillval = "black";
 let mySound;
 var audio;
 
-let right = prompt("player using W and S");
-let left = prompt("player using UP_ARROW and DOWN_ARROW");
+let right = 'Right';
+let left = 'Left';
 let roundScore = parseFloat(prompt("best of what? (number)"));
 alert("ok best of " + roundScore);
 
@@ -35,6 +35,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   bar2x = windowWidth - barw;
   frameRate(60);
+  xspeed = width/150;
 }
 
 function draw() {
@@ -105,7 +106,7 @@ function draw() {
     reDraw();
   }
 
-  if (pointsLeft > roundScore || pointsRight > roundScore) {
+  if (pointsLeft >= roundScore || pointsRight >= roundScore) {
     won();
   }
   textSize(width / 5);
@@ -142,7 +143,7 @@ function removedecoration() {
 }
 
 function reDraw() {
-  xspeed = 12;
+  xspeed = width/150;
   y = 200;
   x = 200;
 }
