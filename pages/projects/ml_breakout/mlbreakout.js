@@ -1,8 +1,8 @@
 // alert(" Allow camera to play");
 let x = 600 / 2;
-let y = 500;
+let y = 590;
 let speedx = 6;
-let speedy = -7;
+let speedy = 0;
 let points = 0;
 let barY;
 let bar2Y;
@@ -13,33 +13,42 @@ let barw = 100;
 let barh = 15;
 let balld = 25; //ball's diameter
 let ratio = 2.65;//for points position
+let val2;
+let val1;
 
-function preload(){
+function preload() {
+  audio = new Audio("hit.mp3");
+}
+
+
+function setup() {
   video = createCapture(VIDEO);
+
   video.hide();
   //poseNet form ML5 machine learning database loading..
   poseNet = ml5.poseNet(video, modelReady);
   poseNet.on("pose", gotPoses);
   //loading done datas added to stuffs LOL
-}
-
-function setup() {
   createCanvas(500, 650);
   frameRate(30);
   barY  = height-barh;
   bar2Y = barh;
+  val2 = 0;
+  val1 = 255;
 }
 
 function draw() {
-  background(0);
+
+  background(val2);
   textSize(220);
-  fill(255, 51);
-  canvas.getContext('2d').fillText( points, width/ratio, height/1.5); //points counter
-  //ball
-  stroke(225);
+  
+  fill(0);
   strokeWeight(4);
-  noFill();
-  stroke(255);
+  stroke(val1);
+  textAlign(CENTER);
+  text( points, width/2, height/1.65); //points counter
+
+  
   ellipse(x, y, balld, balld);
 
   if(x + speedx >= width-balld/2 || x + speedx <= balld/2) {
@@ -47,17 +56,16 @@ function draw() {
 }
 
 else if(y + speedy >= height-balld/2 || y + speedy <= balld/2 ) {
+
     if(x >= eyelX && x < eyelX + barw) {
-        speedy = -speedy;
-        points++;
-        val = 'black';
-    }
+      hit();
+      }
     else {
-        location.reload()
-        clearInterval(interval); // Needed for Chrome to end game
+      endgame();
     }
 }
     //bar starts
+
   rect(eyelX, barY, barw, barh);
   rect(eyelX, bar2Y-barh, barw, barh);
 
@@ -65,15 +73,34 @@ else if(y + speedy >= height-balld/2 || y + speedy <= balld/2 ) {
   y += speedy;
 
 
-  if (points >= 10){
-    ratio = 4.5;
+}
+
+
+function changeColor(){
+  if(val1 == 0){
+    val1 = 255;
+    val2 = 0; 
+}else if (val1 == 255){
+  val1 = 0;
+  val2 = 255; 
+  
   }
 }
+
+function hit(){
+  audio.play();
+  speedy = -speedy;
+  changeColor();
+  points++;
+}
+
+
 
 
 function modelReady() {
   //if modelready or poseNet is fully loaded..
   console.log("model ready");
+  speedy = -7;
 }
 
 function gotPoses(poses) {
@@ -91,4 +118,12 @@ function gotPoses(poses) {
 
 
 
-var interval = setInterval(draw, 20);
+function endgame(){
+  speedx  = 0 ;
+  speedy  = 0 ; //stops ball
+  barY = height+22; //hides bar controll
+  bar2Y = -20; //hides bar auto
+  val = (56,61,69);
+  x = 700;
+  location.reload()
+} 

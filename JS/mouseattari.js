@@ -11,7 +11,7 @@ let barw = 100;
 let barh = 15;
 let balld = 25; //ball's diameter
 let ratio = 2.65; //points positon according to points number 
-var val ='black';
+let val ='black';
 
 let initailInput;
 
