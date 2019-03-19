@@ -40,6 +40,7 @@ function setup() {
 
 function draw() {
   background(backgroundVal);
+  // testMode();
   stroke(strokeVal);
   strokeWeight(3);
   fill(fillval);
@@ -169,9 +170,11 @@ function pointsReset() {
 }
 
 // function testMode(){  // calling this function in draw loops calls a hidden test mode
-
+//     textSize(16);
+//     noStroke();
 //     x = mouseX;
 //     y = mouseY;
+//     text(bar2x+ "x : y"+ bar2y,600,200);
 //     text(bar1x+ "x : y"+ bar1y,300,200);
 //     text(x+ "x : y"+ y,100,200);
 //     strokeWeight(8);
