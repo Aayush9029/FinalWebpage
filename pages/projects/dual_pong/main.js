@@ -52,19 +52,19 @@ function draw() {
   line(width / 2, 0, width / 2, height);
 
   if (keyIsDown(UP_ARROW)) {
-    bar2y -= 7;
+    bar2y -= 9;
   }
 
   if (keyIsDown(DOWN_ARROW)) {
-    bar2y += 7;
+    bar2y += 9;
   }
 
   if (keyIsDown(87)) {
-    bar1y -= 7;
+    bar1y -= 9;
   }
 
   if (keyIsDown(83)) {
-    bar1y += 7;
+    bar1y += 9;
   }
 
   if (bar1y <= 0) {
