@@ -24,8 +24,8 @@ var audio;
 
 let right = 'Right';
 let left = 'Left';
-let roundScore = parseFloat(prompt("best of what? (number)"));
-alert("ok best of " + roundScore);
+let roundScore = parseFloat(prompt("Best of what? (number)"));
+alert("Ok best of " + roundScore);
 
 function preload() {
   audio = new Audio("assets/hit.mp3");
