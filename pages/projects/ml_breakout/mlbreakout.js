@@ -108,7 +108,7 @@ function gotPoses(poses) {
   //poseNet data manupulation
   if (poses.length > 0) {
     //for eyeleft x and y position
-    let eX = poses[0].pose.keypoints[1].position.x;
+    let eX = poses[0].pose.keypoints[0].position.x;
     //lerping to make jitter go away >>> optional but better to add few line to make it look better
     eyelX = lerp(eyelX, eX, 0.5);
   }
