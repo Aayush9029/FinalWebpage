@@ -26,7 +26,6 @@ if ( stop < 1500){
         }
         count++;
         stop++; 
-        console.log(stop);
 
         if(count == 69){
             for (let i = 0; i <tree.length; i++){
