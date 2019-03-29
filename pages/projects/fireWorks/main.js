@@ -3,12 +3,14 @@ let gravity;
 let is_pressed = false;
 let amount = 2;
 let falling_Text;
+
 function setup(){
     createCanvas(windowWidth,windowHeight);
     colorMode(HSB);
     falling_Text = height/1.5;
     background(0, 0, 0, 25);
     gravity = createVector(0, 0.098);
+    noCursor();
 }
 
 function windowResized(){
@@ -30,11 +32,14 @@ function draw(){
         }
     }
     falling_Text -= 0.7;
+
+    noFill();
+    ellipse(mouseX, mouseY,20,10);
+
 }
 
+
 function helpThem(){
- // font(222);
- 
  textSize(width/20);
  textAlign(CENTER, CENTER)
  noStroke();
