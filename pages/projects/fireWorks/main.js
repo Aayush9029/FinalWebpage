@@ -33,8 +33,7 @@ function draw(){
     }
     falling_Text -= 0.7;
 
-    noFill();
-    ellipse(mouseX, mouseY,20,10);
+   
 
 }
 
