@@ -6,7 +6,9 @@ let falling_Text;
 let playerW = 10;
 let playerX;
 let playerY;
+
 let sound;
+let img;
 
 let boxW = 26;
 let box1x;
@@ -24,9 +26,11 @@ let bullets = 101;
 
 function preload(){
     sound = loadSound('SFX.mp3');
+    img = loadImage('startship.png');
 }
 
 function setup(){
+    console.log(image);
     createCanvas(windowWidth,windowHeight);
     colorMode(HSB);
     falling_Text = height/1.2;
@@ -116,6 +120,7 @@ function draw(){
     text('Bullets left : '+ bullets, 55, 60);
     // fill(hue, 255,255);
     rect(playerX - 5, playerY, playerW,playerW+10)
+    image(img, playerX-20 , playerY-10 , img.width-25, img.height-15)
 }
 
 
