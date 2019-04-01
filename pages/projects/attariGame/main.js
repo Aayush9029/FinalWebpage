@@ -22,7 +22,7 @@ let box4y = 0;
 
 let lvlAngle = 0;
 let points = 0;
-let bullets = 101;
+let bullets = 201;
 
 function preload(){
     sound = loadSound('SFX.mp3');
@@ -53,7 +53,7 @@ function draw(){
        pickLocation();
     }
     colorMode(RGB);
-    background(0, 0, 0, 20);
+    background(0, 0, 0,20);
     for (let i = fireworks.length -1; i > 0; i--) {
         fireworks[i].update();
         fireworks[i].show();
@@ -193,7 +193,7 @@ function pickLocation(){
 
 function bulletsPoints(){
     points++;
-    bullets++;
+    bullets+=2;
 }
 
 function gameOver(){
