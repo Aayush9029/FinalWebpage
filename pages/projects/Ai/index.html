@@ -9,6 +9,11 @@
     <script language="javascript" type="text/javascript" src="main.js"></script>
     </head>
 <body>
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            Click and hold anywhere, to record rocket's path
+    </span>
+
     <style>
         *{
             padding:0px; 
@@ -18,8 +23,31 @@
             background: #F1F2EC;
             font-family: 'Ubuntu', sans-serif;
         }
+        .closebtn {
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .closebtn:hover {
+            color: black;
+        }
+        .alert{
+            width:60%;
+            font-size:20px;
+            text-align: center;
+            display: block;
+            margin-top:20px; 
+            padding: 10px;
+            background-color: #FFAC00; 
+            color: white;
+        }
         canvas{
-            margin-top: 100px;
+            margin-top: 75px;
             margin-left: auto;
             margin-right: auto;
             display: block;
@@ -36,7 +64,7 @@
             display: block;
             background: #FC4349;
             margin-top: 50px; 
-            width: 50px;
+            width: 200px;
             text-align: center;
         }
         div{

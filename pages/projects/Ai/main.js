@@ -3,10 +3,12 @@ let lifespan = 400;
 let lifeP;
 let generation;
 let gen = 1;
+let mFit = 1;
+let mxFit = 0;
 let count = 0;
 let target;
-let maxForce = 0.2;
-
+let maxForce = 0.3;
+let touched = false;
 let rx = 100;
 let ry = 150;
 let rw = 200;
@@ -18,16 +20,27 @@ function setup() {
   population = new Population();
   lifeP = createP();
   generation = createDiv();
+  mFit = createDiv();
+  touch = createDiv();
   target = createVector(width/2, height/5);
   background(0);
 }
 
 function draw() {
-    if(!mouseIsPressed){
-  background(40,43,64);
-    }
-//   background(0);
-  
+  if(!mouseIsPressed){
+    background(40,43,64);
+  }
+  if(mxFit>= 4000){
+    touched = true;
+  }
+  if(touched){
+
+    touch.html('Touched :)');
+    touch.style("background-color", 'rgb(1, 163, 155)');
+  }else{
+    touch.html('Not touched yet');
+    touch.style("background-color", '#FC4349');
+  }
   noStroke();
   fill(60,152,155, 150);
   ellipse(target.x, target.y, 48, 48);
@@ -37,7 +50,8 @@ function draw() {
   ellipse(target.x, target.y, 16, 16);
   
   population.run();
-  lifeP.html(count);
+  lifeP.html("Time left : " + (lifespan - count));
+  mFit.html("Maxfit : " + mxFit);
   generation.html("Generation : " + gen);
   count++;
   if (count == lifespan) {
@@ -59,6 +73,7 @@ function Population() {
   }
   this.evaluate = function() {
     gen++;
+    touched = false;
     
     let maxFit = 0;
     for (let i = 0; i < this.popSize; i++) {
@@ -67,7 +82,8 @@ function Population() {
         maxFit = this.rockets[i].fitness;
       }
     }
-    // createP(floor(maxFit));
+    mxFit = floor(maxFit);
+
     for (let i = 0; i < this.popSize; i++) {
       this.rockets[i].fitness /= maxFit;
     }
