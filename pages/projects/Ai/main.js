@@ -1,6 +1,8 @@
 let population;
 let lifespan = 400;
 let lifeP;
+let generation;
+let gen = 1;
 let count = 0;
 let target;
 let maxForce = 0.2;
@@ -15,6 +17,7 @@ function setup() {
   rocket = new Rocket();
   population = new Population();
   lifeP = createP();
+  generation = createDiv();
   target = createVector(width/2, height/5);
   background(0);
 }
@@ -35,6 +38,7 @@ function draw() {
   
   population.run();
   lifeP.html(count);
+  generation.html("Generation : " + gen);
   count++;
   if (count == lifespan) {
     population.evaluate();
@@ -54,6 +58,7 @@ function Population() {
     this.rockets[i] = new Rocket();
   }
   this.evaluate = function() {
+    gen++;
     
     let maxFit = 0;
     for (let i = 0; i < this.popSize; i++) {
