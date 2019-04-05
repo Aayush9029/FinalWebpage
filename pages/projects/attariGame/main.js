@@ -6,7 +6,7 @@ let falling_Text;
 let playerW = 10;
 let playerX;
 let playerY;
-
+let dropSpeed = 1;
 let sound;
 let img;
 
@@ -47,13 +47,16 @@ function windowResized(){
 }
 
 function draw(){
+    if(points >= 10 && points < 11){
+    dropSpeed+=0.01;
+    }
     gravity = createVector(lvlAngle, 0.05);
     if(!is_pressed){
        helpThem();
        pickLocation();
     }
     colorMode(RGB);
-    background(0, 0, 0,20);
+    background(0, 0, 0,30);
     for (let i = fireworks.length -1; i > 0; i--) {
         fireworks[i].update();
         fireworks[i].show();
@@ -106,11 +109,11 @@ function draw(){
         gameOver();
         pickLocation();
     }
-
-    box1y++;
-    box2y++;
-    box3y++;
-    box4y++;
+    
+    box1y+= dropSpeed;
+    box2y+=dropSpeed;
+    box3y+=dropSpeed;
+    box4y+=dropSpeed;
 
     // lvlAngle += 0.001;
     fill(255);
@@ -119,8 +122,8 @@ function draw(){
     text('Points : '+ points, 40, 30);
     text('Bullets left : '+ bullets, 55, 60);
     // fill(hue, 255,255);
-    rect(playerX - 5, playerY, playerW,playerW+10)
-    image(img, playerX-20 , playerY-10 , img.width-25, img.height-15)
+    // rect(playerX - 5, playerY, playerW,playerW+10)
+    image(img, playerX+31 , playerY-10 , img.width-230, img.height-100)
 }
 
 
@@ -198,5 +201,6 @@ function bulletsPoints(){
 
 function gameOver(){
     points = 0;
+    dropSpeed = 1;
 
 }
