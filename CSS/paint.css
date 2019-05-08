@@ -9,9 +9,9 @@
     cursor: pointer;
     box-shadow: 15px 15px 25px rgb(24, 24, 24);
   }
-  
+
   body{
-    overflow: hidden;
+    overflow-x: hidden;
     background:#383D45;
     font-family: 'Ubuntu', sans-serif;
   }
@@ -20,7 +20,7 @@
     margin-top: 15px;
     margin-left: 10px;
   }
-  
+
 .stroke{
   color:white;
 }
@@ -78,3 +78,24 @@ button:active {
   background: rgb(168, 0, 104);
 }
 
+a{
+  padding: 10px;
+  background: #3E52B3;
+  display:block;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+a:hover{
+  background: skyblue;
+}
+
+li{
+  font-size: 18pt;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  background: #E82A53;
+  display:block;
+  margin: 20px;
+}

@@ -6,7 +6,7 @@ var isDrawing = false;
 function setup(){
 
 
-canvas = createCanvas(700, 500);
+canvas = createCanvas(windowWidth-45, windowHeight-250);
 canvas.mousePressed(startPath);
 canvas.parent('canvascontainer');
 canvas.mouseReleased(endPath);
@@ -16,10 +16,6 @@ saveButton.mousePressed(saveDrawing);
 
 var clearButton = select('#clearButton');
 clearButton.mousePressed(clearDrawing);
-
-
-
-
 
 
 
@@ -37,13 +33,13 @@ var config = {
 
     var ref = database.ref('drawings');
     ref.on('value', gotData, errData);
-} 
+}
 
 function  startPath(){
     isDrawing = true;
     currentPath = [];
     drawing.push(currentPath);
-    
+
 }
 
 function  endPath(){
@@ -52,7 +48,7 @@ function  endPath(){
 }
 
 function draw(){
-    background(51);
+    background(25);
 
 
     if(isDrawing){
@@ -64,7 +60,6 @@ function draw(){
     }
 
     noFill();
-    stroke(4);
     stroke(255);
     for(var i = 0; i < drawing.length; i++){
         var path = drawing[i];
@@ -77,7 +72,6 @@ function draw(){
     }
 
 }
-
 
 
 function saveDrawing(){
@@ -106,13 +100,14 @@ for (var i = 0 ; i < elements.length; i++){
     elements[i].remove();
 }
 
-
+let a = 0;
     var drawings = data.val();
     var keys = Object.keys(drawings);
     for(var i = 0; i < keys.length ; i++){
+      a++;
         var key = keys[i];
         // console.log(key)
-        var li = createElement('li', key);
+        var li = createElement('li', 'drawing'+a);
         li.class('listing');
         var ahref = createA('#', key);
         ahref.mousePressed(showDrawing);
@@ -129,7 +124,7 @@ function showDrawing(){
     var key = this.html();
     var ref = database.ref('drawings/' + key);
     ref.once('value', oneDrawing, errData);
-    
+
     function oneDrawing(data){
         var dbdrawing = data.val();
         drawing = dbdrawing.drawing;
