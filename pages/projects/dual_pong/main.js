@@ -7,18 +7,19 @@ let y = 200;
 let xspeed;
 let yspeed = 4;
 let diameter = 25;
-let radius = diameter / 2;
+let radius;
 let bar1x = 0;
 let bar1y = 10;
 let barh = 150;
-let barw = 10;
+let barw = 20;
 let bar2x;
 let bar2y = 600;
+let barspeed = 9;
 let pointsRight = 0;
 let pointsLeft = 0;
-let backgroundVal = "white";
-let strokeVal = "black";
-let fillval = "black";
+let backgroundVal = 255;
+let strokeVal = 255;
+let fillval = 0;
 let mySound;
 var audio;
 
@@ -36,10 +37,12 @@ function setup() {
   bar2x = windowWidth - barw;
   frameRate(60);
   xspeed = width/150;
+  radius = xspeed;
 }
 
 function draw() {
-  background(backgroundVal);
+  background(backgroundVal,100);
+  // background();
   // testMode();
   stroke(strokeVal);
   strokeWeight(3);
@@ -52,19 +55,19 @@ function draw() {
   line(width / 2, 0, width / 2, height);
 
   if (keyIsDown(UP_ARROW)) {
-    bar2y -= 9;
+    bar2y -= barspeed;
   }
 
   if (keyIsDown(DOWN_ARROW)) {
-    bar2y += 9;
+    bar2y += barspeed;
   }
 
   if (keyIsDown(87)) {
-    bar1y -= 9;
+    bar1y -= barspeed;
   }
 
   if (keyIsDown(83)) {
-    bar1y += 9;
+    bar1y += barspeed;
   }
 
   if (bar1y <= 0) {
@@ -82,28 +85,32 @@ function draw() {
   updateBall(); // updates Pingpong's location
   checkSide();  // CHECKS IF PONG TOUCHED THE SIDE
 
-  if (x - radius <= bar1x + barw) {
+  if (x - radius <= bar1x+barw ) {
     //for left bar
-    if (y - radius >= bar1y && y + radius < bar1y + barh) {
+    if (y + radius >= bar1y && y - radius < bar1y + barh) {
       hit();
-      backgroundVal = "white";
-      strokeVal = "black";
-      fillval = "black";
+      backgroundVal = 255;
+      strokeVal = 0;
+      fillval = 0;
     }
   } else if (x + radius >= bar2x) {
     //for right bar
-    if (y - radius >= bar2y && y + radius < bar2y + barh) {
+    if (y + radius >= bar2y && y - radius < bar2y + barh) {
       hit();
-      backgroundVal = "black";
-      strokeVal = "white";
+      backgroundVal = 0;
+      strokeVal = 255;
     }
   }
 
   if (x + radius > width) {
     pointsLeft++;
+    xspeed *= 1.2;
+    barspeed *= 1.2;
     reDraw();
   } else if (x - radius < 0) {
     pointsRight++;
+    xspeed *= 1.2;
+    barspeed *= 1.2;
     reDraw();
   }
 
@@ -113,6 +120,12 @@ function draw() {
   textSize(width / 5);
   text(pointsLeft, width / 6, height / 1.75);
   text(pointsRight, width / 1.5, height / 1.75);
+
+if(xspeed > width/15 + 20 || xspeed < -1*width/15-20){
+  xspeed = 1/2;
+  barspeed = 9;
+}
+
 }
 
 function updateBall() {
@@ -145,6 +158,7 @@ function removedecoration() {
 
 function reDraw() {
   xspeed = width/150;
+  barspeed = 9;
   y = 200;
   x = 200;
 }
@@ -169,17 +183,26 @@ function pointsReset() {
   pointsLeft = 0;
 }
 
-// function testMode(){  // calling this function in draw loops calls a hidden test mode
-//     textSize(16);
-//     noStroke();
-//     x = mouseX;
-//     y = mouseY;
-//     text(bar2x+ "x : y"+ bar2y,600,200);
-//     text(bar1x+ "x : y"+ bar1y,300,200);
-//     text(x+ "x : y"+ y,100,200);
-//     strokeWeight(8);
-//     stroke(33,333,33);
-//     point(x,y);
-//     point(bar1x+barw,bar1y);
-//     point(bar2x,bar2y);
-// }
+function testMode(){  // calling this function in draw loops calls a hidden test mode
+    textSize(16);
+    noStroke();
+    x = mouseX;
+    y = mouseY;
+    text(bar2x+ "x : y"+ bar2y,600,200);
+    text(bar1x+ "x : y"+ bar1y,300,200);
+    text(x+ "x : y"+ y,100,200);
+    strokeWeight(8);
+    stroke(2,255,2);
+    point(x,y);
+    point(bar1x,bar1y);
+    point(bar2x,bar2y);
+}
+
+
+function keyPressed(){
+  if(keyCode == 70){
+    xspeed *= 1.6;
+    barspeed *= 1.3;
+
+  }
+}
