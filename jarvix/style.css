@@ -1,0 +1,47 @@
+h1 {
+  color: #ff5100;
+  font-size: 3em;
+  text-shadow: -0.8191520405px 0px 0px #00334d, 0px -0.5735764357px 0px #0099e6,
+    -1.6383040811px -0.5735764357px 0px #00334d,
+    -0.8191520405px -1.1471528715px 0px #0099e6,
+    -2.4574561216px -1.1471528715px 0px #00334d,
+    -1.6383040811px -1.7207293072px 0px #0099e6,
+    -3.2766081622px -1.7207293072px 0px #00334d,
+    -2.4574561216px -2.294305743px 0px #0099e6,
+    -4.0957602027px -2.294305743px 0px #00334d,
+    -3.2766081622px -2.8678821787px 0px #0099e6,
+    -4.9149122433px -2.8678821787px 0px #00334d,
+    -4.0957602027px -3.4414586144px 0px #0099e6,
+    -5.7340642838px -3.4414586144px 0px #00334d,
+    -4.9149122433px -4.0150350502px 0px #0099e6,
+    -6.5532163244px -4.0150350502px 0px #00334d,
+    -5.7340642838px -4.5886114859px 0px #0099e6,
+    -7.3723683649px -4.5886114859px 0px #00334d,
+    -6.5532163244px -5.1621879217px 0px #0099e6,
+    -8.1915204055px -5.1621879217px 0px #00334d;
+  -webkit-transform: translatex(36.042689784px) translatey(25.2373631725px);
+  transform: translatex(36.042689784px) translatey(25.2373631725px);
+  position: relative;
+  z-index: 1;
+}
+
+body {
+  font-family: "Bowlby One SC", sans-serif;
+  text-transform: uppercase;
+  background-color: #0d1563;
+  overflow-x: hidden;
+}
+
+:root {
+  height: 100%;
+  display: flex;
+}
+
+:root > * {
+  margin: auto;
+  text-align: center;
+}
+
+#text {
+  padding: 50px;
+}
