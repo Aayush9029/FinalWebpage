@@ -1,101 +1,92 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Page Title</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-  <script src="main.js"></script>
-</head>
-<body>
-  
-</body>
-</html><!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Dual_pong v1.0</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
-    <script src="../../../p5/p5.min.js"></script><!-- loading p5 js --><!-- loading p5 js -->
-</head>
-<body>
+  </head>
+  <body></body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Dual_pong v1.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="main.js"></script>
+    <script src="../../../p5/p5.min.js"></script>
+  </head>
+  <body>
     <style>
-    *{
-        padding:0px; 
-        margin:0px;
+      * {
+        padding: 0px;
+        margin: 0px;
         overflow: hidden;
-    }
-    canvas{
+      }
+      canvas {
         cursor: none;
-    }
-    
-.endgame{
-display: none;
-background-image: linear-gradient(to bottom right, #2e3858, #202430);
-border-radius: 5px;
-box-shadow: 15px 15px 55px rgba(0, 0, 0);
-width: 550px;
-height: 700px;
-top: 10%;
-position: absolute;
-left: 50%;
-margin-left: -275px;
-text-align: center;
-color:rgb(31, 82, 100);
-font-family: 'Ubuntu', sans-serif;
-font-size: 7em;
+      }
 
-}
+      .endgame {
+        display: none;
+        background-image: linear-gradient(to bottom right, #2e3858, #202430);
+        border-radius: 5px;
+        box-shadow: 15px 15px 55px rgba(0, 0, 0);
+        width: 550px;
+        height: 700px;
+        top: 10%;
+        position: absolute;
+        left: 50%;
+        margin-left: -275px;
+        text-align: center;
+        color: rgb(31, 82, 100);
+        font-family: "Ubuntu", sans-serif;
+        font-size: 3em;
+      }
 
-#points{
-    margin-top: 10%;
-}
+      #points {
+        margin-top: 10%;
+      }
 
-.submit {
-    cursor: pointer;
-    position: relative;
-    background-color: #212531;
-    color: rgb(209, 106, 204);
-    padding-top: 18px;
-    padding-right: 50px;
-    padding-left: 50px;
-    padding-bottom: 18px;
-    border-radius: 50px;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    border: 2px solid rgba(209, 106, 204, 0.5);
-  }
+      .submit {
+        cursor: pointer;
+        position: relative;
+        background-color: #212531;
+        color: rgb(209, 106, 204);
+        padding-top: 18px;
+        padding-right: 50px;
+        padding-left: 50px;
+        padding-bottom: 18px;
+        border-radius: 50px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        border: 2px solid rgba(209, 106, 204, 0.5);
+      }
 
-  
-  .submit:hover {
-    /* transform:scale(1.05); */
-    border: 2px solid rgba(255, 255, 255, 0.75);
-    color: white;
-    background: rgba(235, 37, 225, 0.75);
-    border: 2px solid rgba(235, 37, 225, 0.75);
-    transition: 0.25s;
-  }
-  
-  .submit:active {
-    transform:scale(0.95);
-    border: 2px solid rgba(0, 0, 0, 0.75);
-    border: 2px solid rgb(150, 0, 92);
-    background: rgb(168, 0, 104);
-  }
+      .submit:hover {
+        /* transform:scale(1.05); */
+        border: 2px solid rgba(255, 255, 255, 0.75);
+        color: white;
+        background: rgba(235, 37, 225, 0.75);
+        border: 2px solid rgba(235, 37, 225, 0.75);
+        transition: 0.25s;
+      }
 
-
-
-
+      .submit:active {
+        transform: scale(0.95);
+        border: 2px solid rgba(0, 0, 0, 0.75);
+        border: 2px solid rgb(150, 0, 92);
+        background: rgb(168, 0, 104);
+      }
     </style>
 
-
-
-<div class="endgame" id = "endgame">
-    <div id="userName"></div>
+    <div class="endgame" id="endgame">
+      <div id="userName"></div>
       <div id="points"></div>
-    <button class = "submit" onclick="rePlay()">Replay</button>
-  </div>
-</body>
+      <button class="submit" onclick="rePlay()">Replay</button>
+    </div>
+  </body>
 </html>

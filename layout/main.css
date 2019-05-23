@@ -1,15 +1,20 @@
-::selection {  /*removes highlight*/
+* {
+  cursor: none;
+}
+
+::selection {
+  /*removes highlight*/
   color: none;
   background: none;
 }
 body {
   background-color: #100e17;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
-a{
-text-decoration:none;
-font-size:14pt;
-  margin-top:16px;
+a {
+  text-decoration: none;
+  font-size: 14pt;
+  margin-top: 16px;
 }
 .container {
   position: absolute;
@@ -34,19 +39,7 @@ font-size:14pt;
 }
 
 .card:not(:first-child) {
-    margin-left: -50px;
-}
-
-.card:hover {
-  border:1px solid wheat;                /* will change color and design later on */
-  transform: translateY(-50px);
-  transition: 0.4s ease-out;
-}
-
-.card:hover ~ .card {
-  position: relative;
-  left: 50px;
-  transition: 0.4s ease-out;
+  margin-left: -50px;
 }
 
 .title {
@@ -77,14 +70,14 @@ font-size:14pt;
   z-index: 3;
   width: 0px;
   height: 100%;
-  background: rgb(0,154,217);
-  background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
+  background: rgb(0, 154, 217);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 154, 217, 1) 0%,
+    rgba(217, 147, 0, 1) 65%,
+    rgba(255, 186, 0, 1) 100%
+  );
   transition: 0.6s ease-out;
-}
-
-.card:hover .filledbar {
-  width: 80%;
-  transition: 0.4s ease-out;
 }
 
 .circle {
@@ -100,16 +93,29 @@ font-size:14pt;
   transition: 0.6s ease-out;
 }
 
-
-.card:hover .stroke {
-  stroke-dashoffset: 100;
-  transition: 0.6s ease-out;
+.info {
+  margin-top: 20px;
+  margin-right: 20px;
+  color: white;
+  opacity: 0.3;
 }
 
+.nav {
+  font-size: 16pt;
+  /* background: white; */
+  color: #000;
+  margin-left: 40%;
+  position: absolute;
+  color: white;
+  bottom: 50px;
+  padding: 5px;
+}
 
-.info{
-  margin-top: 20px;
-  margin-right: 20px;;
-  color:white;
-  opacity: 0.3;
+span {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 16pt;
+  border: 2px solid white;
+  padding-right: 5px;
+  padding-left: 5px;
 }

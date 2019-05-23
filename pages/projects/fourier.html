@@ -1,39 +1,95 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <title>Fourier</title> <script src="../../../p5/p5.min.js"></script><!-- loading p5 js --><!-- loading p5 js -->
-      <script src="../../../p5/p5.dom.js"></script>
-      <meta charset="utf-8" />
-
+    <title>Fourier</title>
+    <script src="../../../p5/p5.min.js"></script>
+    <!-- loading p5 js -->
+    <!-- loading p5 js -->
+    <script src="../../../p5/p5.dom.js"></script>
+    <meta charset="utf-8" />
   </head>
   <body>
-
     <style>
-    *{
-      padding: 0px;
-      margin:0px;
-    }
-    body{
-      overflow: hidden;
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+      body {
+        overflow: hidden;
         display: block;
-        font-family: 'Open Sans', sans-serif;
-        color:aliceblue;
-        background: #383D45;
-    }
-    p{
-      margin-left: 10%;
-      margin-top: 4%;
-    }
+        font-family: "Open Sans", sans-serif;
+        background: #383d45;
+      }
+      p {
+        font-size: 14pt;
+        border: 2px solid white;
+        padding: 20px;
+        color: white;
+        margin-top: 30px;
+      }
 
+      input {
+        color: white;
+        -webkit-appearance: none;
+        width: 100%;
+        height: 10px;
+        background: #fffbfb2a;
+        outline: none;
+        opacity: 0.8;
+        -webkit-transition: 0.2s;
+        transition: opacity 0.2s;
+      }
+
+      input:hover {
+        opacity: 1;
+      }
+
+      input::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        background: #101991;
+        cursor: pointer;
+      }
+
+      input::-moz-range-thumb {
+        width: 15px;
+        height: 15px;
+        background: #4e4caf;
+        cursor: pointer;
+      }
     </style>
-  
-    <p>
-      Every thing I've learnt in Maths (Sinusoidal graph), Physics (Waves) and ComputerScience (Canvas)<p>  (p.s: Change slider to change value of radius)  
-     <br>
-      <input type="range" min="50" max="150" value="50" step="2" onChange="sliderChange(this.value)" />
-    </p>
 
+    <center>
+      <p>
+        Radius
+        <br />
+        <input
+          class="slider"
+          type="range"
+          min="50"
+          max="150"
+          value="50"
+          step="2"
+          onChange="sliderChange(this.value)"
+        />
+      </p>
+      <p>
+        Wave Length
+        <br />
+        <input
+          class="slider"
+          type="range"
+          min="1"
+          max="150"
+          value="10"
+          step="1"
+          onChange="sliderChange2(this.value)"
+        />
+      </p>
+      <button type="checkbox" id="check" /></button>
+    </center>
     <script src="../../JS/fourier.js"></script>
-
   </body>
 </html>
