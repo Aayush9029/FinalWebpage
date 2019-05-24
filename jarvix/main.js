@@ -60,13 +60,32 @@ recognition.onresult = function(e) {
 
 function task() {
   document.getElementById("text").innerHTML = "";
-  // console.log(lastCommand);
+  console.log(lastCommand);
+
+  if (lastCommand == " hey jarvis") {
+    console.log("i'm good");
+    msg.text = "hey";
+    speechSynthesis.speak(msg);
+  }
+  if (lastCommand == " hey jarvis how are you") {
+    console.log("i'm good");
+    msg.text = "I am good";
+    speechSynthesis.speak(msg);
+  }
+  if (lastCommand == " what can you do") {
+    console.log("i'm good");
+    msg.text =
+      "I can do online search, recommend  videos , say tempreature, clock info and  puns";
+    document.getElementById("text").innerHTML = msg.text + "<p>";
+
+    speechSynthesis.speak(msg);
+  }
 
   let singleWord = lastCommand.split(" ");
   console.log(singleWord);
 
   for (w of singleWord) {
-    if (w == "weather" || w == "temperature") {
+    if (w == "weather") {
       sayWeather();
     } else if (w == "date") {
       sayDate();
@@ -80,7 +99,28 @@ function task() {
       newJoke();
     } else if (w == "reddit") {
       funny();
+    } else if (w == "jokes") {
+      funny2();
+    } else if (w == "stupid") {
+      noU();
+    } else if (w == "jarvis") {
+      console.log(10);
+      for (a of singleWord) {
+        if (a == "funny") {
+          //funny3();
+          console.log("lololol");
+        }
+      }
+    } else if (w == "youtube") {
+      let lastYtWord = singleWord[singleWord.length - 1];
+      let url = "https://www.youtube.com/results?search_query=" + lastYtWord;
+      openInNewTab(url);
+    } else if (w == "google") {
+      let lastGWord = singleWord[singleWord.length - 1];
+      let url2 = "http://www.google.com/search?q=" + lastGWord;
+      openInNewTab(url2);
     }
+
     document.getElementById("text").innerHTML += " " + w;
   }
   singleWord = [];
@@ -113,8 +153,6 @@ function weather(lat, long) {
     min = Math.round(data.main.temp_min, 1);
     wind = data.wind.speed;
     humid = data.main.humidity;
-
-    console.log(msg.text + "okok");
   });
 }
 
@@ -135,13 +173,14 @@ function sayWeather() {
     temp +
     " it's, " +
     desc;
+
   let showWeater =
     "high: " +
     max +
-    " degrees <br>" +
+    " &deg;C <br>" +
     " low: " +
     min +
-    " degrees <br>" +
+    " &deg;C  <br>" +
     " wind speed: " +
     wind +
     " km/hr<br>" +
@@ -174,11 +213,12 @@ function sayDate() {
 }
 function sayTime() {
   var time = new Date();
-  time = time.toLocaleString("en-US", { hour: "numeric", hour12: true });
+
+  time = time.toLocaleTimeString("en-US");
   msg.text = time;
   speechSynthesis.speak(msg);
   document.getElementById("text").innerHTML = " ";
-  document.getElementById("text").innerHTML += " " + msg.text;
+  document.getElementById("text").innerHTML += " " + msg.text + "<p>";
 }
 
 function sayBye() {
@@ -207,9 +247,8 @@ var jokes = [
   "A programmer is a person who fixed a problem that you didnt know you had in a way you dont understand",
   "How can you tell if a computer geek is an extrovert? They stare at your shoes when you talk instead of their own.",
   "I would love to change the world but they wont give me the source code.",
-  "If at first you dont succedd call it version 1.0",
+  "If at first you dont succeed call it version 1.0",
   "Computers make very fast very accurate mistakes",
-  "I farted in the Apple store and everyone got mad at me. Not my fault they dont have Windows.",
   "Knock Knock... Whos there? Art... Art Who? R2D2",
   "Hilarious and amazingly true thing: if a pizza has a radius (z) and a depth (a) that pizzas volume can be defined Pi*z*z*a."
 ];
@@ -221,16 +260,51 @@ function newJoke() {
   msg.text = jokes[randomNumber];
   speechSynthesis.speak(msg);
 }
+function noU() {
+  document.getElementById("text").innerHTML = " ";
+  document.getElementById("text").innerHTML = "no U";
+  msg.text = "no you";
+  speechSynthesis.speak(msg);
+}
 
 function funny() {
   var randomNumber2 = Math.floor(Math.random() * 20);
+  //raw.githubusercontent.com/elijahmanor/devpun/master/
+  https: console.log(randomNumber2);
   $.getJSON(
-    "https://raw.githubusercontent.com/taivop/joke-dataset/master/stupidstuff.json",
+    "https://raw.githubusercontent.com/15Dkatz/jokes-api-ruby/master/data/jokes.json",
     p => {
-      msg.text = p[randomNumber2].body;
+      text1 = p[randomNumber2].setup;
+      text2 = p[randomNumber2].punchline;
+      msg.text = text1 + text2;
       speechSynthesis.speak(msg);
       document.getElementById("text").innerHTML = " ";
-      document.getElementById("text").innerHTML = msg.text;
+      document.getElementById("text").innerHTML = text1 + "<br>" + text2;
     }
   );
+}
+
+function funny2() {
+  var randomNumber2 = Math.floor(Math.random() * 20);
+  console.log(randomNumber2);
+  $.getJSON("jokes.json", p => {
+    if (p[randomNumber2].question == "undefined") {
+      jokes2();
+    }
+    // text1 = p[randomNumber2].text;
+    text2 = p[randomNumber2].question;
+    text3 = p[randomNumber2].answer;
+    msg.text =
+      //text1 +
+      text2 + text3;
+    speechSynthesis.speak(msg);
+    document.getElementById("text").innerHTML = " ";
+    document.getElementById("text").innerHTML =
+      //text1 + "<br>" +
+      text2 + "<p>" + text3;
+  });
+}
+
+function openInNewTab(url) {
+  var win = window.open(url, "_blank");
 }

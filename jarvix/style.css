@@ -45,3 +45,9 @@ body {
 #text {
   padding: 50px;
 }
+
+.ok {
+  color: #0099e6;
+  font: 12pt sans-serif;
+  text-shadow: none;
+}
