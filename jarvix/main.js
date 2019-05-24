@@ -4,6 +4,11 @@ let max;
 let min;
 let wind;
 let humid;
+let ok = false;
+let url;
+
+let query;
+// let query = prompt("type what you want to search");
 
 //-----------------------------------------------------text-to-speech------------------------------------------------------
 let msg = new SpeechSynthesisUtterance();
@@ -92,6 +97,9 @@ function task() {
     } else if (w == "time") {
       sayTime();
     } else if (w == "thank") {
+      window.open("", "_self", ""); //closes the browser -- force close --
+      window.close();
+
       sayBye();
     } else if (w == "open") {
       openSite();
@@ -119,6 +127,14 @@ function task() {
       let lastGWord = singleWord[singleWord.length - 1];
       let url2 = "http://www.google.com/search?q=" + lastGWord;
       openInNewTab(url2);
+    } else if (w == "gif" || w == "gifs") {
+      console.log("ok");
+      let lastGWord = singleWord[singleWord.length - 1];
+      query = lastGWord;
+      console.log(query);
+      searchGIf(query);
+    } else if (w == "reload") {
+      location.reload();
     }
 
     document.getElementById("text").innerHTML += " " + w;
@@ -307,4 +323,25 @@ function funny2() {
 
 function openInNewTab(url) {
   var win = window.open(url, "_blank");
+}
+
+//------------------giphy------------
+
+function setup() {
+  noCanvas();
+}
+
+function searchGIf(url) {
+  url =
+    "https://api.giphy.com/v1/gifs/search?q=" +
+    query +
+    "&api_key=i16haKNFolQNdDBdlNvQh8IHuL7Jz1so";
+  loadJSON(url, gotData);
+}
+function gotData(giphy) {
+  let totalUrlNumber = giphy.data.length;
+  let randomNum = Math.floor(random(1, totalUrlNumber));
+  console.log(totalUrlNumber);
+  let imgg = createImg(giphy.data[randomNum].images.original.url);
+  imgg.id("ok");
 }
