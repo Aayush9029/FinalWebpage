@@ -9,7 +9,7 @@ function pcChoose() {
     view.style.animation = "flip 1s 1";
     setTimeout(function() {
       view.style.animation = "clear 1s 1";
-      view.style.backgroundImage = "url('../assets/rock.svg')";
+      view.style.backgroundImage = "url('assets/rock.svg')";
     }, 300);
 
     return "rock";
@@ -17,7 +17,7 @@ function pcChoose() {
     view.style.animation = "flip 1s 1";
     setTimeout(function() {
       view.style.animation = "clear 1s 1";
-      view.style.backgroundImage = "url('../assets/paper.svg')";
+      view.style.backgroundImage = "url('assets/paper.svg')";
     }, 400);
 
     return "paper";
@@ -25,7 +25,7 @@ function pcChoose() {
     view.style.animation = "flip 1s 1";
     setTimeout(function() {
       view.style.animation = "clear 1s 1";
-      view.style.backgroundImage = "url('../assets/scissors.svg')";
+      view.style.backgroundImage = "url('assets/scissors.svg')";
     }, 300);
 
     return "scissors";
