@@ -20,7 +20,7 @@
   
   .text--medium {
     font-family: "Open Sans", sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 20px;
     font-weight: 400;
     color: #ecf0f1;
@@ -49,8 +49,7 @@
   }
   
   .card__image-container {
-    z-index:-1;
-    /* border:2px solid red; */
+    z-index:-1; /*if one wants to add gradient to the image tag*/
     width: 100%;
     padding-top: 56.25%;
     overflow: hidden;
@@ -71,14 +70,14 @@
         rgb(1, 186, 196),rgba(2, 169, 199, 0.37)
     ) ;
     padding: 20px;
-    text-shadow: rgb(0, 29, 48) 0px 2px 5px;
-    border-radius: 0px 0px 10px 10px;
+    text-shadow: rgba(0, 29, 48, 0.5) 0px 2px 5px;
   }
   
   .card__title {
     /* border:2px solid red; */
     /* color:rgb(179, 252, 255); */
     margin-bottom: 20px;
+
   }
   
   .card__info {
@@ -88,7 +87,6 @@
   }
   
   a {
-    text-shadow:  rgba(0, 29, 48, 0.5) 0px 2px 2px;;
     margin-left: auto;
     padding: 5px 20px;
     border-radius: 20px;
