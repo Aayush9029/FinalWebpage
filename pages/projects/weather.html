@@ -8,25 +8,58 @@
     <script src="../../JS/weather.js"></script>
 </head>
 <body>
-
-     <div id="city">LOADING...</div>
-   
-     <div class="degrees">
-                <div id = "temp"></div>
-                  <span>&#176</span>
-                 <div id="desc"></div><br>  
-          <div class = 'info'>  
-                 <div id="wind"></div><br>
-                 <div id="humid"></div><br>
-                 <div id="minmax"></div>
-                 <div id="max"></div><br>
-                 <div id="wear"></div><br>
-                <div id="date"></div><br>
-            </div>
-        </div>
-        
-        <div id ="copyright"> Make sure to turn on location and services</div>
-
-
+        <center>
+          
+                <div class="dashboard">
+                  <div class="temp_holder">
+                    <div class="info">
+                      <div id="city">London</div>
+                      <div id="time">Sat, 6 AUG</div>
+                    </div>
+            
+                    <div class="temperature">
+                      <span>Today</span><br />
+                      <div class="icon_temp_holder">
+                        <!-- <img src="ok.png" alt="" id="image" /> -->
+                        <div id="temp">22°</div>
+                      </div>
+                      <br />
+                      <div id="desc">Clouds</div>
+                    </div>
+            
+                    <div class="info">
+                      <div id="city">Wind Speed</div>
+                      <div id="wind_speed">Fast</div>
+                    </div>
+            
+                  </div>
+            
+                  <!-- nex ui element board -->
+                  <div class="terminal">
+                    <div class="info terminal">
+                      <div id="city">Pressure</div>
+                      <div id="pressure">1006 km/h</div>
+                    </div>
+            
+                    <div class="info terminal">
+                      <div id="city">Temp Max</div>
+                      <div id="max">10°</div>
+                    </div>
+            
+                    <div class="info terminal">
+                      <div id="city">Temp min</div>
+                      <div id="min">0°</div>
+                    </div>
+            
+                    <div class="info terminal">
+                      <div id="city">Humidity</div>
+                      <div id="humid">50%</div>
+                    </div>
+            
+                  
+                  <!-- nex ui element board -->
+                </div>
+            
+            </center>
 </body>
 </html>
