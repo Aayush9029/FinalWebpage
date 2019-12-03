@@ -10,7 +10,7 @@ function pcChoose() {
     setTimeout(function() {
       view.style.animation = "clear 1s 1";
       view.style.backgroundImage =
-        "url('https://writecode.me/pages/projects/rockPaperScissors/assets/rock.svg')";
+        "url('https://aayush.wtf/pages/projects/rockPaperScissors/assets/rock.svg')";
     }, 300);
 
     return "rock";
@@ -19,7 +19,7 @@ function pcChoose() {
     setTimeout(function() {
       view.style.animation = "clear 1s 1";
       view.style.backgroundImage =
-        "url('https://writecode.me/pages/projects/rockPaperScissors/assets/paper.svg')";
+        "url('https://aayush.wtf/pages/projects/rockPaperScissors/assets/paper.svg')";
     }, 400);
 
     return "paper";
@@ -28,7 +28,7 @@ function pcChoose() {
     setTimeout(function() {
       view.style.animation = "clear 1s 1";
       view.style.backgroundImage =
-        "url('https://writecode.me/pages/projects/rockPaperScissors/assets/scissors.svg')";
+        "url('https://aayush.wtf/pages/projects/rockPaperScissors/assets/scissors.svg')";
     }, 300);
 
     return "scissors";
