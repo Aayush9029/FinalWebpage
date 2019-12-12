@@ -1,3 +1,3 @@
 # Aayush
 
-[mySite](https://www.aayush.wtf)
+[mySite](https://aayush.wtf)
