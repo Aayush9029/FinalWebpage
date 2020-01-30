@@ -1,5 +1,3 @@
-# Aayush
-
 # [My Website](https://aayush.wtf)
 
 > ### Intro Page
