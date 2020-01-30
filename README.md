@@ -1,6 +1,6 @@
 # Aayush
 
-[mySite](https://aayush.wtf)
+# [My Website](https://aayush.wtf)
 
 > ### Intro Page
 
