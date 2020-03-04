@@ -63,10 +63,10 @@ function setup() {
   xspeed = random(3,5);
   yspeed = random(5,9);
   brickWidth = 100;
-  brickOffsetTop = 20;
-  brickOffsetLeft = 0;
+  brickOffsetTop = 10;
+  brickOffsetLeft = width/25;
   brickRowCount = height/100;
-  brickColumnCount = width /(brickWidth + brickPadding/2+ brickOffsetLeft);
+  brickColumnCount = Math.floor(width / (brickWidth + 15));
   for(var c=0; c<brickColumnCount; c++) {
       bricks[c] = [];
       for(var r=0; r<brickRowCount; r++) {
@@ -141,17 +141,13 @@ function moveBar(){
 
 function out(){
   if(y + yspeed > height -r){
-    // alert('bye');
     showEnd();
-
-
   }
 }
 
 
 function drawBricks() {
     for(var c=0; c<brickColumnCount; c++) {
-
         for(var r=0; r<brickRowCount; r++) {
             if(bricks[c][r].status == 1) {
                 var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
@@ -187,7 +183,7 @@ function replay(){
 }
 
 function showEnd(){
-  document.getElementById('box').style.display = 'block'
+  document.location.reload();
 }
 
 

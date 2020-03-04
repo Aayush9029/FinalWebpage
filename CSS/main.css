@@ -8,7 +8,6 @@ html {
 }
 
 body {
-    cursor: pointer;
     background:url('../img/background_earth.jpg');
     background-attachment: fixed;
     background-position: center;
@@ -21,6 +20,8 @@ body {
 
 
 .hello{
+    cursor: pointer;
+
     margin:0px;
     padding:0px;
     font-size: 5vw;
@@ -101,15 +102,15 @@ body {
 }
 
 .projects{
-    background: linear-gradient(to bottom right,rgb(136, 100, 0),#F8B500 );
-      color:#1F2226;
-      text-decoration: none; border-radius: 5px; 
+    /* background: linear-gradient(to bottom right,rgb(136, 100, 0),#F8B500 ); */
+       color:rgb(0, 255, 85); 
+      /* text-decoration: none; border-radius: 5px;  */
       padding: 2.5px;
-      animation:projects 1s infinite;
+      /* animation:projects 1s infinite;  */
 }
 
 .projects:hover{
-    background: linear-gradient(to bottom right,rgb(167, 122, 1),rgb(255, 195, 31) );
+    background: linear-gradient(to bottom right,rgba(54, 167, 1, 0.479),rgba(31, 255, 87, 0.281) );
 
 }
 
