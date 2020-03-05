@@ -14,9 +14,9 @@ function setup(){
     canvas.position(0,0);
     canvas.style('z-index', '-1');
     
-    r = random(255);
-    g = random(255);
-    b = random(255);
+    r = random(100,255);
+    g = random(100,255);
+    b = random(100,255);
     
     yspeed = random(2,4);
     xspeed = random(2,5);
