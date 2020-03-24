@@ -4,8 +4,6 @@
 }
 body {
   background: #f1f2ec;
-
-  /* background: #161616; */
   font-family: "Ubuntu", sans-serif;
 }
 .closebtn {
@@ -18,6 +16,7 @@ body {
   transition: 0.3s;
 }
 .closebtn:hover {
+  cursor: pointer;
   color: black;
 }
 .alert {
@@ -29,10 +28,12 @@ body {
   padding: 10px;
   background-color: #ffac00;
   color: white;
+  margin-left: auto;
+  margin-right: auto;
 }
 canvas {
   cursor: pointer;
-  margin-top: 40px;
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -44,27 +45,22 @@ p {
   border-radius: 3px;
   box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.25);
   padding: 8px;
-  font-size: 22px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+  font-size: 1rem;
   background: #fc4349;
-  margin-top: 15px;
-  width: 200px;
+  /* width: 200px; */
   text-align: center;
+  /* height: 25px; */
 }
 div {
   color: #e9f0f7;
   border-radius: 3px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
   padding: 8px;
-  font-size: 22px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+  font-size: 1rem;
   background: rgb(1, 163, 155);
-  margin-top: 15px;
-  width: 200px;
+  /* width: 200px; */
+  /* height: 25px; */
+
   text-align: center;
 }
 
@@ -109,7 +105,10 @@ div {
 }
 
 .sliderContainer {
-  margin: 5%;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-bottom: 2%;
+
   color: #e9f0f7;
   border-radius: 3px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
@@ -137,7 +136,7 @@ div {
   grid-column: 2;
   grid-row: 1;
   display: block;
-  margin-top: 5psx;
+  margin-top: 5px;
 }
 .label3 {
   grid-column: 3;
@@ -170,11 +169,10 @@ div {
 .darkmode {
   top: 20px;
   margin-left: 25px;
-  /* padding: 200px; */
-  /* border: 3px solid #73ad21; */
 }
 
-button {
+button,
+#darkbtn {
   background: #161616fd;
   /* padding: 1em; */
   border-radius: 50%;
@@ -196,4 +194,18 @@ button {
 
 button:hover {
   opacity: 0.75;
+}
+
+#infoHolder {
+  margin: 0% 5% 1% 5%;
+  font-size: 18px;
+  /* padding: 30px; */
+
+  display: grid;
+  text-align: center;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 0.5fr);
+  grid-template-rows: repeat(1, 2fr);
+
+  grid-auto-columns: minmax(30px, auto);
 }

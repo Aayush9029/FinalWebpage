@@ -11,7 +11,6 @@ class Population {
 
   evaluate() {
     gen++;
-    touched = false;
 
     let maxFit = 0;
     for (let i = 0; i < this.popSize; i++) {

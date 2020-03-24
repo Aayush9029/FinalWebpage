@@ -9,23 +9,30 @@ let mxFit = 0;
 let count = 0;
 let target;
 let maxForce = 0.3;
-let touched = false;
 let obstacleX;
 let obstacleY;
 let obstacleRadius = 200;
 
+let isdarkMode = false;
+
 // initiazing html sliders
 
 function setup() {
-  createCanvas(600, 320);
+  let cv = createCanvas(window.innerWidth / 1.1, window.innerHeight / 1.1);
+  cv.parent(document.getElementById("canvasParent"));
   rocket = new Rocket();
   population = new Population(100);
 
+  let parent = document.getElementById("infoHolder");
   popp = createP();
   lifeP = createP();
   generation = createDiv();
   mFit = createDiv();
-  touch = createDiv();
+
+  popp.parent(parent);
+  lifeP.parent(parent);
+  generation.parent(parent);
+  mFit.parent(parent);
 
   target = createVector(width / 2, height / 5);
   obstacleX = width / 2;
@@ -64,16 +71,6 @@ function draw() {
     cursor("default");
   }
 
-  if (mxFit >= 4000) {
-    touched = true;
-  }
-  if (touched) {
-    touch.html("Touched :)");
-    touch.style("background-color", "rgb(1, 163, 155)");
-  } else {
-    touch.html("Not touched yet");
-    touch.style("background-color", "#FC4349");
-  }
   noStroke();
   fill(60, 152, 155, 150);
   ellipse(target.x, target.y, 48, 48);
@@ -90,7 +87,6 @@ function draw() {
   mFit.html("Maxfit : " + mxFit);
   generation.html("Generation : " + gen);
   popp.html("Population: " + document.getElementById("Population").value);
-  popp.style("margin-top", "25px");
   popp.style(
     "background-color",
     "rgb(" + document.getElementById("Population").value + ",67, 77)"
@@ -106,4 +102,17 @@ function draw() {
   fill(255, 50);
   ellipse(obstacleX, obstacleY, obstacleRadius, obstacleRadius);
   ellipse(obstacleX, obstacleY, obstacleRadius - 20, obstacleRadius - 20);
+}
+
+function toggleDarkMode() {
+  isdarkMode = isdarkMode ? false : true;
+  // document.getElementById("darkbtn").style.backgroundColor = "white";
+  if (isdarkMode) {
+    document.getElementById("darkbtn").style.filter = "invert(100%)";
+    document.getElementById("body").style.backgroundColor = "#161616";
+  } else {
+    document.getElementById("darkbtn").style.filter = "invert(0%)";
+    document.getElementById("body").style.backgroundColor = "#f1f2ec";
+  }
+  print(isdarkMode);
 }
