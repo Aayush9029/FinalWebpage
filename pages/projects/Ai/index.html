@@ -1,88 +1,121 @@
 <!DOCTYPE html>
 <html>
-<head>
-    
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Smart Rockets</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="../../../p5/p5.min.js"></script>
-    <script src="../../../p5/p5.dom.js"></script>
-    <script language="javascript" type="text/javascript" src="main.js"></script>
-    </head>
-<body>
-    <div class="alert">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-            Click and hold anywhere, to record rocket's path
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="p5/p5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script language="javascript" type="text/javascript" src="dna.js"></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="rocket.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="population.js"
+    ></script>
+  </head>
+  <body id="body">
+    <span class="darkmode">
+      <button
+        onclick="this.parentElement.style.display='none'; document.getElementById('body').style.backgroundColor='#161616'"
+        id="darkbtn"
+      ></button>
     </span>
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.opacity='0%'"
+        >&times;</span
+      >
+      Tip: You can move the obstacle
+    </div>
 
-    <style>
-        *{
-            padding:0px; 
-            margin:0px;
-        }
-        body{
-            background: #F1F2EC;
-            font-family: 'Ubuntu', sans-serif;
-        }
-        .closebtn {
-            margin-left: 15px;
-            color: white;
-            font-weight: bold;
-            float: right;
-            font-size: 22px;
-            line-height: 20px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .closebtn:hover {
-            color: black;
-        }
-        .alert{
-            width:60%;
-            font-size:20px;
-            text-align: center;
-            display: block;
-            margin-top:20px; 
-            padding: 10px;
-            background-color: #FFAC00; 
-            color: white;
-        }
-        canvas{
-            margin-top: 75px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            box-shadow: 15px 15px 15px  rgba(0, 0, 0, 0.60);
-        }
-        p{
-            color:#E9F0F7;
-            border-radius: 3px;
-            box-shadow: 5px 10px 15px  rgba(0, 0, 0, 0.60);
-            padding: 8px;
-            font-size: 24px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            background: #FC4349;
-            margin-top: 50px; 
-            width: 200px;
-            text-align: center;
-        }
-        div{
-            color:#E9F0F7;
-            border-radius: 3px;
-            box-shadow: 5px 10px 15px  rgba(0, 0, 0, 0.60);
-            padding: 8px;
-            font-size: 24px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            background: rgb(1, 163, 155);
-            margin-top: 25px; 
-            width: 200px;
-            text-align: center;
-        }
+    <span class="sliderContainer">
+      <span>
+        <input
+          id="lifeSpan"
+          type="range"
+          class="slider s1"
+          id=""
+          max="500"
+          ,
+          min="100"
+          step="2"
+          ,
+          value="250"
+          onchange="changeValue()"
+        /><br />
+        <span class="label1">Life Span</span>
+      </span>
+      <span>
+        <input
+          id="Population"
+          type="range"
+          class="slider s2"
+          max="330"
+          min="1"
+          step="2"
+          value="12"
+          onchange="changeValue()"
+        /><br />
+        <span class="label2">Population</span>
+      </span>
+      <span>
+        <input
+          id="ObstacleY"
+          type="range"
+          class="slider s3"
+          max="250"
+          min="75"
+          step="2"
+          value="160"
+          onchange="changeValue()"
+        /><br />
+        <span class="label3">Anything</span>
+      </span>
+      <span>
+        <input
+          id="ObstacleW"
+          type="range"
+          class="slider s3"
+          max="140"
+          min="50"
+          step="2"
+          value="90"
+          onchange="changeValue()"
+        /><br />
+        <span class="label3">Obstacle Radius</span>
+      </span>
 
-    </style>
-</body>
+      <span>
+        <input
+          id="RocketHeight"
+          type="range"
+          class="slider s3"
+          max="50"
+          min="3"
+          step="1"
+          value="25"
+          onchange="changeValue()"
+        /><br />
+        <span class="label3">Rocket Height</span>
+      </span>
+      <span>
+        <input
+          id="RocketWidth"
+          type="range"
+          class="slider s3"
+          max="50"
+          min="3"
+          step="1"
+          value="5"
+          onchange="changeValue()"
+        /><br />
+        <span class="label3">Rocket Width</span>
+      </span>
+    </span>
+    <script language="javascript" type="text/javascript" src="main.js"></script>
+  </body>
 </html>
