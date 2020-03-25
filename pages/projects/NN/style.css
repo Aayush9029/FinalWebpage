@@ -176,7 +176,7 @@ button,
   background: #161616fd;
   /* padding: 1em; */
   border-radius: 50%;
-  background-image: url("/moon.png");
+  background-image: url("moon.png");
   background-size: 100%;
   background-repeat: no-repeat;
   width: 40px;
