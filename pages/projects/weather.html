@@ -8,58 +8,51 @@
     <script src="../../JS/weather.js"></script>
 </head>
 <body>
-        <center>
-          
-                <div class="dashboard">
-                  <div class="temp_holder">
-                    <div class="info">
-                      <div id="city">London</div>
-                      <div id="time">Sat, 6 AUG</div>
-                    </div>
-            
-                    <div class="temperature">
-                      <span>Today</span><br />
-                      <div class="icon_temp_holder">
-                        <!-- <img src="ok.png" alt="" id="image" /> -->
-                        <div id="temp">22°</div>
-                      </div>
-                      <br />
-                      <div id="desc">Clouds</div>
-                    </div>
-            
-                    <div class="info">
-                      <div id="city">Wind Speed</div>
-                      <div id="wind_speed">Fast</div>
-                    </div>
-            
-                  </div>
-            
-                  <!-- nex ui element board -->
-                  <div class="terminal">
-                    <div class="info terminal">
-                      <div id="city">Pressure</div>
-                      <div id="pressure">1006 km/h</div>
-                    </div>
-            
-                    <div class="info terminal">
-                      <div id="city">Temp Max</div>
-                      <div id="max">10°</div>
-                    </div>
-            
-                    <div class="info terminal">
-                      <div id="city">Temp min</div>
-                      <div id="min">0°</div>
-                    </div>
-            
-                    <div class="info terminal">
-                      <div id="city">Humidity</div>
-                      <div id="humid">50%</div>
-                    </div>
-            
-                  
-                  <!-- nex ui element board -->
-                </div>
-            
-            </center>
+  <div class="dashboard">
+
+    <div class="column1">
+      
+      <div class="card nameDate">
+        <div id="city">London</div>
+        <div id="time">Sat, 6 AUG</div>
+      </div>
+
+      <div class=" card temperature">
+        <span class="label">Today</span>
+          <div id="temp">22°</div>
+        <div id="desc">Clouds</div>
+      </div>
+
+      <div class=" card wind">
+        <div class="label">Wind Speed</div>
+        <div id="wind_speed">Fast</div>
+      </div>
+
+    </div>
+    <!-- nex ui element board -->
+    <div class="column2"> 
+
+      <div class="card Pressure">
+        <div class="label">Pressure</div>
+        <div id="pressure">1006 km/h</div>
+      </div>
+
+      <div class="card Max">
+        <div class="label">Temp Max</div>
+        <div id="max">10°</div>
+      </div>
+
+      <div class="card Min">
+        <div class="label">Temp min</div>
+        <div id="min">0°</div>
+      </div>
+
+      <div class="card Humidity">
+        <div class="label">Humidity</div>
+        <div id="humid">50%</div>
+      </div>
+
+    </div>
+  </div>
 </body>
 </html>

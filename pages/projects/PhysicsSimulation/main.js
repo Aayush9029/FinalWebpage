@@ -45,8 +45,9 @@ function setup() {
   friction_div = createP();
 
   obstacleradiusP_div.parent(parent);
-  bouncinessP_div.parent(parent);
+
   friction_div.parent(parent);
+  bouncinessP_div.parent(parent);
 
   frictionForCanvas = document.getElementById("friction").value;
   bouncinessForCanvas = document.getElementById("bounciness").value;

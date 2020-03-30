@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Quad tree Visualization</title>
+    <script src="../../../p5/p5.min.js"></script>
+
+    <script src="quadtree.js"></script>
+
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none'"
+        >&times;</span
+      >Tip: Click and drag anywhere to add points
+    </div>
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none'"
+        >&times;</span
+      >
+      Tip: Use mouse wheel to zoom in / out
+    </div>
+
+    <style>
+      canvas {
+        padding: 0px;
+        margin: 0px;
+        cursor: none;
+        /* z-index: -1; */
+        position: 0, 0;
+      }
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+      body {
+        background: #000;
+        font-family: "Ubuntu", sans-serif;
+        overflow: hidden;
+        font-weight: 100;
+      }
+      button {
+        position: fixed;
+      }
+
+      .closebtn {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        transition: 0.3s;
+      }
+      .closebtn:hover {
+        cursor: pointer;
+        color: black;
+      }
+      .alert {
+        width: 50%;
+        font-size: 16px;
+        text-align: center;
+        display: block;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #005780b6;
+        color: white;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      a {
+        color: rgba(0, 255, 255, 0.75);
+      }
+    </style>
+  </body>
+</html>

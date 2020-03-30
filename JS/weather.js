@@ -10,16 +10,21 @@ const finalDate = days[week] + ", " + day + " " + month;
 //jquery manupulation
 $(document).ready(function() {
   // Get Location (asks for location access !!
-  navigator.geolocation.getCurrentPosition(success, error);
+
+  navigator.geolocation.getCurrentPosition(success, error, {
+    maximumAge: 60000,
+    timeout: 5000,
+    enableHighAccuracy: true
+  });
 
   function success(pos) {
-    console.log(pos);
     var lat = pos.coords.latitude;
     var long = pos.coords.longitude;
     weather(lat, long);
   }
 
-  function error() {
+  function error(err) {
+    console.log(err);
     console.log("There was an error");
   }
 
@@ -67,8 +72,5 @@ $(document).ready(function() {
     $("#humid").html(humid + "%");
     $("#time").html(finalDate);
 
-    // $("#copyright").html(
-    //   "  (c) aayushpokharel, (p.s) for people who wanna know more console log :)"
-    // );
   }
 });

@@ -190,10 +190,17 @@ button,
   border: none;
   cursor: pointer;
   transition: 0.3s;
+  animation: cubic-bezier(1, -0.28, 0.735, 0.045);
 }
 
 button:hover {
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  transform: rotate(-45deg);
   opacity: 0.75;
+}
+button:active {
+  -ms-transform: rotate(-360deg); /* IE 9 */
+  transform: rotate(-360deg);
 }
 
 #infoHolder {
