@@ -120,6 +120,6 @@ function fullMode(){
         document.getElementById("help").style.display = 'none'
         resizeCanvas(window.innerWidth, window.innerHeight)
         resetGame()
-    }, 4000);  
+    }, 3000);  
 
 }
