@@ -1,8 +1,10 @@
 # [My Website](https://aayush.wtf)
 
-[My latest AI project](https://aayush.wtf/pages/projects/NN/index.html)
+> Some of my latest projects.
 
-[My latest open source project](https://github.com/Aayush9029/Rifi)
+- [AI project *web*](https://aayush.wtf/pages/projects/NN/index.html)
+
+- [Open source project *iOS, Python*](https://github.com/Aayush9029/Rifi)
 
 ---
 > ### Intro Page
