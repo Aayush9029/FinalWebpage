@@ -7,6 +7,7 @@ let birdTouched = false
 
 let buttons = document.getElementsByTagName('button');
 
+let isMobile = false
 
 
 function setup(){
@@ -17,6 +18,23 @@ function setup(){
     addPipe() 
     font = loadFont("assets/FlappyBirdy.ttf")
     textAlign(CENTER, CENTER)
+
+    if(window.innerWidth < 722){
+        isMobile = true
+        setTimeout(function(){ 
+    
+            document.getElementById("help").style.display = 'none'
+
+            document.getElementById("buttons").style.display = 'none'
+    
+            resizeCanvas(window.innerWidth, window.innerHeight)
+            resetGame()
+        }, 200); 
+     
+    
+   
+         
+}
 }
 
 
@@ -43,8 +61,21 @@ function draw(){
       
     });
 
-   
+    
 }
+
+function touchStarted() {
+    bird.up()
+
+    if(birdTouched){
+        setTimeout(() => { 
+            document.getElementById("help").style.display = 'none'
+            document.getElementById("buttons").style.display = 'none'
+            resizeCanvas(window.innerWidth, window.innerHeight)
+            resetGame()
+        }, 200); 
+    }
+  }
 
 function keyPressed(e){
     if(e.key == " "){
@@ -56,11 +87,9 @@ function keyPressed(e){
         resizeCanvas(720, 480)
         resetGame()
         document.getElementById("buttons").style.display = 'block'
-
-
-
     }
 }
+
 
 
 function resetGame(){  

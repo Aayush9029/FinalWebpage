@@ -14,7 +14,14 @@ class Pipe{
             textSize(width/5)
             fill(255, 160)
             textFont(font)
-            text("Press R to replay", width/2, height/2)
+            if(isMobile){
+                textSize(width/6)
+
+                text("Tap twice to replay", width/2, height/2)
+            }else{
+                text("Press R to replay", width/2, height/2)
+            
+            }
             birdTouched = true
             fill(255, 100, 50)
             noLoop()
