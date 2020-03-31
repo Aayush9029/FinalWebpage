@@ -1,0 +1,93 @@
+*, div {
+  padding: 0px;
+  margin: 0px;
+  background-color: #d0ecff;
+
+}
+
+body {
+  overflow: hidden;
+  background-color: #d0ecff;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+canvas{
+  display: block;
+  margin: auto auto ;
+  box-shadow: 3px 3px  8px rgba(0, 26, 83, 0.5);
+
+}
+
+button{
+  margin:6vh 0.5vh 6vh ;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  outline: 0;
+  background-color: #ffffff;
+  box-shadow: 3px 3px  8px rgba(0, 26, 83, 0.281);
+  cursor: pointer;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.65;
+
+  transition: 0.4s
+}
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  transition: 0.3s;
+}
+.closebtn:hover {
+  cursor: pointer;
+  color: black;
+}
+
+#help{
+  display: none;
+  margin-bottom:15vw ;
+}
+
+#alert {
+  margin:12vh 0.5vh 6vh ;
+  padding: 4vw;
+  font-size: 2vw;
+  width: 50%;
+  text-align: center;
+  display: block;
+  /* padding: 10px; */
+  background-color: rgb(255, 100, 50);
+  color: white;
+  box-shadow: 3px 3px  8px rgba(255, 100, 50, 0.5);
+}
+
+.fullScreen{
+  background-image: url("assets/expand.png");
+
+}
+  
+.github{
+  background-image: url("assets/github-logo.png");
+}
+
+.portfolio{
+  background-image: url("assets/www.png");
+
+}
+.share{
+  background-image: url("assets/share.png");
+
+}
+
+button:hover, button:active{
+  opacity: 0.95;
+  box-shadow: 0 0 8px rgb(197, 248, 255);
+  background-color: rgba(212, 252, 255, 1);
+
+}
