@@ -9,7 +9,6 @@ let buttons = document.getElementsByTagName('button');
 
 let isMobile = false
 
-
 function setup(){
     createCanvas(720, 480);
     bird = new Bird(100,40, 20, 20)
@@ -67,7 +66,7 @@ function draw(){
 function touchStarted() {
     bird.up()
 
-    if(birdTouched){
+    if(isMobile &&  birdTouched){
         setTimeout(() => { 
             document.getElementById("help").style.display = 'none'
             document.getElementById("buttons").style.display = 'none'
@@ -94,7 +93,6 @@ function keyPressed(e){
 
 function resetGame(){  
     birdTouched = false
-    print(points)
     points = 0
     loop()
     pipes = []
@@ -123,3 +121,22 @@ function fullMode(){
     }, 3000);  
 
 }
+
+
+function shareButton(){
+    document.getElementById('notification').innerHTML = "Failed to copy link to clipboard"
+    navigator.clipboard.writeText("https://aayush.wtf/pages/projects/miniBird/index.html").then(() => {
+        document.getElementById('notification').innerHTML = "Copied link to clipboard"
+    })
+    document.getElementById('notification').style.animation = "nanimation 2s 1"
+
+
+    
+    setTimeout(function(){ 
+        document.getElementById('notification').style.animation = ""
+        print("ckear")
+
+    }, 3000);  
+
+}
+

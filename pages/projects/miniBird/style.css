@@ -91,3 +91,85 @@ button:hover, button:active{
   background-color: rgba(212, 252, 255, 1);
 
 }
+
+#notification{
+  background-color: rgba(255, 255, 255, 0.973);
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.603);
+  width: 20%;
+  font-weight: 500;
+  padding: 0.75em;
+  position: fixed;
+  top: 2vh;
+  left: -250px;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0, 26, 83, 0.288);
+  opacity: 0;
+}
+
+
+
+@-webkit-keyframes nanimation {
+  0% {
+    opacity: 0;
+    left: -250px;
+    
+  }
+  50% {
+    opacity: 1;
+    left: 2vw;
+
+  }
+  100% {
+    opacity: 0;
+    left: -500px;
+  }
+}
+@-moz-keyframes nanimation {
+  0% {
+    opacity: 0;
+    left: -250px;
+    
+  }
+  50% {
+    opacity: 1;
+    left: 2vw;
+
+  }
+  100% {
+    opacity: 0;
+    left: -500px;
+  }
+}
+@-o-keyframes nanimation {
+  0% {
+    opacity: 0;
+    left: -250px;
+    
+  }
+  50% {
+    opacity: 1;
+    left: 2vw;
+
+  }
+  100% {
+    opacity: 0;
+    left: -500px;
+  }
+}
+@keyframes nanimation {
+  0% {
+    opacity: 0;
+    left: -250px;
+    
+  }
+  50% {
+    opacity: 1;
+    left: 2vw;
+
+  }
+  100% {
+    opacity: 0;
+    left: -500px;
+  }
+}
