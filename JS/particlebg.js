@@ -6,7 +6,7 @@ let yspeed;
 let xspeed;
 let x = 50;
 let y = 50;
-let auto = false;
+let auto = true;
 let controlX,controlY;
 
 function setup(){
@@ -21,7 +21,6 @@ function setup(){
     yspeed = random(2,4);
     xspeed = random(2,5);
     background(30);
-    
 }
 
 function windowResized() {
@@ -32,7 +31,7 @@ function draw(){
    
 
 
-    for (let i = 0; i < random(1,5) ; i++){
+    for (let i = 0; i < random(1,2) ; i++){
     let p = new Particle()
      particles.push(p);   
     }

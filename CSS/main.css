@@ -13,14 +13,28 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* will add image for parralax effect later */
     font-family: 'Ubuntu', sans-serif;
 }
 
 
 
+/* NAV START */
+
+
+
+
+/* NAV END */
+
+
+
+
+
+
+
+
+
 .hello{
-    cursor: pointer;
+    /* cursor: pointer; */
 
     margin:0px;
     padding:0px;
@@ -32,7 +46,8 @@ body {
 
 .greypart{
     height: 100vh;
-    /* background:#1F2226; */
+    /* background:rgb(255, 255, 255); */
+    cursor: none;
 }
 
 .line {
@@ -58,7 +73,6 @@ body {
 
 .anim-typewriter:hover {
     opacity: 1;
-    cursor: pointer;
 }
 
 @keyframes typewriter {
@@ -102,19 +116,14 @@ body {
 }
 
 .projects{
-    /* background: linear-gradient(to bottom right,rgb(136, 100, 0),#F8B500 ); */
        color:rgb(0, 255, 85); 
-      /* text-decoration: none; border-radius: 5px;  */
       padding: 2.5px;
-      /* animation:projects 1s infinite;  */
 }
 
 .projects:hover{
     background: linear-gradient(to bottom right,rgba(54, 167, 1, 0.479),rgba(31, 255, 87, 0.281) );
 
 }
-
-
 
 
 @keyframes projects{
