@@ -9,7 +9,7 @@
 ---
 > ### Intro Page
 
-![Intro Page](https://raw.githubusercontent.com/Aayush9029/FinalWebpage/gh-pages/intropage.png)
+![Intro Page](https://raw.githubusercontent.com/Aayush9029/FinalWebpage/gh-pages/introp.png)
 
 
 > ### Projects page
