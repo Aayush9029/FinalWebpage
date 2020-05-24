@@ -1,65 +1,35 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <link rel="shortcut icon" href="img/icon.ico"/>
-    <title>Aayush Pokharel</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="CSS/main.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-</head>
-<body>
-    <script src="/JS/particlebg.js"></script>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <section class="hero is-fullheight">
+      <div
+        class="terminal-window primary-bg"
+        onclick="document.getElementById('dummyKeyboard').focus();"
+      >
+        <div class="terminal-output" id="terminalOutput">
+          <div class="terminal-line">
+            <span class="help-msg"
+              >Type <span class="help">help</span> to see a list of supported
+              commands.
+            
+          </div>
+        </div>
+        <div class="terminal-line">
+          <span class="success">➜</span>
+          <span class="directory">~</span>
+          <span class="user-input" id="userInput"></span><span class="line anim-typewriter"></span>
+            <input type="text" id="dummyKeyboard" class="dummy-keyboard" />
+          </p>
+        </div>
+      </div>
+    </section>
 
-<!-- Nav Starts -->
-
-
-<!-- Nav ends -->
-    <div class="greypart">
-        <div class="hello">
-                <p class="line anim-typewriter">
-                    <font color = "#FC3C3C">
-                        <
-                    </font>
-                    <font color = "#00ADB5">
-                        Scroll Down 
-                    </font>
-                    <font color = "#FC3C3C">
-                        /
-                    </font>
-                    <font color = "#FC3C3C">
-                        >
-                    </font>
-                </p></div>
-    </div>
-
-<div class="intropart">
-    <div class="info">
-    <font color ="#FFF4E0" class = "Hi,">
-        Hi,<br>
-    </font>
-    <font color="00ADB5" class="name">
-    I am <a href ="https://github.com/Aayush9029" style="color:#00ADB5; text-decoration: none;">Aayush Pokharel</a>.<br>
-    </font>
-    <a href = "pages/projects.html" class = "projects">
-
-        Here are my web projects.<br>
-    </a>
-
-    <font color = "lightgrey" class = "into">
-        I'm a Student, specializing in developing (and occasionally designing)</a> exceptional, high-quality websites, desktop and mobile applications. Feel free to visit my
-    <a href ="https://github.com/Aayush9029" target='_blank' style="color:#ff5100;">
-        github<br> 
-    </a>
-
-    <br><a href = "pages/contact.html" style="color:rgb(0, 198, 248); ">Contact</a><font color = "#00C6F8">?</font>
-
-    </div>
-
-    </div>
-<!-- About Me
-
-I'm a front end software engineer who enjoys building things that live on the internet. I develop exceptional websites and web apps that provide intuitive, pixel-perfect user interfaces while being clean and efficient behind the scenes. -->
-</body>
+    <script src="js/terminal.js"></script>
+  </body>
 </html>
