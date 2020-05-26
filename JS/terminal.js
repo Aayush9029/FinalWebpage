@@ -3,20 +3,22 @@ let projAsk = false;
 let lastCommands = [];
 
 const COMMANDS = {
+  n: "k, cool",
+  no: "ok, cool",
   info:
-    " <font color ='#FFF4E0'>Hi,<br></font><font color='#ff5100'>I am <a href ='https://github.com/Aayush9029' style='color:#ff5100; text-decoration: none;'>Aayush</a>.<br></font><a style='color:#5ee6b2' href = 'pages/projects.html' >  Here are my web projects.<br></a><font color = 'lightgrey' > I'm a Student, specializing in developing (and occasionally designing)</a> exceptional, high-quality websites, desktop and mobile applications. Feel free to visit my <a href ='https://github.com/Aayush9029' target='_blank' style='color:#5ee6b2;'> github<br> </a><br><a href = 'pages/contact.html' style='color:rgb(0, 198, 248); '>Suggestions</a><font color = '#00C6F8'>?</font><br>",
+    "Hi, I am Aayush<br>I'm a Student, specializing in developing (and occasionally designing)<br> exceptional, high-quality websites, desktop and mobile applications.<br> Feel free to visit my <a href ='https://github.com/Aayush9029' target='_blank' style='color:#fff;'> github</a>. You also send suggestion or say hi to me <a href = 'pages/contact.html' style='color:rgb(255,255,255); '>here</a>",
   ls:
     "usr&nbsp;&nbsp;&nbsp;&nbsp;home&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;&nbsp;&nbsp;&nbsp;root",
   cd: "changed directory to root..",
   "cd ..": "cd: no such file or directory",
-  "cd var": "access denied",
+  "cd var": "var aliased to ../",
   "cd root": "access denied",
   "cd usr": "no can do",
 
   "cd home": "home was aliased to .",
   sudo: "user not in the sudoers file.  This incident will be reported.",
   help:
-    'Supported commands: <span class="code">info</span>,  <span class="code">about</span>, <span class="code">education</span>, <span class="code">skills</span>, <span class="code">contact</span>, <span class="code">projects</span>, <span class="code">github</span><br>System commands: <span class="code">clear</span>, <span class="code">history</span>, <span class="code">cd</span>, <span class="code">ls</span><br>Tip: Use Up / Down arrow to go through recent commands',
+    'Supported commands: <span class="code">about</span>, <span class="code">info</span>, <span class="code">education</span>, <span class="code">skills</span>, <span class="code">contact</span>, <span class="code">projects</span>, <span class="code">github</span><br>System commands: <span class="code">clear</span>, <span class="code">history</span>, <span class="code">cd</span>, <span class="code">ls</span><br>Tip: Use Up / Down arrow to go through recent commands',
   about:
     "<span class='aboutHead'>Name:</span> Aayush<br><span class='aboutHead'>Location:</span>: Canada<br><span class='aboutHead'>Favourites:</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class='aboutTail'>Os</span>: Arch, MacOs?&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class='aboutTail'>Editor</span>: Vim<br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class='aboutTail'>Version Control</span>:Git<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class='aboutTail'>Tabs or Spaces</span>: Depends usually <i>Tabs</i><br>&nbsp;&nbsp;&nbsp;&nbsp;",
   skills:
@@ -39,18 +41,15 @@ const execute = function executeCommand(input) {
   input = input.toLowerCase();
   lastCommands.push(input);
   let output;
-
-  if (input === "y" || input === "yes") {
-    if (projAsk) {
-      window.open("https://aayush.wtf/pages/projects.html");
-    }
-  } else {
-    projAsk = false;
+  if (input.length === 0) {
+    return;
+  }
+  if (input.indexOf("sudo") >= 0) {
+    input = "sudo";
   }
 
   if (input == "projects") {
-    terminalOutput.innerHTML = `<div class="terminal-line">Do you want to open web projects page? [y/n]</div>`;
-    projAsk = true;
+    open("https://github.com/Aayush9029");
   } else if (input === "clear" || input === "cls") {
     clearScreen();
   } else if (input === "history") {
@@ -58,9 +57,6 @@ const execute = function executeCommand(input) {
   } else if (input === "github") {
     open("https://github.com/Aayush9029");
   } else {
-    if (input.length === 0) {
-      return;
-    }
     output = `<div class="terminal-line"><span class="success">➜</span> <span class="directory">~</span> ${input}</div>`;
     if (!COMMANDS.hasOwnProperty(input)) {
       output += `<div class="terminal-line">command not found: ${input}</div>`;
@@ -68,7 +64,7 @@ const execute = function executeCommand(input) {
       output += COMMANDS[input];
     }
 
-    terminalOutput.innerHTML = `${terminalOutput.innerHTML}<div class="terminal-line">${output}</div>`;
+    terminalOutput.innerHTML = `${terminalOutput.innerHTML}<br><div class="terminal-line">${output}<br></div>`;
     terminalOutput.scrollTop = terminalOutput.scrollHeight;
   }
 };
