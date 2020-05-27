@@ -49,7 +49,7 @@ const execute = function executeCommand(input) {
   }
 
   if (input == "projects") {
-    open("https://github.com/Aayush9029");
+    open("https://aayush.wtf/pages/projects.html");
   } else if (input === "clear" || input === "cls") {
     clearScreen();
   } else if (input === "history") {
