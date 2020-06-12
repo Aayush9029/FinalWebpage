@@ -1,0 +1,217 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  background: #151b1f;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma,
+    Sans-Serif;
+  font-size: 1em;
+  color: white;
+}
+canvas {
+  /* border: 0.1px solid white; */
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  margin: auto auto;
+  margin-top: 3vh;
+  display: block;
+}
+
+input:focus {
+  outline: none;
+}
+pre {
+  display: inline;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.5em;
+}
+#color {
+  margin-right: 0.4em;
+  border: 0.5px solid #aaa;
+  border-radius: 2px;
+  width: 25px;
+}
+
+#customCheckbox {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+label {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  border: 1px solid #eeeeee;
+  background-color: #d7d8da;
+  border-radius: 15px;
+  transition: background 0.3s linear;
+  cursor: pointer;
+}
+label:after {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 0px;
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  transition: left 0.3s ease-out;
+}
+
+/* Here comes the magic */
+
+#customCheckbox:checked ~ label {
+  background-color: #8974ff;
+}
+#customCheckbox:checked ~ label:after {
+  left: 20px;
+}
+
+/* SAVE BUTTON */
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.button-wrapper {
+  justify-content: center;
+  align-content: center;
+}
+
+.applybutton {
+  position: relative;
+  width: 100%;
+  background: #9ab899;
+  border: 1px solid #2a363d;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  padding: 10px 0;
+  font-size: 15px;
+}
+.applybutton:hover {
+  background: #81b97e;
+}
+
+.button {
+  margin: 20px;
+  background: #2a363d;
+  border: 3px solid #343436;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 15px;
+  position: relative;
+}
+
+.button:hover {
+  background: #4d4d50;
+}
+
+.button--save:before {
+  background: #9ab899;
+  display: block;
+  content: "";
+  height: 2px;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: calc(100% - 6px);
+}
+
+/* NUMBER */
+
+.slider {
+  -webkit-appearance: none;
+  width: 150px;
+  height: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.8;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #71fff8;
+  border-radius: 50%;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: #ff7171;
+  border-radius: 50%;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+/* Options */
+
+.options {
+  display: none;
+  width: 750px;
+  background: #eb4860;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  border-radius: 0.3em;
+}
+
+.gridSize {
+  padding: 20px;
+  background: #f5827e;
+}
+.detailSize {
+  padding: 2em;
+  background: #f6c6a9;
+}
+
+.colorPicker {
+  padding: 20px;
+}
+
+span {
+}
+
+.gridWidth {
+  padding: 1em;
+}
+
+.gridWidth {
+  padding: 1em;
+}
+
+.gridHeight {
+  padding: 1em;
+}
+
+.close {
+  padding: 5px;
+  font-size: 1em;
+  margin: 0;
+}
+
+.close:hover {
+  cursor: pointer;
+  background: rgb(255, 58, 58);
+}
+
+.title {
+  padding: 20px;
+  margin-top: 200px;
+}

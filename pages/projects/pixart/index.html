@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <link rel="stylesheet" href="style.css" media="all" />
+    <script src="p5.min.js"></script>
+  </head>
+  <body>
+    <center>
+      <p>
+        &nbsp;
+      </p>
+      <span class="title">Pixel Art Maker v1.0</span><br />
+      <button
+        id="showSettings"
+        class="button button--save"
+        onclick="document.getElementById('settings').style.display='block';this.style.display='none'"
+      >
+        settings
+      </button>
+
+      <div class="options" id="settings">
+        <div
+          class="close"
+          onclick="document.getElementById('settings').style.display='none';document.getElementById('showSettings').style.display='block'"
+        >
+          Close
+        </div>
+        <div class="size">
+          <div class="gridSize">
+            <div class="gridWidth">
+              <span id="gridWidthLabel">
+                Grid width [450px]:
+              </span>
+              <input
+                class="slider"
+                min="100"
+                max="720"
+                type="range"
+                value="200"
+                id="gridWidth"
+                step="50"
+              />
+            </div>
+            <div class="gridHeight">
+              <span id="gridHeightLabel">
+                Grid height [450px]:
+              </span>
+              <input
+                class="slider"
+                min="100"
+                max="720"
+                type="range"
+                value="200"
+                id="gridHeight"
+                step="50"
+              />
+            </div>
+          </div>
+          <div class="detailSize">
+            <span id="detailLabel">
+              Detail [50]:
+            </span>
+            <input
+              class="slider"
+              min="10"
+              max="100"
+              type="range"
+              value="20"
+              id="detailSize"
+              step="5"
+            />
+          </div>
+
+          <button
+            class="applybutton button--save"
+            onclick="changeSize();document.getElementById('settings').style.display='none';document.getElementById('showSettings').style.display='block'"
+          >
+            Apply
+          </button>
+        </div>
+      </div>
+
+      <div class="colorPicker">
+        Color:
+        <input id="color" type="color" value="71fff8" />
+      </div>
+      Grid:
+      <input type="checkbox" id="customCheckbox" />
+      <label for="customCheckbox"></label>
+      <div class="button-wrapper">
+        <button class="button button--save" onclick="saveCanvas()">
+          ⬇ Save Image
+        </button>
+      </div>
+    </center>
+
+    <script src="pix.js"></script>
+
+    <script src="main.js"></script>
+  </body>
+</html>
