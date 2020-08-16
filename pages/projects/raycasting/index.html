@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>asd</title>
+    <script src="p5.min.js"></script>
+  </head>
+  <body>
+    <h3 id="help">
+      Use Arrow Keys To Move. Press 'z' to increase and 'x' to decrease fov. And
+      h to hide this message. (refresh the page for variants)
+    </h3>
+    <style>
+      *,
+      body,
+      canvas {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background: #000;
+        overflow: hidden;
+        z-index: -11;
+      }
+      h3 {
+        color: white;
+        z-index: 111;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+      }
+    </style>
+    <script src="boundary.js"></script>
+    <script src="particle.js"></script>
+
+    <script src="ray.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
