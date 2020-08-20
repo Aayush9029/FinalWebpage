@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dot-matrix</title>
+    <script src="../../../p5/p5.min.js"></script>
+  </head>
+  <body>
+    <div class="help">
+      <span class="closebtn" onclick="this.parentElement.style.display='none'"
+        >&times;</span
+      >
+      Connect the nodes to make an art, A dot can't be connected twice. There's
+      no settings to change, simple.
+    </div>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background: black;
+        overflow: hidden;
+      }
+      canvas {
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+      .help {
+        font-family: Impact, Haettenschweiler, "Arial Narrow", sans-serif;
+        color: rgb(159, 207, 226);
+        padding: 15px;
+        margin: 50px;
+        background: #0a0a0a;
+        box-shadow: inset 25px 25px 50px #1b1b1b, inset -25px -25px 50px #1a1a1a;
+        box-shadow: 1px 1px 10px #2020207a, -1px -1px 10px #52abff;
+        margin-left: auto;
+        margin-right: auto;
+        width: 750px;
+        display: block;
+      }
+      .closebtn {
+        color: #ff7373;
+        cursor: pointer;
+        padding: 25px;
+      }
+    </style>
+    <div id="sketch-holder"></div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
