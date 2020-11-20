@@ -133,3 +133,22 @@ a:hover {
     grid-column-end: span 6;
   }
 }
+
+.cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+}
+.cont h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bolder;
+  font-size: 3rem;
+  background-image: linear-gradient(
+    to right,
+    rgb(50, 255, 155),
+    rgb(1, 186, 196)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
