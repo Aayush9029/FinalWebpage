@@ -3,31 +3,314 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AuTerm</title>
+    <title>Aayush - Portfolio</title>
     <link rel="stylesheet" href="CSS/main.css" />
   </head>
+  <script src="https://kit.fontawesome.com/3f2db6afb6.js" crossorigin="anonymous"></script>
+  
+  <style>
+  .intro{
+    margin-bottom: 50px;
+  }
+  .cont {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    align-items: center;
+    padding-top: 3rem;
+  }
+  .cont h1 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bolder;
+    font-size: 3rem;
+    background-image: linear-gradient(
+      to right,
+     #fc7929,
+      #de0012
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+    .text_banner{
+      padding: 19px;
+      background: #F0F0F3;
+      box-shadow: -10px -10px 30px #FFFFFF, 10px 10px 30px rgba(174, 174, 192, 0.4);
+      border-radius: 5px;
+      width: 550px;
+      box-sizing: border-box;
+      font-family: "Anonymous Pro", monospace;
+
+    }
+    .terminal_text{
+      margin: 25px auto;
+
+    }
+    
+    .button_text{
+      margin: 50px auto 5px auto;
+    }
+    
+    .social_links_window_holder{
+      margin: auto;
+      width: 70%;
+
+    }
+    
+    .social_links_window{
+      
+      align-content: center;
+      text-align: center;
+      font-family: "Anonymous Pro", monospace;
+      padding: 25px;
+
+    }
+    
+    .social_links_window > div{
+      float: left;
+
+      background: #F0F0F3;
+      box-shadow: -10px -10px 30px #FFFFFF, 10px 10px 30px rgba(174, 174, 192, 0.4);
+      border-radius: 16px;
+      margin: 20px;
+      padding: 25px;
+      width: 100px;
+      height: 75px;
+
+
+    }
+    .social_links_window  :hover{
+      color: #745FF2;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+    .social_links_window :active{
+      box-shadow: 1px 1px 5px #FFFFFF, 5px 5px 5px rgba(174, 174, 192, 0.4);
+    }
+    
+    .social_links_window > div > i{
+      font-size: 2em;
+      color: black;
+    }
+    .links_text{
+      padding-top: 10px
+    }
+    
+    ::selection{
+      background: none;
+    }
+    
+/*  TITLE*/    
+    
+    .typity {
+      
+      background-position: 0% 100%;
+      border-bottom: 3px solid #d50000;
+      box-sizing: border-box;
+      color: #363636;
+      font-size: 2rem;
+      padding-right: 2px;
+      position: relative;
+      transition: background-position 1s;
+      
+      
+      font-family: "Open Sans", sans-serif;
+      font-weight: bolder;
+      font-size: 3rem;
+      background-image: linear-gradient(
+        to right,
+       #fc7929,
+        #de0012
+      );
+      -webkit-background-clip: text;
+      color: transparent;
+      
+    }
+    .typity::after {
+      animation: blink-cursor 0.75s step-end infinite;
+      background-color: transparent;
+      content: "";
+      display: block;
+      height: 3rem;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 2px;
+    }
+    .typity.highlight {
+      background-image: linear-gradient(to left, rgba(0, 0, 0, 0.3) 50%, transparent 50%);
+      background-position: 100% 100%;
+      background-repeat: no-repeat;
+      background-size: 200% 5rem;
+    }
+    .typity.highlight::after {
+      animation: none;
+    }
+    
+    @keyframes blink-cursor {
+      0% {
+        background-color: transparent;
+      }
+      50% {
+        background-color: black;
+      }
+    }
+    @media only screen and (max-width: 600px) {
+      html {
+        font-size: 12px;
+      }
+    
+      .typity {
+        border-bottom: 2px solid red;
+      }
+    }
+    
+  </style>
+  
   <body>
-      <div
-        class="terminal-window primary-bg"
-        onclick="document.getElementById('dummyKeyboard').focus();"
-      >
-        <div class="terminal-output" id="terminalOutput">
+    <div class="intro">
+   <div class="cont">
+     <h1>Hi, Welcome <br>I am Aayush <br>I love <span class="typity"></span></h1>
+   </div>   
+
+    </div>
+
+    
+    <div class="terminal_window" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" >
+      <div class="text_banner terminal_text">Browse this site using terminal!</div>
+      <div class="fakeMenu">
+        <div class="fakeButtons fakeClose"></div>
+        <div class="fakeButtons fakeMinimize"></div>
+        <div class="fakeButtons fakeZoom"></div>
+      </div>
+      <div class="fakeScreen">
+        <div
+          class="terminal-window primary-bg"
+          onclick="document.getElementById('dummyKeyboard').focus();"
+        > 
+          <div class="terminal-output" id="terminalOutput">
+            <div class="terminal-line">
+              <span class="help-msg">Hey welcome!, Type <span class="help">help</span> to see a list of supported
+                commands.<br>
+            </div>
+          </div>
           <div class="terminal-line">
-            <span class="help-msg"
-              >Hey welcome!, Type <span class="help">help</span> to see a list of supported
-              commands.<br>
-            
+            <span class="success">➜</span>
+            <span class="directory">~</span>
+            <span class="user-input" id="userInput"></span>
+            <span class="line anim-typewriter"></span>
+            <input type="text" id="dummyKeyboard" class="dummy-keyboard" />
           </div>
         </div>
-        <div class="terminal-line">
-          <span class="success">➜</span>
-          <span class="directory">~</span>
-          <span class="user-input" id="userInput"></span><span class="line anim-typewriter"></span>
-            <input type="text" id="dummyKeyboard" class="dummy-keyboard" />
-          </p>
-        </div>
       </div>
+    </div>
+    
+    
+  <div class="social_links_window_holder">
+    <div class="text_banner button_text">Some Quick Links</div>
+    <div class="social_links_window">
+      
+      
+    <div class="appstore" onclick="window.open('https://apps.apple.com/ca/developer/aayush-pokharel/id1532440924', '_blank');">
+    <i class="fab fa-app-store-ios"></i>
+    <div class="links_text">Appstore projects</div>
+  </div>  
+    
+    <div class="projects" onclick="window.open('pages/projects.html', '_blank');">
+      <i class="fas fa-boxes"></i>
+      <div class="links_text">Web Projects</div>
+    </div> 
+    
+    <div class="github" onclick="window.open('https://github.com/Aayush9029', '_blank');">
+      <i class="fab fa-github"></i> 
+      <div class="links_text">Github</div>
+    </div> 
+    
+  <div class="discord" onclick="window.open('https://discord.gg/Dx6dWaGtNE', '_blank');">
+    <i class="fab fa-discord">
+    </i>
+    <div class="links_text">Discord</div>
+  </div> 
+    
+    
+<div class="email" onclick="window.open('mailto:aayushpokharel36@gmail.com');">
+      <i class="fas fa-envelope"></i>
+      <div class="links_text">Email</div>
+    </div> 
+    
+  <div class="random" onclick="window.open('pages/projects.html', '_blank');">
+    <i class="fas fa-random"></i>
+    <div class="links_text">Random Project</div>
+  </div> 
+  </div> 
+
+  </div> 
 
     <script src="JS/terminal.js"></script>
+    
+    <script>
+      // https://codepen.io/Milleus/pen/YzKOjoO
+      let typed = "";
+      const element = document.querySelector(".typity");
+      
+      function startType(pun, index) {
+        if (index < pun.length) {
+          typed += pun.charAt(index);
+          element.innerHTML = typed;
+          index++;
+          setTimeout(function() {
+            startType(pun, index);
+          }, 50);
+        } else {
+          setTimeout(function() {
+            element.classList.add("highlight");
+          }, 4000);
+      
+          setTimeout(function() {
+            element.classList.remove("highlight");
+            typed = "";
+            element.innerHTML = typed;
+            startType(getRandomPun(), 0);
+          }, 5000);
+        }
+      }
+      
+      function getRandomPun() {
+        const puns = [
+          "to program.",
+          "to solve problems.",
+          "to automate stuff.",
+          "to work on projects.",
+          "to explore projects.",
+          "to build iOS Apps.",
+          "to look at designs.",
+          "to test new features.",
+          "to ship amazing products.",
+          "to scrape the web.",
+          "to make a difference.",
+          "to make random things.",
+          "to hack around.",
+          "to tinker around.",
+          "memes.",
+          "vim.",
+          "rounded boxes.",
+          "git.",
+          "learning new things.",
+          "Machine Learning.",
+          "bio hacking.",
+          "hikes.",
+          "terminal.",
+          "to swim."
+        ];
+        const index = Math.floor(Math.random() * puns.length);
+      
+        return puns[index];
+      }
+      
+      startType(getRandomPun(), 0);
+      
+    </script>  
+    
   </body>
+  
 </html>

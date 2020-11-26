@@ -5,8 +5,8 @@ let lastCommands = [];
 const COMMANDS = {
   n: "k, cool",
   no: "ok, cool",
-  info:
-    "Hi, I am Aayush<br>I'm a Student, specializing in developing (and occasionally designing)<br> exceptional, high-quality websites, desktop and mobile applications.<br> Feel free to visit my <a href ='https://github.com/Aayush9029' target='_blank' style='color:#fff;'> github</a>. You also send suggestion or say hi to me <a href = 'pages/contact.html' style='color:rgb(255,255,255); '>here</a>",
+  about:
+    "Hi, I am Aayush<br>I'm a Student, specializing in developing (and occasionally designing)<br> exceptional, high-quality websites, desktop and mobile applications.<br> Feel free to visit my <a href ='https://github.com/Aayush9029' target='_blank' style='color:#000;'> github</a>. You also send suggestion or say hi to me <a href = 'pages/contact.html' style='color:rgb(0,0,0); '>here</a>",
   ls:
     "usr&nbsp;&nbsp;&nbsp;&nbsp;home&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;&nbsp;&nbsp;&nbsp;root",
   cd: "changed directory to root..",
@@ -19,8 +19,8 @@ const COMMANDS = {
   sudo: "user not in the sudoers file.  This incident will be reported.",
   help:
     'Supported commands: <span class="code">about</span>, <span class="code">info</span>, <span class="code">education</span>, <span class="code">skills</span>, <span class="code">contact</span>, <span class="code">projects</span>, <span class="code">github</span><br>System commands: <span class="code">clear</span>, <span class="code">history</span>, <span class="code">cd</span>, <span class="code">ls</span><br>Tip: Use Up / Down arrow to go through recent commands',
-  about:
-    "<span class='aboutHead'>Name:</span> Aayush<br><span class='aboutHead'>Location:</span>: Canada<br><span class='aboutHead'>Favourites:</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class='aboutTail'>Os</span>: Arch, MacOs?&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class='aboutTail'>Editor</span>: Vim<br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class='aboutTail'>Version Control</span>:Git<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class='aboutTail'>Tabs or Spaces</span>: Depends usually <i>Tabs</i><br>&nbsp;&nbsp;&nbsp;&nbsp;",
+  info:
+    "<span class='aboutHead'>Name:</span> Aayush<br><span class='aboutHead'>Location:</span> Canada<br><span class='aboutHead'>Favourites:</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class='aboutTail'>Os</span>: Arch, MacOs&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class='aboutTail'>Editor</span>: Vim, Nova<br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class='aboutTail'>Version Control</span>: Git<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class='aboutTail'>Tabs or Spaces</span>: Depends usually <i>Tabs</i><br>&nbsp;&nbsp;&nbsp;&nbsp;",
   skills:
     '<span class="skills">Languages:</span> Swift, Python, JavaScript, HTML5*, CSS*<br><span class="skills">Technologies:</span> AWS <i>Lambda</i>, Git<br><span class="skills">Frameworks:</span> Flask, Django, P5js<br><span class="skills">Other:</span> Terminal, *nix Based OSes, Office 365, <i>most</i> Adobe Suite, Networking <i>Cyber Security</i>',
   education:
@@ -49,7 +49,7 @@ const execute = function executeCommand(input) {
   }
 
   if (input == "projects") {
-    open("https://aayush.wtf/pages/projects.html");
+    open("pages/projects.html");
   } else if (input === "clear" || input === "cls") {
     clearScreen();
   } else if (input === "history") {
