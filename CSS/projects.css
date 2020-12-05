@@ -5,7 +5,9 @@
 }
 
 body {
-  background: rgb(39, 48, 61);
+  background: rgb(28, 35, 44);
+  background-color: #e5e5e5;
+
 }
 
 main {
@@ -14,6 +16,28 @@ main {
   grid-gap: 40px;
   padding: 60px 0;
 }
+
+
+
+.cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+}
+.cont h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bolder;
+  font-size: 3rem;
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 189, 132),
+    rgb(2, 169, 219)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 
 .text--medium {
   font-family: "Open Sans", sans-serif;
@@ -28,20 +52,23 @@ main {
   display: grid;
   grid-template-columns: repeat(12, minmax(auto, 60px));
   grid-gap: 40px;
+  
 }
 
 .card {
   grid-column-end: span 4;
   display: flex;
   flex-direction: column;
-
+  /* background: #ecf0f1; */
+  border: 2px solid rgb(0, 180, 156);
+  box-shadow: -5px -5px 15px rgb(255, 255, 255), 5px 5px 25px rgba(0, 237, 245, 0.4);
   /* cursor: pointer; */
   transition: all 0.3s ease 0s;
 }
 
 .card:hover {
   transform: translateY(-7px);
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: -5px -5px 15px rgb(153, 255, 241), 5px 5px 55px rgba(0, 237, 245, 0.4);
 }
 
 .card__image-container {
@@ -51,6 +78,8 @@ main {
   padding-top: 56.25%;
   overflow: hidden;
   position: relative;
+  
+  
 }
 
 .card__image-container img {
@@ -59,21 +88,20 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background: #ecf0f1;
 }
 
 .card__content {
   background: linear-gradient(
     to bottom right,
-    rgb(1, 186, 196),
+    rgb(1, 196, 180),
     rgb(0, 132, 155)
   );
   padding: 20px;
-  text-shadow: rgba(0, 29, 48, 0.5) 0px 2px 5px;
+  /* text-shadow: rgba(0, 29, 48, 0.5) 0px 2px 5px; */
 }
 
 .card__title {
-  /* border:2px solid red; */
-  /* color:rgb(179, 252, 255); */
   margin-bottom: 20px;
 }
 
@@ -91,16 +119,16 @@ a {
   background: linear-gradient(
     to bottom right,
     rgb(1, 186, 196),
-    rgba(2, 169, 199, 0.37)
+    rgba(0, 181, 212, 0.37)
   );
-  box-shadow: rgba(0, 87, 145, 0.3) 0px 2px 5px;
+  box-shadow: rgba(0, 87, 145, 0.527) 0px 2px 5px;
 }
 
 a:hover {
   background: linear-gradient(
     to bottom right,
     rgb(255, 206, 73),
-    rgb(117, 86, 0)
+    rgb(255, 115, 0)
   );
 }
 
@@ -132,23 +160,4 @@ a:hover {
   .card {
     grid-column-end: span 6;
   }
-}
-
-.cont {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 3rem;
-}
-.cont h1 {
-  font-family: "Open Sans", sans-serif;
-  font-weight: bolder;
-  font-size: 3rem;
-  background-image: linear-gradient(
-    to right,
-    rgb(50, 255, 155),
-    rgb(1, 186, 196)
-  );
-  -webkit-background-clip: text;
-  color: transparent;
 }
