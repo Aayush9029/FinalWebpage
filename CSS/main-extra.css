@@ -42,7 +42,7 @@
 
 .aayush_image{
     background: rgb(196, 196, 196);
-    background-image: url("/images/aayush.jpeg");
+    background-image: url("../images/aayush.jpeg");
     width:150px;
     height:150px;
     border-radius: 5%;
