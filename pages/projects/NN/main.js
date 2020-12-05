@@ -4,7 +4,8 @@ let lifeP;
 let popp;
 let generation;
 let gen = 1;
-let mFit = 1;
+let mFit = 1;let cv = createCanvas(window.innerWidth / 1.1, window.innerHeight / 1.1);
+  cv.parent(document.getElementById("canvasParent"));
 let mxFit = 0;
 let count = 0;
 let target;
@@ -18,8 +19,7 @@ let isdarkMode = false;
 // initiazing html sliders
 
 function setup() {
-  let cv = createCanvas(window.innerWidth / 1.1, window.innerHeight / 1.1);
-  cv.parent(document.getElementById("canvasParent"));
+  
   rocket = new Rocket();
   population = new Population(100);
 
@@ -42,7 +42,6 @@ function setup() {
 }
 
 function changeValue() {
-  console.log("as");
   lifespan = document.getElementById("lifeSpan").value;
   maxForce = document.getElementById("RocketWidth").value;
   obstacleRadius = document.getElementById("ObstacleW").value;

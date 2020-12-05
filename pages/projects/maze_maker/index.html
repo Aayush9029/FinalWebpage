@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maze Generator 2.0</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.min.js"></script>
+  <script src="cell.js"></script>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body id="body">
+  <span class="darkmode">
+    <button onclick="toggleDarkMode()" id="darkbtn"></button>
+  </span>
+  <div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+    (beta) Change the width, height and grid resolution
+  </div>
+  <span id="canvasParent"></span>
+
+  <span class="sliderContainer">
+    <span>
+      <input id="grid_width" type="range" class="slider s1" id="" max="1200" , min="250" step="20" , value="600"
+        onchange="changeValue()" /><br />
+      <span class="label1">Width</span>
+    </span>
+    <span>
+      <input id="grid_height" type="range" class="slider s2" max="1200" min="250" step="20" value="600"
+        onchange="changeValue()" /><br />
+      <span class="label2">Height</span>
+    </span>
+
+    <span>
+      <input id="grid_res" type="range" class="slider s3" max="100" min="5" step="5" value="30"
+        onchange="changeValue()" /><br />
+      <span class="label3">Resolution</span>
+    </span>
+  </span>
+
+  <span id="infoHolder"> </span>
+
+  <script language="javascript" type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
