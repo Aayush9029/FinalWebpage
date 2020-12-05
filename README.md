@@ -1,8 +1,8 @@
-# [My Website](https://aayush.wtf)
+# [My Website](https://aayush9029.github.io/FinalWebpage/)
 
 > Some of my latest projects.
 
-- [AI project *web*](https://aayush.wtf/pages/projects/NN/index.html)
+- [AI project *web*](https://aayush9029.github.io/FinalWebpage/pages/projects/NN/index.html)
 
 - [Open source project *iOS, Python*](https://github.com/Aayush9029/Rifi)
 
