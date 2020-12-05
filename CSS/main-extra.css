@@ -1,4 +1,45 @@
 
+.quick_links{
+    background: white;
+    box-shadow: -5px -5px 10px #ffffff, 5px 5px 25px rgb(233, 225, 255);
+    width: 55px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 2%;
+    position: fixed;
+}
+.quick_links > a{
+    border-radius: 50%;
+    margin: 5px;
+    font-size: 24px;
+    padding: 10px;
+    color:rgb(58, 58, 58);
+    border: 2px solid rgb(158, 117, 255);
+    text-decoration: none;
+    background: white;
+    box-shadow: -5px -5px 10px #ffffff, 5px 5px 25px rgb(233, 225, 255);
+}
+.quick_links > a:hover{
+    box-shadow: -5px -5px 20px #ffffff, 5px 5px 35px rgb(206, 164, 255);
+   /* transform: scale(1.01); */
+   transform: translateY(-5px);
+   transition: 0.5s;
+   background:rgb(145, 28, 255);
+   background: linear-gradient(0deg, rgb(128, 17, 255) 0%,  rgb(200, 105, 255)100%);
+   border: 2px solid rgb(255, 255, 255);
+
+   color:white;
+   /* border: 1px solid rgb(138, 138, 138); */
+
+}
+.quick_links > a:active{
+    box-shadow: -5px -5px 10px #ffffff, 5px 5px 5px rgb(188, 164, 255);
+   transform: scale(0.9);
+   transition: 0.3s;
+   color:rgb(117, 0, 196)
+}
+
+
 .aayush_image{
     background: rgb(196, 196, 196);
     background-image: url("/images/aayush.jpeg");
@@ -11,18 +52,32 @@
        float: right;
     shape-outside: square();
     background-color: rgb(154, 167, 201);
-    border: 2px solid rgb(244, 251, 255) ;
+    border: 2px solid rgb(245, 225, 255) ;
 
-    box-shadow: -10px -10px 30px #d9f1ff, 10px 10px 30px rgba(174, 174, 192, 0.678);
+    box-shadow: -10px -10px 20px #b74cff77, 10px 10px 20px rgba(115, 107, 139, 0.137);
     margin-left: 15px;
 }
 
 .intro_text{
     margin: 50px auto 5px auto;
-    background-color:  rgb(231, 245, 255) !important;
+    background: linear-gradient(90deg, rgb(143, 208, 255) 0%,  rgb(226, 176, 255) 100%);
+    color:rgb(0, 51, 80);
+    text-shadow: 2px 2px 2px rgba(161, 78, 255, 0.267);
     text-align: right ;
-    box-shadow: -10px -10px 30px #d9f1ff, 10px 10px 30px rgba(174, 174, 192, 0.4) !important;
+    box-shadow: -10px -10px 30px #bfe8ff, 10px 10px 20px rgb(204, 194, 209) !important;
 
+}
+.terminal_text{
+    margin: 50px auto 20px auto;
+    color:black;
+    background-color:  rgb(0, 8, 4);
+    background: linear-gradient(90deg, rgb(0, 255, 170) 0%, rgb(0, 173, 130) 100%);
+    box-shadow: -10px -10px 20px #00ffaa67, 5px 5px 20px rgba(0, 160, 107, 0.404) !important;
+}
+.button_text{
+    margin: 50px auto 5px auto;
+    background: linear-gradient(90deg, rgb(108, 201, 255) 0%, rgb(227, 249, 255) 100%);
+    box-shadow: -10px -10px 30px #abe0ff, 10px 10px 30px rgba(174, 185, 192, 0.4) !important;
 }
 
 .intro{
@@ -50,21 +105,17 @@
 }
 .text_banner{
     padding: 19px;
-    background: #F0F0F3;
-    box-shadow: -10px -10px 30px #FFFFFF, 10px 10px 30px rgba(174, 174, 192, 0.4);
+    /* background: #F0F0F3; */
+    /* box-shadow: -10px -10px 30px #FFFFFF, 10px 10px 30px rgba(174, 174, 192, 0.4); */
     border-radius: 5px;
     width: 550px;
     box-sizing: border-box;
     font-family: "Anonymous Pro", monospace;
 
 }
-.terminal_text{
-    margin: 25px auto;
-}
 
-.button_text{
-    margin: 50px auto 5px auto;
-}
+
+
 
 .social_links_window_holder{
     margin: auto;
