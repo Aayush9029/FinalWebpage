@@ -1,7 +1,12 @@
 * {
   padding: 0;
   margin: 0;
+  
 }
+
+*::selection{
+  background: none;
+  }
 
 body {
   margin: 0;
@@ -70,6 +75,7 @@ p {
   color: #75e1e7;
   font-weight: 500;
 }
+
 
 .success {
   color: #8dd39e;

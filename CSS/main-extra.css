@@ -75,7 +75,7 @@
     box-shadow: -10px -10px 20px #00ffaa67, 5px 5px 20px rgba(0, 160, 107, 0.404) !important;
 }
 .button_text{
-    margin: 50px auto 20px auto;
+    margin: 50px auto 5px auto;
     background: linear-gradient(90deg, rgb(108, 201, 255) 0%, rgb(227, 249, 255) 100%);
     box-shadow: -10px -10px 30px #abe0ff, 10px 10px 30px rgba(174, 185, 192, 0.4) !important;
 }
@@ -103,8 +103,8 @@
     -webkit-background-clip: text;
     color: transparent;
 }
+
 .text_banner{
-    
     padding: 19px;
     /* background: #F0F0F3; */
     /* box-shadow: -10px -10px 30px #FFFFFF, 10px 10px 30px rgba(174, 174, 192, 0.4); */
@@ -124,7 +124,7 @@
 
 .social_links_window{
  
-    margin: 50px auto 20px auto;
+    margin: 0px auto 20px auto;
     align-content: center;
     text-align: center;
     font-family: "Anonymous Pro", monospace;
@@ -166,10 +166,6 @@
 
 .links_text{
     padding-top: 10px
-}
-
-::selection{
-background: none;
 }
 
 /*  TITLE*/    
@@ -239,16 +235,18 @@ background: none;
         width: 100%;
     }  
     .social_links_window_holder{
-        width:100%;
+        width:110%;
         padding:0px;
-        margin: -50px;
+        margin-top: 14%;
+        margin-left: -15%;
 
     }
-    .social_links_window > div{
-        /* margin-left: -15px; */
-        padding: 30px;
+    .bb_bth {
         width: 100%;
         height: 75px;
+        margin: 1px;
+        /* text-align: left; */
+
     }
     .intro{
         display: none;
