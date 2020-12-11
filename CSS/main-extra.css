@@ -1,3 +1,25 @@
+.tooltiptext {
+    opacity: 0;
+    width: 120px;
+    background-color: rgba(220, 210, 255, 0.5);
+    color: rgb(144, 107, 255);
+    text-align: center;
+    border-radius: 3px;
+    padding: 0.3em;
+    margin-left: 2em;
+    font-size: 16px;
+    font-weight: 100;
+    position: absolute;
+    z-index: 1;
+    border: 2px solid rgb(194, 174, 255);
+    box-shadow: -5px -5px 25px #ffffff, 5px 5px 25px rgba(170, 139, 255, 0.5);
+
+  }
+  
+.tooltip:hover .tooltiptext {
+opacity: 1;
+transition: 1.45s;
+}
 
 .quick_links{
     background: white;
@@ -224,6 +246,11 @@
 
 
 @media only screen and (max-width: 820px) {
+    .tooltiptext{
+        margin-left: -5em;
+        margin-top: 3em;
+        background: rgba(255, 255, 255, 0.85);
+    }
     .quick_links {
         position: initial;
         width:95%;
