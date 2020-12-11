@@ -1,3 +1,8 @@
+*{
+    animation:  welcome_animation 1s ease-in-out 1;
+
+}
+
 .tooltiptext {
     visibility: hidden;
     opacity: 0;
@@ -14,14 +19,12 @@
     z-index: 1;
     border: 2px solid rgb(194, 174, 255);
     box-shadow: -5px -5px 25px #ffffff, 5px 5px 25px rgba(170, 139, 255, 0.5);
-
-  }
+}
   
 .tooltip:hover .tooltiptext {
     visibility: visible;
-
-opacity: 1;
-transition: 1.45s;
+    opacity: 1;
+    transition: 1.45s;
 }
 
 .quick_links{
@@ -81,6 +84,8 @@ transition: 1.45s;
 
     box-shadow: -10px -10px 20px #b74cff77, 10px 10px 20px rgba(115, 107, 139, 0.137);
     margin-left: 15px;
+    animation:  focus 1.1s ease-in-out 1;
+
 }
 
 .intro_text{
@@ -98,6 +103,7 @@ transition: 1.45s;
     background-color:  rgb(0, 8, 4);
     background: linear-gradient(90deg, rgb(0, 255, 170) 0%, rgb(0, 173, 130) 100%);
     box-shadow: -10px -10px 20px #00ffaa67, 5px 5px 20px rgba(0, 160, 107, 0.404) !important;
+    
 }
 .button_text{
     margin: 50px auto 5px auto;
@@ -197,7 +203,7 @@ transition: 1.45s;
 
 .typity {
     background-position: 0% 100%;
-    border-bottom: 3px solid #d50000;
+    border-bottom: 3px solid #d5000046;
     box-sizing: border-box;
     color: #363636;
     font-size: 2rem;
@@ -228,10 +234,12 @@ transition: 1.45s;
     width: 2px;
 }
 .typity.highlight {
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.3) 50%, transparent 50%);
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.26) 50%, transparent 50%);
     background-position: 100% 100%;
     background-repeat: no-repeat;
     background-size: 200% 5rem;
+    animation:  focus_text 1s ease-in-out 1;
+
 }
 
 .typity.highlight::after {
@@ -369,3 +377,34 @@ transition: 1.45s;
     }
   }
   
+  
+  @keyframes welcome_animation {
+    0% {
+        filter: blur(0.1px);
+    transform: translateY(1%);
+
+    }  
+    50% {
+        transform: translateY(-5px);
+        }
+    75%{
+
+    }
+  }
+
+  @keyframes focus{
+    50%{
+        filter: blur(1px);
+        transform: translateY(-25px);
+    }
+  }
+
+  @keyframes focus_text{
+    0% {
+        filter: blur(1px);
+    }
+    50%{
+        filter: blur(2px);
+
+    }
+  }
