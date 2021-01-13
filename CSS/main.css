@@ -8,6 +8,12 @@
   background: none;
   }
 
+
+.embedded_link{
+  color: rgb(110, 47, 255);
+  font-weight: bold;
+}
+
 body {
   margin: 0;
   height: 100%;
